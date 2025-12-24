@@ -1,0 +1,220 @@
+{
+  "metadata": {
+    "source_file": "SNA_Virtualization.pdf",
+    "total_questions": 21,
+    "format": "multiple_choice",
+    "options_per_question": 4
+  },
+  "questions": [
+    {
+      "question": "What is the main purpose of a hypervisor?",
+      "options": [
+        "Increase bandwidth",
+        "Mediate between VMs and hardware",
+        "Manage user accounts",
+        "Compile code"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does full virtualization do?",
+      "options": [
+        "Partially emulate hardware",
+        "Fully emulate underlying hardware",
+        "Use special CPU",
+        "Share operating system"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What is a key limitation of full virtualization?",
+      "options": [
+        "High performance",
+        "No overhead",
+        "Performance penalty due to translation",
+        "Requires no modification"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What is paravirtualization?",
+      "options": [
+        "Partial virtualization",
+        "Modified guests cooperate with hypervisor",
+        "Full hardware emulation",
+        "Container-based"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which hypervisor uses paravirtualization?",
+      "options": [
+        "KVM",
+        "Xen",
+        "VMware",
+        "VirtualBox"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What enables hardware-assisted virtualization?",
+      "options": [
+        "Software algorithms",
+        "CPU features like Intel VT",
+        "Kernel modules",
+        "Network optimization"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does KVM stand for?",
+      "options": [
+        "Kernel Virtual Machine",
+        "Key Value Map",
+        "Knowledge Virtual Module",
+        "Kernel Visualization Module"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What is a Type 1 hypervisor?",
+      "options": [
+        "User-space application",
+        "Bare-metal/native hypervisor",
+        "Container",
+        "Emulator"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Example of Type 2 hypervisor:",
+      "options": [
+        "XenServer",
+        "VMware ESXi",
+        "VirtualBox",
+        "Hyper-V"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What is live migration?",
+      "options": [
+        "Moving files",
+        "Moving VMs between hypervisors without downtime",
+        "Updating kernel",
+        "Rebooting system"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What is memory dance in VM migration?",
+      "options": [
+        "Animation technique",
+        "Copying memory changes between source and destination",
+        "Memory leak",
+        "Disk activity"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What are virtual machine images?",
+      "options": [
+        "Screenshot files",
+        "Templates of configured operating systems",
+        "Network diagrams",
+        "Backup files"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Can VM images be portable across different hardware?",
+      "options": [
+        "Never",
+        "Sometimes",
+        "Yes, with conversion tools",
+        "Only if same CPU"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What is containerization?",
+      "options": [
+        "Shipping containers",
+        "OS-level virtualization without hypervisor",
+        "File storage",
+        "Data backup"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which OS provides FreeBSD jails?",
+      "options": [
+        "Linux",
+        "Windows",
+        "FreeBSD",
+        "macOS"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What is Packer used for?",
+      "options": [
+        "Packaging files",
+        "Building VM images from specification",
+        "Backup software",
+        "File compression"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What format does Packer use?",
+      "options": [
+        "XML",
+        "YAML",
+        "JSON",
+        "INI"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What is Vagrant?",
+      "options": [
+        "Virtualization platform",
+        "Wrapper on top of virtualization platforms",
+        "Operating system",
+        "Container engine"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What can Vagrant simplify?",
+      "options": [
+        "Web browsing",
+        "Virtual environment provisioning",
+        "Email",
+        "File compression"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What is the containers-on-VMs architecture used for?",
+      "options": [
+        "Testing",
+        "Containerized apps on public clouds",
+        "File storage",
+        "Database replication"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What resource overhead do containers have?",
+      "options": [
+        "Very high",
+        "Moderate",
+        "Low, near-native performance",
+        "Unknown"
+      ],
+      "answer": 2
+    }
+  ]
+}

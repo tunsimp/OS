@@ -1,0 +1,220 @@
+{
+  "metadata": {
+    "source_file": "SNA_DNS.pdf",
+    "total_questions": 21,
+    "format": "multiple_choice",
+    "options_per_question": 4
+  },
+  "questions": [
+    {
+      "question": "What does DNS stand for?",
+      "options": [
+        "Data Network Service",
+        "Domain Name System",
+        "Digital Network Standard",
+        "Distributed Name Service"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Why is DNS distributed hierarchically instead of centralized?",
+      "options": [
+        "Faster servers available",
+        "Avoids single point of failure, manages traffic volume",
+        "Uses less power",
+        "Easier to understand"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "How many logical root name servers exist worldwide?",
+      "options": [
+        "3",
+        "7",
+        "13",
+        "256"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does ICANN manage?",
+      "options": [
+        "Internet security",
+        "Root DNS domain and address allocation",
+        "Website content",
+        "Email services"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What is a Top-Level Domain (TLD)?",
+      "options": [
+        ".co.uk",
+        ".com, .org, .edu",
+        "www.example",
+        "mail.google"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Who is responsible for .com and .net TLDs?",
+      "options": [
+        "ICANN",
+        "Network Solutions",
+        "Root servers",
+        "ISPs"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What role does a local DNS server play?",
+      "options": [
+        "Only for internal networks",
+        "Returns cached translations or forwards to hierarchy",
+        "Stores all DNS records",
+        "Only processes recursive queries"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "In an iterated DNS query, what does the contacted server reply with?",
+      "options": [
+        "The IP address directly",
+        "Name of server to contact next",
+        "Error message",
+        "Random IP"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What is the main advantage of DNS caching?",
+      "options": [
+        "More disk space needed",
+        "Improves response time",
+        "Requires more processing",
+        "Increases traffic"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What DNS record type maps hostname to IP address?",
+      "options": [
+        "NS",
+        "A",
+        "MX",
+        "CNAME"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does CNAME record represent?",
+      "options": [
+        "Canonical name mapping",
+        "Cache name record",
+        "Connection mode",
+        "Custom network"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What is the purpose of MX record?",
+      "options": [
+        "Hostname mapping",
+        "Mapping to mail server",
+        "Maximum exchanges",
+        "Memory exchange"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What happens if TTL expires on cached DNS entry?",
+      "options": [
+        "Entry is kept forever",
+        "Entry is removed from cache",
+        "Query is blocked",
+        "Entry becomes permanent"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "How many steps are required to resolve www.amazon.com?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "5"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What security protocol provides DNS authentication?",
+      "options": [
+        "SSL/TLS",
+        "DNSSEC",
+        "AES",
+        "RSA"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which command can be used to query DNS?",
+      "options": [
+        "dig",
+        "nslookup",
+        "host",
+        "All of above"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What file contains static hostname-to-IP mappings?",
+      "options": [
+        "/etc/hosts",
+        "/etc/network",
+        "/etc/domain",
+        "/etc/dns"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Who must be contacted to register a domain name?",
+      "options": [
+        "Root server",
+        "DNS registrar",
+        "ISP",
+        "IANA"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What must a DNS registrar insert into TLD server?",
+      "options": [
+        "Only A records",
+        "NS and A records",
+        "Only NS records",
+        "All records"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What is a DDoS attack on DNS likely to target?",
+      "options": [
+        "Only local servers",
+        "Root or TLD servers",
+        "Client machines",
+        "Email servers"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "In a recursive DNS query, where is the burden placed?",
+      "options": [
+        "Client",
+        "Contacted server",
+        "Root server",
+        "Local network"
+      ],
+      "answer": 1
+    }
+  ]
+}

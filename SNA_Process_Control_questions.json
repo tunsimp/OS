@@ -1,0 +1,220 @@
+{
+  "metadata": {
+    "source_file": "SNA_Process_Control.pdf",
+    "total_questions": 21,
+    "format": "multiple_choice",
+    "options_per_question": 4
+  },
+  "questions": [
+    {
+      "question": "What is a process?",
+      "options": [
+        "Execution thread",
+        "Running program with address space",
+        "Memory segment",
+        "Kernel function"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does PID represent?",
+      "options": [
+        "Process Information Data",
+        "Process ID number",
+        "Primary ID",
+        "Program Identifier"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does PPID stand for?",
+      "options": [
+        "Primary Process ID",
+        "Parent Process ID",
+        "Program Process ID",
+        "Priority ID"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does fork() system call do?",
+      "options": [
+        "Terminates process",
+        "Copies process into new process",
+        "Changes program",
+        "Sends signal"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does exec family of routines do?",
+      "options": [
+        "Execute multiple processes",
+        "Begin execution of new program",
+        "Change directory",
+        "Delete files"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What must happen before a process disappears?",
+      "options": [
+        "Parent must wait",
+        "Kernel must acknowledge",
+        "Process must signal",
+        "Parent must wait via wait()"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What happens to orphan processes?",
+      "options": [
+        "They die",
+        "Kernel makes them children of init/systemd",
+        "They become zombies",
+        "They migrate"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What are signals?",
+      "options": [
+        "Network packets",
+        "Process-level interrupt requests",
+        "File permissions",
+        "Memory blocks"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What signal is sent by pressing <Control-C>?",
+      "options": [
+        "TERM",
+        "KILL",
+        "INT",
+        "QUIT"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Which signal cannot be caught or blocked?",
+      "options": [
+        "TERM",
+        "INT",
+        "KILL",
+        "HUP"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'catching a signal' mean?",
+      "options": [
+        "Blocking signal",
+        "Designating handler routine",
+        "Ignoring signal",
+        "Sending signal"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What is the default action of TERM signal?",
+      "options": [
+        "Stop",
+        "Continue",
+        "Terminate",
+        "Dump core"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Which signal is used by daemons to reread config?",
+      "options": [
+        "QUIT",
+        "TERM",
+        "HUP",
+        "USR1"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'kill' command do by default?",
+      "options": [
+        "Send KILL",
+        "Send TERM",
+        "Send INT",
+        "Send HUP"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does KILL signal (9) do?",
+      "options": [
+        "Request termination",
+        "Unblockably terminate at kernel level",
+        "Stop process",
+        "Pause process"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What tool is main for monitoring processes?",
+      "options": [
+        "top",
+        "htop",
+        "ps",
+        "pstat"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What information does ps show?",
+      "options": [
+        "Only running processes",
+        "PID, UID, priority, terminal",
+        "Memory usage only",
+        "Network connections"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What is a zombie process?",
+      "options": [
+        "Running process",
+        "Finished but status not collected",
+        "Sleeping process",
+        "Suspended process"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What command provides real-time process monitoring?",
+      "options": [
+        "ps",
+        "top",
+        "ls",
+        "find"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What can process owner do?",
+      "options": [
+        "Delete any file",
+        "Send signals and reduce priority",
+        "Change UID",
+        "Modify kernel"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What defines process scheduling priority?",
+      "options": [
+        "UID",
+        "Niceness value",
+        "GID",
+        "PID"
+      ],
+      "answer": 1
+    }
+  ]
+}

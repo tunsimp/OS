@@ -1,0 +1,220 @@
+{
+  "metadata": {
+    "source_file": "SNA_Monitoring.pdf",
+    "total_questions": 21,
+    "format": "multiple_choice",
+    "options_per_question": 4
+  },
+  "questions": [
+    {
+      "question": "What is the primary goal of system monitoring?",
+      "options": [
+        "Increase bandwidth",
+        "Ensure infrastructure operates as expected",
+        "Reduce costs",
+        "Speed up applications"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which monitoring platform specializes in real-time notification of errors?",
+      "options": [
+        "Graphite",
+        "InfluxDB",
+        "Nagios and Icinga",
+        "Prometheus"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What are the three types of data in monitoring?",
+      "options": [
+        "Static, dynamic, temporal",
+        "Real-time metrics, events, aggregated trends",
+        "Network, storage, compute",
+        "Logs, files, streams"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What is the modern approach to monitoring data?",
+      "options": [
+        "File-based storage",
+        "Time-series database with summarization",
+        "Real-time only",
+        "Batch processing"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which statement about notifications is MOST important?",
+      "options": [
+        "More notifications are always better",
+        "Notifications must be actionable",
+        "Email is the only option",
+        "Silence all alerts"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What is a main advantage of Sensu monitoring platform?",
+      "options": [
+        "Cheapest option",
+        "Can run legacy plugins from Nagios",
+        "Requires no configuration",
+        "Only for Linux"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which tool monitors load averages on a system?",
+      "options": [
+        "ping",
+        "SNMP",
+        "uptime command",
+        "DNS lookup"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does logwatch do?",
+      "options": [
+        "Monitor network packets",
+        "Monitor application logs",
+        "Monitor file changes",
+        "Monitor user login"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which security monitoring approach validates system state against baseline?",
+      "options": [
+        "Port scanning",
+        "System integrity verification",
+        "Packet capture",
+        "Traffic analysis"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Name a popular open source HIDS platform:",
+      "options": [
+        "Snort",
+        "OSSEC",
+        "iptables",
+        "tcpdump"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What is mtree used for?",
+      "options": [
+        "Time synchronization",
+        "System integrity verification",
+        "Memory testing",
+        "Mount filesystem"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does monitoring platforms do with metrics?",
+      "options": [
+        "Delete them",
+        "Evaluate using admin-set rules",
+        "Store in RAM only",
+        "Send to cloud only"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which is a time-series monitoring platform with integrated alerting?",
+      "options": [
+        "Graphite",
+        "Prometheus",
+        "Nagios",
+        "Sensu"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What feature helps avoid monitoring burnout?",
+      "options": [
+        "Increase all alerts",
+        "Monitor everything",
+        "Define what really needs 24/7 attention",
+        "Disable logging"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Which tool pairs with Graphite for visualization?",
+      "options": [
+        "Prometheus",
+        "Grafana",
+        "Sensu",
+        "Icinga"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What should happen before a service goes to production?",
+      "options": [
+        "No testing",
+        "Added to monitoring system",
+        "Certified by auditor",
+        "Installed at night"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What is the purpose of run books in monitoring?",
+      "options": [
+        "Run applications",
+        "Document incident response procedures",
+        "Monitor bandwidth",
+        "Track licenses"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which monitoring tool uses ping to check network status?",
+      "options": [
+        "Graphite",
+        "Network monitoring tools",
+        "InfluxDB",
+        "Prometheus"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What data management feature does InfluxDB provide?",
+      "options": [
+        "Basic storage",
+        "Richer data management features",
+        "No data retention",
+        "File-based only"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What is AIDE abbreviation stand for?",
+      "options": [
+        "Advanced Internet Data Exchange",
+        "Advanced Intrusion Detection Environment",
+        "Application Interface Development",
+        "Automated Infrastructure Deployment"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "How often does monitoring platform typically update by default?",
+      "options": [
+        "Every hour",
+        "Every 1-2 seconds",
+        "Only on demand",
+        "Never automatically"
+      ],
+      "answer": 1
+    }
+  ]
+}

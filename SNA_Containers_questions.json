@@ -1,0 +1,220 @@
+{
+  "metadata": {
+    "source_file": "SNA_Containers.pdf",
+    "total_questions": 21,
+    "format": "multiple_choice",
+    "options_per_question": 4
+  },
+  "questions": [
+    {
+      "question": "What is a container?",
+      "options": [
+        "Physical box",
+        "Isolated group of processes with private filesystem",
+        "Shipping container",
+        "Database"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "How do containers provide isolation?",
+      "options": [
+        "Multiple kernels",
+        "Namespaces and control groups",
+        "Virtual machines",
+        "Hardware partition"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What is Docker?",
+      "options": [
+        "Database system",
+        "Open source container engine",
+        "Web server",
+        "Filesystem"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What is a container image?",
+      "options": [
+        "Picture of container",
+        "Template for a container",
+        "Snapshot",
+        "Backup"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "How many read/write layers do containers have?",
+      "options": [
+        "One",
+        "Multiple",
+        "None",
+        "Dynamic number"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What kernel feature isolates namespaces?",
+      "options": [
+        "Cgroups",
+        "Namespaces",
+        "SELinux",
+        "AppArmor"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What do control groups (cgroups) do?",
+      "options": [
+        "Isolate processes",
+        "Prevent resource runaway",
+        "Encrypt data",
+        "Manage users"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What is seccomp?",
+      "options": [
+        "Security compiler",
+        "Secure computing mode for fine-grained control",
+        "System compression",
+        "Security checkpoint"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What is Docker daemon called?",
+      "options": [
+        "docker",
+        "dockerd",
+        "docker-service",
+        "container-d"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What is a volume in Docker?",
+      "options": [
+        "Disk partition",
+        "Independent writable directory",
+        "Network drive",
+        "Memory area"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What is container networking default option?",
+      "options": [
+        "Host",
+        "Bridge",
+        "Overlay",
+        "Custom"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What is a bridge in container networking?",
+      "options": [
+        "Network device",
+        "Connects two networks",
+        "Container to container link",
+        "Docker command"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does union filesystem do?",
+      "options": [
+        "Combines directories",
+        "Encrypts data",
+        "Compresses files",
+        "Partitions disk"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What is a Dockerfile?",
+      "options": [
+        "Configuration file",
+        "Recipe for building image",
+        "Document folder",
+        "Data file"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'docker build' do?",
+      "options": [
+        "Start container",
+        "Reads Dockerfile and creates image",
+        "Remove image",
+        "Deploy container"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Can multiple containers share base layers?",
+      "options": [
+        "Never",
+        "Only with copy",
+        "Yes, improving efficiency",
+        "Only on same host"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What is the main benefit of containers vs VMs?",
+      "options": [
+        "Better security",
+        "Lower overhead, faster startup",
+        "More isolation",
+        "Better hardware support"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What is container networking bridge?",
+      "options": [
+        "VPN connection",
+        "Linux kernel feature connecting networks",
+        "Virtual network",
+        "USB bridge"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Can containers access files outside their filesystem?",
+      "options": [
+        "Yes, always",
+        "No, without explicit volumes",
+        "Only as root",
+        "With special permission"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What prevents containers from interfering with each other?",
+      "options": [
+        "Separate disks",
+        "Isolation mechanisms",
+        "Different UID",
+        "Separate networks only"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What is docker-compose used for?",
+      "options": [
+        "Build images",
+        "Run single container",
+        "Manage multi-container applications",
+        "Delete containers"
+      ],
+      "answer": 2
+    }
+  ]
+}

@@ -1,0 +1,2122 @@
+{
+  "SNA_Network_Services.pdf": [
+    {
+      "question": "What does HTTP stand for?",
+      "options": [
+        "HyperText Transfer Portal",
+        "HyperText Transfer Protocol",
+        "High Transfer Text Protocol",
+        "Host Transfer Protocol"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which port does HTTP use by default?",
+      "options": [
+        "8080",
+        "443",
+        "80",
+        "3000"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What is a web page composed of?",
+      "options": [
+        "Only HTML files",
+        "Objects stored on different servers",
+        "JavaScript files only",
+        "CSS stylesheets only"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What is the main difference between persistent and non-persistent HTTP?",
+      "options": [
+        "Persistent uses UDP",
+        "Non-persistent closes TCP connection after each object",
+        "Persistent uses different ports",
+        "Non-persistent is more secure"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What HTTP method uploads a new file to the server?",
+      "options": [
+        "GET",
+        "POST",
+        "PUT",
+        "DELETE"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'stateless' mean in the context of HTTP?",
+      "options": [
+        "Server cannot store files",
+        "Server maintains no information about past requests",
+        "Connection is always open",
+        "Server can only handle one request at a time"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What is the primary purpose of HTTP cookies?",
+      "options": [
+        "Improve website loading speed",
+        "Store client-side session information",
+        "Encrypt data transmission",
+        "Compress HTTP responses"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which of the following is NOT an HTTP request method?",
+      "options": [
+        "GET",
+        "POST",
+        "RECEIVE",
+        "PUT"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What is a web cache (proxy server)?",
+      "options": [
+        "Hardware that stores files",
+        "Server that acts as both client and server",
+        "Application that improves website graphics",
+        "Tool to monitor network traffic"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does SMTP protocol handle?",
+      "options": [
+        "Email retrieval",
+        "Email delivery and sending",
+        "Web page transfer",
+        "Domain name resolution"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which port does SMTP use by default?",
+      "options": [
+        "25",
+        "110",
+        "143",
+        "587"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What is the purpose of the HEAD HTTP method?",
+      "options": [
+        "Delete server headers",
+        "Request headers only without response body",
+        "Modify HTTP headers",
+        "Establish connection"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "How many RTTs (Round Trip Times) does persistent HTTP require for multiple objects?",
+      "options": [
+        "One RTT per object",
+        "Two RTTs per object",
+        "One RTT for all objects",
+        "Three RTTs per object"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does IMAP protocol provide?",
+      "options": [
+        "Email sending only",
+        "Message storage and retrieval",
+        "Network routing",
+        "Domain registration"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which component handles incoming mail in the mail system?",
+      "options": [
+        "MTA",
+        "UA",
+        "DA (Delivery Agent)",
+        "MSA"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What is the role of load balancer in a web application stack?",
+      "options": [
+        "Increase database capacity",
+        "Forward requests to healthy servers",
+        "Encrypt HTTP traffic",
+        "Store static files"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which open source caching software is known for excellent configuration language?",
+      "options": [
+        "Squid",
+        "Varnish",
+        "Apache mod_cache",
+        "NGINX"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What is the standard payload size of an Ethernet frame?",
+      "options": [
+        "1024 bytes",
+        "2000 bytes",
+        "1500 bytes",
+        "512 bytes"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does a web application firewall search for?",
+      "options": [
+        "Slow requests",
+        "Malicious requests",
+        "Large files",
+        "Unknown protocols"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What format are Packer configurations written in?",
+      "options": [
+        "YAML",
+        "XML",
+        "JSON",
+        "Python"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "How are HTTP response messages structured?",
+      "options": [
+        "Data first, then headers",
+        "Status line, headers, blank line, data",
+        "Headers only, no data",
+        "Only status code"
+      ],
+      "answer": 1
+    }
+  ],
+  "SNA_Monitoring.pdf": [
+    {
+      "question": "What is the primary goal of system monitoring?",
+      "options": [
+        "Increase bandwidth",
+        "Ensure infrastructure operates as expected",
+        "Reduce costs",
+        "Speed up applications"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which monitoring platform specializes in real-time notification of errors?",
+      "options": [
+        "Graphite",
+        "InfluxDB",
+        "Nagios and Icinga",
+        "Prometheus"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What are the three types of data in monitoring?",
+      "options": [
+        "Static, dynamic, temporal",
+        "Real-time metrics, events, aggregated trends",
+        "Network, storage, compute",
+        "Logs, files, streams"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What is the modern approach to monitoring data?",
+      "options": [
+        "File-based storage",
+        "Time-series database with summarization",
+        "Real-time only",
+        "Batch processing"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which statement about notifications is MOST important?",
+      "options": [
+        "More notifications are always better",
+        "Notifications must be actionable",
+        "Email is the only option",
+        "Silence all alerts"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What is a main advantage of Sensu monitoring platform?",
+      "options": [
+        "Cheapest option",
+        "Can run legacy plugins from Nagios",
+        "Requires no configuration",
+        "Only for Linux"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which tool monitors load averages on a system?",
+      "options": [
+        "ping",
+        "SNMP",
+        "uptime command",
+        "DNS lookup"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does logwatch do?",
+      "options": [
+        "Monitor network packets",
+        "Monitor application logs",
+        "Monitor file changes",
+        "Monitor user login"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which security monitoring approach validates system state against baseline?",
+      "options": [
+        "Port scanning",
+        "System integrity verification",
+        "Packet capture",
+        "Traffic analysis"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Name a popular open source HIDS platform:",
+      "options": [
+        "Snort",
+        "OSSEC",
+        "iptables",
+        "tcpdump"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What is mtree used for?",
+      "options": [
+        "Time synchronization",
+        "System integrity verification",
+        "Memory testing",
+        "Mount filesystem"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does monitoring platforms do with metrics?",
+      "options": [
+        "Delete them",
+        "Evaluate using admin-set rules",
+        "Store in RAM only",
+        "Send to cloud only"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which is a time-series monitoring platform with integrated alerting?",
+      "options": [
+        "Graphite",
+        "Prometheus",
+        "Nagios",
+        "Sensu"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What feature helps avoid monitoring burnout?",
+      "options": [
+        "Increase all alerts",
+        "Monitor everything",
+        "Define what really needs 24/7 attention",
+        "Disable logging"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Which tool pairs with Graphite for visualization?",
+      "options": [
+        "Prometheus",
+        "Grafana",
+        "Sensu",
+        "Icinga"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What should happen before a service goes to production?",
+      "options": [
+        "No testing",
+        "Added to monitoring system",
+        "Certified by auditor",
+        "Installed at night"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What is the purpose of run books in monitoring?",
+      "options": [
+        "Run applications",
+        "Document incident response procedures",
+        "Monitor bandwidth",
+        "Track licenses"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which monitoring tool uses ping to check network status?",
+      "options": [
+        "Graphite",
+        "Network monitoring tools",
+        "InfluxDB",
+        "Prometheus"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What data management feature does InfluxDB provide?",
+      "options": [
+        "Basic storage",
+        "Richer data management features",
+        "No data retention",
+        "File-based only"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What is AIDE abbreviation stand for?",
+      "options": [
+        "Advanced Internet Data Exchange",
+        "Advanced Intrusion Detection Environment",
+        "Application Interface Development",
+        "Automated Infrastructure Deployment"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "How often does monitoring platform typically update by default?",
+      "options": [
+        "Every hour",
+        "Every 1-2 seconds",
+        "Only on demand",
+        "Never automatically"
+      ],
+      "answer": 1
+    }
+  ],
+  "SNA_DNS.pdf": [
+    {
+      "question": "What does DNS stand for?",
+      "options": [
+        "Data Network Service",
+        "Domain Name System",
+        "Digital Network Standard",
+        "Distributed Name Service"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Why is DNS distributed hierarchically instead of centralized?",
+      "options": [
+        "Faster servers available",
+        "Avoids single point of failure, manages traffic volume",
+        "Uses less power",
+        "Easier to understand"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "How many logical root name servers exist worldwide?",
+      "options": [
+        "3",
+        "7",
+        "13",
+        "256"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does ICANN manage?",
+      "options": [
+        "Internet security",
+        "Root DNS domain and address allocation",
+        "Website content",
+        "Email services"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What is a Top-Level Domain (TLD)?",
+      "options": [
+        ".co.uk",
+        ".com, .org, .edu",
+        "www.example",
+        "mail.google"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Who is responsible for .com and .net TLDs?",
+      "options": [
+        "ICANN",
+        "Network Solutions",
+        "Root servers",
+        "ISPs"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What role does a local DNS server play?",
+      "options": [
+        "Only for internal networks",
+        "Returns cached translations or forwards to hierarchy",
+        "Stores all DNS records",
+        "Only processes recursive queries"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "In an iterated DNS query, what does the contacted server reply with?",
+      "options": [
+        "The IP address directly",
+        "Name of server to contact next",
+        "Error message",
+        "Random IP"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What is the main advantage of DNS caching?",
+      "options": [
+        "More disk space needed",
+        "Improves response time",
+        "Requires more processing",
+        "Increases traffic"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What DNS record type maps hostname to IP address?",
+      "options": [
+        "NS",
+        "A",
+        "MX",
+        "CNAME"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does CNAME record represent?",
+      "options": [
+        "Canonical name mapping",
+        "Cache name record",
+        "Connection mode",
+        "Custom network"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What is the purpose of MX record?",
+      "options": [
+        "Hostname mapping",
+        "Mapping to mail server",
+        "Maximum exchanges",
+        "Memory exchange"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What happens if TTL expires on cached DNS entry?",
+      "options": [
+        "Entry is kept forever",
+        "Entry is removed from cache",
+        "Query is blocked",
+        "Entry becomes permanent"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "How many steps are required to resolve www.amazon.com?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "5"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What security protocol provides DNS authentication?",
+      "options": [
+        "SSL/TLS",
+        "DNSSEC",
+        "AES",
+        "RSA"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which command can be used to query DNS?",
+      "options": [
+        "dig",
+        "nslookup",
+        "host",
+        "All of above"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What file contains static hostname-to-IP mappings?",
+      "options": [
+        "/etc/hosts",
+        "/etc/network",
+        "/etc/domain",
+        "/etc/dns"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Who must be contacted to register a domain name?",
+      "options": [
+        "Root server",
+        "DNS registrar",
+        "ISP",
+        "IANA"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What must a DNS registrar insert into TLD server?",
+      "options": [
+        "Only A records",
+        "NS and A records",
+        "Only NS records",
+        "All records"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What is a DDoS attack on DNS likely to target?",
+      "options": [
+        "Only local servers",
+        "Root or TLD servers",
+        "Client machines",
+        "Email servers"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "In a recursive DNS query, where is the burden placed?",
+      "options": [
+        "Client",
+        "Contacted server",
+        "Root server",
+        "Local network"
+      ],
+      "answer": 1
+    }
+  ],
+  "SNA_Performance_Analysis.pdf": [
+    {
+      "question": "What is the first step when diagnosing a slow server?",
+      "options": [
+        "Reboot it",
+        "Run ps or top to find runaway processes",
+        "Increase memory",
+        "Change kernel parameters"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which file shows CPU information on Linux?",
+      "options": [
+        "/proc/meminfo",
+        "/proc/cpuinfo",
+        "/proc/diskstats",
+        "/proc/network"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'st' metric represent in vmstat/top?",
+      "options": [
+        "System time",
+        "Stolen CPU cycles",
+        "Storage time",
+        "Status"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What is the most common performance bottleneck?",
+      "options": [
+        "CPU utilization",
+        "Memory availability",
+        "Disk bandwidth",
+        "Network latency"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What command shows system load averages?",
+      "options": [
+        "ps",
+        "top",
+        "uptime",
+        "iostat"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What do 'si' and 'so' represent in vmstat output?",
+      "options": [
+        "System input/output",
+        "Page-in/page-out",
+        "Speed in/out",
+        "Socket input/output"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does iostat measure?",
+      "options": [
+        "Internet of Things statistics",
+        "Disk I/O activity",
+        "CPU statistics",
+        "Memory usage"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which I/O scheduler is best for mechanical hard disks?",
+      "options": [
+        "NOOP",
+        "Deadline",
+        "Completely Fair Queuing",
+        "FIFO"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Which I/O scheduler is best for SSD drives?",
+      "options": [
+        "Completely Fair Queuing",
+        "Deadline",
+        "NOOP",
+        "Random"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does mpstat show that vmstat doesn't?",
+      "options": [
+        "Memory details",
+        "Per-CPU statistics",
+        "Disk activity",
+        "Network information"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What are the three load average values in uptime output represent?",
+      "options": [
+        "1, 5, 15 minutes",
+        "1, 2, 3 hours",
+        "Low, medium, high",
+        "First, second, third"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "If a process uses >50% CPU, what is likely?",
+      "options": [
+        "Normal behavior",
+        "Process is at fault",
+        "System is fine",
+        "Memory issue"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which file provides memory size and usage information?",
+      "options": [
+        "/proc/cpuinfo",
+        "/proc/meminfo",
+        "/proc/diskstats",
+        "/proc/network"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What should you do before making system changes?",
+      "options": [
+        "Document changes",
+        "Have a rollback plan",
+        "Change multiple things",
+        "No documentation needed"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "How many ways can CPU cycles be stolen in virtualization?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "Unlimited"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'kB_read/s' represent in iostat?",
+      "options": [
+        "Kilobytes read per second",
+        "Total kilobytes read",
+        "Key bytes read",
+        "Knowledge bytes"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What is 'tps' in iostat output?",
+      "options": [
+        "Total packet size",
+        "Transfers per second",
+        "Transfer protocol size",
+        "Time per second"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which command shows per-CPU statistics?",
+      "options": [
+        "vmstat",
+        "iostat",
+        "mpstat",
+        "uptime"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What performance analysis step comes after gathering evidence?",
+      "options": [
+        "Develop conclusion",
+        "Critically appraise data",
+        "Formulate question",
+        "Gather more evidence"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What should baseline comparison focus on?",
+      "options": [
+        "Other systems",
+        "Current vs. previous measurements",
+        "Industry standards",
+        "Theoretical maximum"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What is the recommended monitoring tool for routine observation?",
+      "options": [
+        "Intensive profiler",
+        "Simple lightweight tool like sar",
+        "Wireshark",
+        "strace"
+      ],
+      "answer": 1
+    }
+  ],
+  "SNA_Virtualization.pdf": [
+    {
+      "question": "What is the main purpose of a hypervisor?",
+      "options": [
+        "Increase bandwidth",
+        "Mediate between VMs and hardware",
+        "Manage user accounts",
+        "Compile code"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does full virtualization do?",
+      "options": [
+        "Partially emulate hardware",
+        "Fully emulate underlying hardware",
+        "Use special CPU",
+        "Share operating system"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What is a key limitation of full virtualization?",
+      "options": [
+        "High performance",
+        "No overhead",
+        "Performance penalty due to translation",
+        "Requires no modification"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What is paravirtualization?",
+      "options": [
+        "Partial virtualization",
+        "Modified guests cooperate with hypervisor",
+        "Full hardware emulation",
+        "Container-based"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which hypervisor uses paravirtualization?",
+      "options": [
+        "KVM",
+        "Xen",
+        "VMware",
+        "VirtualBox"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What enables hardware-assisted virtualization?",
+      "options": [
+        "Software algorithms",
+        "CPU features like Intel VT",
+        "Kernel modules",
+        "Network optimization"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does KVM stand for?",
+      "options": [
+        "Kernel Virtual Machine",
+        "Key Value Map",
+        "Knowledge Virtual Module",
+        "Kernel Visualization Module"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What is a Type 1 hypervisor?",
+      "options": [
+        "User-space application",
+        "Bare-metal/native hypervisor",
+        "Container",
+        "Emulator"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Example of Type 2 hypervisor:",
+      "options": [
+        "XenServer",
+        "VMware ESXi",
+        "VirtualBox",
+        "Hyper-V"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What is live migration?",
+      "options": [
+        "Moving files",
+        "Moving VMs between hypervisors without downtime",
+        "Updating kernel",
+        "Rebooting system"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What is memory dance in VM migration?",
+      "options": [
+        "Animation technique",
+        "Copying memory changes between source and destination",
+        "Memory leak",
+        "Disk activity"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What are virtual machine images?",
+      "options": [
+        "Screenshot files",
+        "Templates of configured operating systems",
+        "Network diagrams",
+        "Backup files"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Can VM images be portable across different hardware?",
+      "options": [
+        "Never",
+        "Sometimes",
+        "Yes, with conversion tools",
+        "Only if same CPU"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What is containerization?",
+      "options": [
+        "Shipping containers",
+        "OS-level virtualization without hypervisor",
+        "File storage",
+        "Data backup"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which OS provides FreeBSD jails?",
+      "options": [
+        "Linux",
+        "Windows",
+        "FreeBSD",
+        "macOS"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What is Packer used for?",
+      "options": [
+        "Packaging files",
+        "Building VM images from specification",
+        "Backup software",
+        "File compression"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What format does Packer use?",
+      "options": [
+        "XML",
+        "YAML",
+        "JSON",
+        "INI"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What is Vagrant?",
+      "options": [
+        "Virtualization platform",
+        "Wrapper on top of virtualization platforms",
+        "Operating system",
+        "Container engine"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What can Vagrant simplify?",
+      "options": [
+        "Web browsing",
+        "Virtual environment provisioning",
+        "Email",
+        "File compression"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What is the containers-on-VMs architecture used for?",
+      "options": [
+        "Testing",
+        "Containerized apps on public clouds",
+        "File storage",
+        "Database replication"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What resource overhead do containers have?",
+      "options": [
+        "Very high",
+        "Moderate",
+        "Low, near-native performance",
+        "Unknown"
+      ],
+      "answer": 2
+    }
+  ],
+  "SNA_Process_Control.pdf": [
+    {
+      "question": "What is a process?",
+      "options": [
+        "Execution thread",
+        "Running program with address space",
+        "Memory segment",
+        "Kernel function"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does PID represent?",
+      "options": [
+        "Process Information Data",
+        "Process ID number",
+        "Primary ID",
+        "Program Identifier"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does PPID stand for?",
+      "options": [
+        "Primary Process ID",
+        "Parent Process ID",
+        "Program Process ID",
+        "Priority ID"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does fork() system call do?",
+      "options": [
+        "Terminates process",
+        "Copies process into new process",
+        "Changes program",
+        "Sends signal"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does exec family of routines do?",
+      "options": [
+        "Execute multiple processes",
+        "Begin execution of new program",
+        "Change directory",
+        "Delete files"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What must happen before a process disappears?",
+      "options": [
+        "Parent must wait",
+        "Kernel must acknowledge",
+        "Process must signal",
+        "Parent must wait via wait()"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What happens to orphan processes?",
+      "options": [
+        "They die",
+        "Kernel makes them children of init/systemd",
+        "They become zombies",
+        "They migrate"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What are signals?",
+      "options": [
+        "Network packets",
+        "Process-level interrupt requests",
+        "File permissions",
+        "Memory blocks"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What signal is sent by pressing <Control-C>?",
+      "options": [
+        "TERM",
+        "KILL",
+        "INT",
+        "QUIT"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Which signal cannot be caught or blocked?",
+      "options": [
+        "TERM",
+        "INT",
+        "KILL",
+        "HUP"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'catching a signal' mean?",
+      "options": [
+        "Blocking signal",
+        "Designating handler routine",
+        "Ignoring signal",
+        "Sending signal"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What is the default action of TERM signal?",
+      "options": [
+        "Stop",
+        "Continue",
+        "Terminate",
+        "Dump core"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Which signal is used by daemons to reread config?",
+      "options": [
+        "QUIT",
+        "TERM",
+        "HUP",
+        "USR1"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'kill' command do by default?",
+      "options": [
+        "Send KILL",
+        "Send TERM",
+        "Send INT",
+        "Send HUP"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does KILL signal (9) do?",
+      "options": [
+        "Request termination",
+        "Unblockably terminate at kernel level",
+        "Stop process",
+        "Pause process"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What tool is main for monitoring processes?",
+      "options": [
+        "top",
+        "htop",
+        "ps",
+        "pstat"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What information does ps show?",
+      "options": [
+        "Only running processes",
+        "PID, UID, priority, terminal",
+        "Memory usage only",
+        "Network connections"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What is a zombie process?",
+      "options": [
+        "Running process",
+        "Finished but status not collected",
+        "Sleeping process",
+        "Suspended process"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What command provides real-time process monitoring?",
+      "options": [
+        "ps",
+        "top",
+        "ls",
+        "find"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What can process owner do?",
+      "options": [
+        "Delete any file",
+        "Send signals and reduce priority",
+        "Change UID",
+        "Modify kernel"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What defines process scheduling priority?",
+      "options": [
+        "UID",
+        "Niceness value",
+        "GID",
+        "PID"
+      ],
+      "answer": 1
+    }
+  ],
+  "SNA_Booting_and_Sys_Mgmt_Daemons.pdf": [
+    {
+      "question": "What is a daemon?",
+      "options": [
+        "Error message",
+        "Background process providing service",
+        "Device driver",
+        "Security module"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "When do system daemons typically start?",
+      "options": [
+        "On demand",
+        "During system boot",
+        "When user logs in",
+        "Never automatically"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What is the first process started during boot?",
+      "options": [
+        "kernel",
+        "init/systemd",
+        "login",
+        "shell"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What controls daemon startup on modern systems?",
+      "options": [
+        "cron",
+        "init scripts",
+        "systemd",
+        "BIOS"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "How are system services managed in systemd?",
+      "options": [
+        "Shell scripts",
+        "Unit files",
+        "Binary executables",
+        "Configuration files only"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What command manages services in systemd?",
+      "options": [
+        "service",
+        "systemctl",
+        "daemon",
+        "init"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Where are systemd unit files typically located?",
+      "options": [
+        "/etc/services",
+        "/etc/systemd/system",
+        "/etc/init.d",
+        "/usr/bin"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'enable' do for a systemd service?",
+      "options": [
+        "Start immediately",
+        "Run on next boot",
+        "Stop service",
+        "Remove service"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "How are SysV init scripts named?",
+      "options": [
+        "service.conf",
+        "S##name",
+        "name.service",
+        "daemon.sh"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What directory contains SysV init scripts?",
+      "options": [
+        "/etc/init",
+        "/etc/init.d",
+        "/etc/systemd",
+        "/usr/init"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What advantage does systemd have over SysV?",
+      "options": [
+        "Uses less memory",
+        "Parallel startup of services",
+        "Simpler syntax",
+        "Better performance"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does daemon typically do after startup?",
+      "options": [
+        "Terminate",
+        "Display message",
+        "Detach from terminal",
+        "Start child processes"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "How can you check if daemon is running?",
+      "options": [
+        "Use ps command",
+        "Check systemd status",
+        "Look at log files",
+        "All of above"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What is runlevel?",
+      "options": [
+        "CPU frequency",
+        "System state defining which services run",
+        "Network speed",
+        "Memory size"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What runlevel is single-user mode?",
+      "options": [
+        "0",
+        "1",
+        "3",
+        "5"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What runlevel is multi-user with GUI?",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What command changes runlevel?",
+      "options": [
+        "init",
+        "runlevel",
+        "telinit",
+        "systemctl"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does /etc/inittab configure?",
+      "options": [
+        "Network",
+        "Initial processes in SysV",
+        "File systems",
+        "Users"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What is the purpose of respawn in init?",
+      "options": [
+        "Restart if stopped",
+        "Spawn processes",
+        "Create users",
+        "Mount filesystems"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "How can daemon logs be accessed?",
+      "options": [
+        "journalctl",
+        "syslog",
+        "Log files",
+        "All of above"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What should daemon do if configuration file is missing?",
+      "options": [
+        "Crash",
+        "Use defaults or fail gracefully",
+        "Ignore",
+        "Create file"
+      ],
+      "answer": 1
+    }
+  ],
+  "SNA_Access_control_and_root.pdf": [
+    {
+      "question": "What is the UID of root account?",
+      "options": [
+        "1",
+        "0",
+        "999",
+        "-1"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does DAC stand for?",
+      "options": [
+        "Digital Access Control",
+        "Discretionary Access Control",
+        "Data Access Check",
+        "Device Access Control"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Who can change file permissions in DAC?",
+      "options": [
+        "Anyone",
+        "Only root",
+        "File owner",
+        "Administrator"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What information do UIDs and GIDs identify?",
+      "options": [
+        "Networks",
+        "Users and groups",
+        "Devices",
+        "Processes only"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Where are UID to username mappings stored?",
+      "options": [
+        "/etc/group",
+        "/etc/passwd",
+        "/etc/shadow",
+        "/etc/users"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What identifies group membership?",
+      "options": [
+        "UID",
+        "GID",
+        "PID",
+        "EUID"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What do setuid programs allow?",
+      "options": [
+        "Multiple users",
+        "Run with elevated permissions",
+        "Share files",
+        "Create groups"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What is a dangerous aspect of setuid programs?",
+      "options": [
+        "Slow execution",
+        "Potential security vulnerabilities",
+        "High CPU use",
+        "Memory leaks"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Why is direct root login discouraged?",
+      "options": [
+        "Slow",
+        "No audit trail",
+        "Uses resources",
+        "Bad for graphics"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What command substitutes user identity?",
+      "options": [
+        "login",
+        "su",
+        "sudo",
+        "switch"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What advantage does sudo have over su?",
+      "options": [
+        "Faster",
+        "Better logging and accountability",
+        "More permissions",
+        "Easier to use"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Where are sudo rules configured?",
+      "options": [
+        "/etc/sudoers",
+        "/etc/sudo",
+        "/etc/access",
+        "/root/.sudoers"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What is default password timeout for sudo?",
+      "options": [
+        "1 minute",
+        "5 minutes",
+        "10 minutes",
+        "No timeout"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "How can root account be disabled?",
+      "options": [
+        "Delete it",
+        "Set password to *",
+        "Remove UID 0",
+        "Uninstall"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What are process identities?",
+      "options": [
+        "PID only",
+        "Real, effective, saved UIDs/GIDs",
+        "Names only",
+        "Numbers only"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What is PAM?",
+      "options": [
+        "Password Authentication Module",
+        "Pluggable Authentication Modules",
+        "Process Access Manager",
+        "Port Access Module"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does Kerberos provide?",
+      "options": [
+        "File encryption",
+        "Network cryptographic authentication",
+        "Disk encryption",
+        "User profiles"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What are Linux capabilities?",
+      "options": [
+        "Hardware features",
+        "Division of root powers into permissions",
+        "Network features",
+        "File attributes"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What is SELinux?",
+      "options": [
+        "Secure Email Linux",
+        "Security-Enhanced Linux",
+        "System Extension Linux",
+        "Secure Execution Layer"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does AppArmor focus on?",
+      "options": [
+        "User authentication",
+        "Service security",
+        "Network encryption",
+        "File permissions"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which access control is newer and easier to administer?",
+      "options": [
+        "SELinux",
+        "AppArmor",
+        "DAC",
+        "MAC"
+      ],
+      "answer": 1
+    }
+  ],
+  "SNA_Containers.pdf": [
+    {
+      "question": "What is a container?",
+      "options": [
+        "Physical box",
+        "Isolated group of processes with private filesystem",
+        "Shipping container",
+        "Database"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "How do containers provide isolation?",
+      "options": [
+        "Multiple kernels",
+        "Namespaces and control groups",
+        "Virtual machines",
+        "Hardware partition"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What is Docker?",
+      "options": [
+        "Database system",
+        "Open source container engine",
+        "Web server",
+        "Filesystem"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What is a container image?",
+      "options": [
+        "Picture of container",
+        "Template for a container",
+        "Snapshot",
+        "Backup"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "How many read/write layers do containers have?",
+      "options": [
+        "One",
+        "Multiple",
+        "None",
+        "Dynamic number"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What kernel feature isolates namespaces?",
+      "options": [
+        "Cgroups",
+        "Namespaces",
+        "SELinux",
+        "AppArmor"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What do control groups (cgroups) do?",
+      "options": [
+        "Isolate processes",
+        "Prevent resource runaway",
+        "Encrypt data",
+        "Manage users"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What is seccomp?",
+      "options": [
+        "Security compiler",
+        "Secure computing mode for fine-grained control",
+        "System compression",
+        "Security checkpoint"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What is Docker daemon called?",
+      "options": [
+        "docker",
+        "dockerd",
+        "docker-service",
+        "container-d"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What is a volume in Docker?",
+      "options": [
+        "Disk partition",
+        "Independent writable directory",
+        "Network drive",
+        "Memory area"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What networking option is default for containers?",
+      "options": [
+        "Host",
+        "Bridge",
+        "Overlay",
+        "Custom"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What is a bridge in container networking?",
+      "options": [
+        "Network device",
+        "Connects two networks",
+        "Container to container link",
+        "Docker command"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does union filesystem do?",
+      "options": [
+        "Combines directories",
+        "Encrypts data",
+        "Compresses files",
+        "Partitions disk"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What is a Dockerfile?",
+      "options": [
+        "Configuration file",
+        "Recipe for building image",
+        "Document folder",
+        "Data file"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'docker build' do?",
+      "options": [
+        "Start container",
+        "Reads Dockerfile and creates image",
+        "Remove image",
+        "Deploy container"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Can multiple containers share base layers?",
+      "options": [
+        "Never",
+        "Only with copy",
+        "Yes, improving efficiency",
+        "Only on same host"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What is the main benefit of containers vs VMs?",
+      "options": [
+        "Better security",
+        "Lower overhead, faster startup",
+        "More isolation",
+        "Better hardware support"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What is container networking bridge?",
+      "options": [
+        "VPN connection",
+        "Linux kernel feature connecting networks",
+        "Virtual network",
+        "USB bridge"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Can containers access files outside their filesystem?",
+      "options": [
+        "Yes, always",
+        "No, without explicit volumes",
+        "Only as root",
+        "With special permission"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What prevents containers from interfering with each other?",
+      "options": [
+        "Separate disks",
+        "Isolation mechanisms",
+        "Different UID",
+        "Separate networks only"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What is docker-compose used for?",
+      "options": [
+        "Build images",
+        "Run single container",
+        "Manage multi-container applications",
+        "Delete containers"
+      ],
+      "answer": 2
+    }
+  ],
+  "SNA_TCP_IP-and-Internet_part_1.pdf": [
+    {
+      "question": "What does TCP/IP stand for?",
+      "options": [
+        "Terminal Connection Protocol/Internet",
+        "Transmission Control Protocol/Internet Protocol",
+        "Transport Communication/IP",
+        "Tool Control Program/IP"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Who controls IP address allocation?",
+      "options": [
+        "ISPs",
+        "ICANN",
+        "IETF",
+        "Root servers"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What is the parent organization of IETF?",
+      "options": [
+        "ICANN",
+        "ISOC",
+        "W3C",
+        "IEEE"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What are RFCs?",
+      "options": [
+        "Random File Codes",
+        "Requests for Comments (protocol standards)",
+        "Real File Contents",
+        "Remote Function Calls"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which protocol routes data packets?",
+      "options": [
+        "TCP",
+        "UDP",
+        "IP",
+        "ICMP"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does ICMP do?",
+      "options": [
+        "Transfer data",
+        "Low-level IP support, errors, routing",
+        "Manage domain names",
+        "Establish connections"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What protocol translates IP to hardware addresses?",
+      "options": [
+        "DNS",
+        "DHCP",
+        "ARP",
+        "SNMP"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Which protocol provides unverified one-way delivery?",
+      "options": [
+        "TCP",
+        "UDP",
+        "ICMP",
+        "IP"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does TCP provide?",
+      "options": [
+        "Simple delivery",
+        "Reliable, full-duplex, error-corrected",
+        "Broadcast only",
+        "One-way only"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "How many bytes is an IPv4 address?",
+      "options": [
+        "2 bytes",
+        "4 bytes",
+        "8 bytes",
+        "16 bytes"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "How many bytes is an IPv6 address?",
+      "options": [
+        "4 bytes",
+        "8 bytes",
+        "16 bytes",
+        "32 bytes"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Which region ran out of IPv4 addresses first?",
+      "options": [
+        "Europe",
+        "America",
+        "Asia-Pacific",
+        "Africa"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does NAT stand for?",
+      "options": [
+        "Network Address Translation",
+        "National Area Transfer",
+        "Network Access Terminal",
+        "Node Assignment Table"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does CIDR provide?",
+      "options": [
+        "Encryption",
+        "Flexible network subdivision",
+        "Compression",
+        "Routing priority"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What is MTU?",
+      "options": [
+        "Maximum Transmission Unit",
+        "Minimum Transfer Unit",
+        "Maximum Transfer Time",
+        "Memory Transfer Unit"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What is standard Ethernet MTU payload size?",
+      "options": [
+        "512 bytes",
+        "1000 bytes",
+        "1500 bytes",
+        "2000 bytes"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What are private IP addresses for?",
+      "options": [
+        "Public Internet",
+        "Internal networks without Internet visibility",
+        "Government use",
+        "Secure communication"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which is a private IP address class?",
+      "options": [
+        "8.0.0.0",
+        "192.168.0.0",
+        "200.0.0.0",
+        "223.0.0.0"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does MAC address identify?",
+      "options": [
+        "Global host",
+        "Network interface on local network",
+        "Internet protocol",
+        "User account"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does hostname address do?",
+      "options": [
+        "Route packets",
+        "Provide human-readable name for IP",
+        "Identify hardware",
+        "Encrypt data"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What is a port?",
+      "options": [
+        "Physical connection",
+        "16-bit number for process/service",
+        "Network interface",
+        "Protocol"
+      ],
+      "answer": 1
+    }
+  ]
+}

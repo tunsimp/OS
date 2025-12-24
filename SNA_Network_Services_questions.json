@@ -1,0 +1,220 @@
+{
+  "metadata": {
+    "source_file": "SNA_Network_Services.pdf",
+    "total_questions": 21,
+    "format": "multiple_choice",
+    "options_per_question": 4
+  },
+  "questions": [
+    {
+      "question": "What does HTTP stand for?",
+      "options": [
+        "HyperText Transfer Portal",
+        "HyperText Transfer Protocol",
+        "High Transfer Text Protocol",
+        "Host Transfer Protocol"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which port does HTTP use by default?",
+      "options": [
+        "8080",
+        "443",
+        "80",
+        "3000"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What is a web page composed of?",
+      "options": [
+        "Only HTML files",
+        "Objects stored on different servers",
+        "JavaScript files only",
+        "CSS stylesheets only"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What is the main difference between persistent and non-persistent HTTP?",
+      "options": [
+        "Persistent uses UDP",
+        "Non-persistent closes TCP connection after each object",
+        "Persistent uses different ports",
+        "Non-persistent is more secure"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What HTTP method uploads a new file to the server?",
+      "options": [
+        "GET",
+        "POST",
+        "PUT",
+        "DELETE"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'stateless' mean in the context of HTTP?",
+      "options": [
+        "Server cannot store files",
+        "Server maintains no information about past requests",
+        "Connection is always open",
+        "Server can only handle one request at a time"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What is the primary purpose of HTTP cookies?",
+      "options": [
+        "Improve website loading speed",
+        "Store client-side session information",
+        "Encrypt data transmission",
+        "Compress HTTP responses"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which of the following is NOT an HTTP request method?",
+      "options": [
+        "GET",
+        "POST",
+        "RECEIVE",
+        "PUT"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What is a web cache (proxy server)?",
+      "options": [
+        "Hardware that stores files",
+        "Server that acts as both client and server",
+        "Application that improves website graphics",
+        "Tool to monitor network traffic"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does SMTP protocol handle?",
+      "options": [
+        "Email retrieval",
+        "Email delivery and sending",
+        "Web page transfer",
+        "Domain name resolution"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which port does SMTP use by default?",
+      "options": [
+        "25",
+        "110",
+        "143",
+        "587"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What is the purpose of the HEAD HTTP method?",
+      "options": [
+        "Delete server headers",
+        "Request headers only without response body",
+        "Modify HTTP headers",
+        "Establish connection"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "How many RTTs (Round Trip Times) does persistent HTTP require for multiple objects?",
+      "options": [
+        "One RTT per object",
+        "Two RTTs per object",
+        "One RTT for all objects",
+        "Three RTTs per object"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does IMAP protocol provide?",
+      "options": [
+        "Email sending only",
+        "Message storage and retrieval",
+        "Network routing",
+        "Domain registration"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which component handles incoming mail in the mail system?",
+      "options": [
+        "MTA",
+        "UA",
+        "DA (Delivery Agent)",
+        "MSA"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What is the role of load balancer in a web application stack?",
+      "options": [
+        "Increase database capacity",
+        "Forward requests to healthy servers",
+        "Encrypt HTTP traffic",
+        "Store static files"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which open source caching software is known for excellent configuration language?",
+      "options": [
+        "Squid",
+        "Varnish",
+        "Apache mod_cache",
+        "NGINX"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What is the standard payload size of an Ethernet frame?",
+      "options": [
+        "1024 bytes",
+        "2000 bytes",
+        "1500 bytes",
+        "512 bytes"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does a web application firewall search for?",
+      "options": [
+        "Slow requests",
+        "Malicious requests",
+        "Large files",
+        "Unknown protocols"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What format are Packer configurations written in?",
+      "options": [
+        "YAML",
+        "XML",
+        "JSON",
+        "Python"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "How are HTTP response messages structured?",
+      "options": [
+        "Data first, then headers",
+        "Status line, headers, blank line, data",
+        "Headers only, no data",
+        "Only status code"
+      ],
+      "answer": 1
+    }
+  ]
+}

@@ -1,0 +1,220 @@
+{
+  "metadata": {
+    "source_file": "SNA_Booting_and_Sys_Mgmt_Daemons.pdf",
+    "total_questions": 21,
+    "format": "multiple_choice",
+    "options_per_question": 4
+  },
+  "questions": [
+    {
+      "question": "What is a daemon?",
+      "options": [
+        "Error message",
+        "Background process providing service",
+        "Device driver",
+        "Security module"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "When do system daemons typically start?",
+      "options": [
+        "On demand",
+        "During system boot",
+        "When user logs in",
+        "Never automatically"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What is the first process started during boot?",
+      "options": [
+        "kernel",
+        "init/systemd",
+        "login",
+        "shell"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What controls daemon startup on modern systems?",
+      "options": [
+        "cron",
+        "init scripts",
+        "systemd",
+        "BIOS"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "How are system services managed in systemd?",
+      "options": [
+        "Shell scripts",
+        "Unit files",
+        "Binary executables",
+        "Configuration files only"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What command manages services in systemd?",
+      "options": [
+        "service",
+        "systemctl",
+        "daemon",
+        "init"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Where are systemd unit files typically located?",
+      "options": [
+        "/etc/services",
+        "/etc/systemd/system",
+        "/etc/init.d",
+        "/usr/bin"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'enable' do for a systemd service?",
+      "options": [
+        "Start immediately",
+        "Run on next boot",
+        "Stop service",
+        "Remove service"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "How are SysV init scripts named?",
+      "options": [
+        "service.conf",
+        "S##name",
+        "name.service",
+        "daemon.sh"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What directory contains SysV init scripts?",
+      "options": [
+        "/etc/init",
+        "/etc/init.d",
+        "/etc/systemd",
+        "/usr/init"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What advantage does systemd have over SysV?",
+      "options": [
+        "Uses less memory",
+        "Parallel startup of services",
+        "Simpler syntax",
+        "Better performance"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does daemon typically do after startup?",
+      "options": [
+        "Terminate",
+        "Display message",
+        "Detach from terminal",
+        "Start child processes"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "How can you check if daemon is running?",
+      "options": [
+        "Use ps command",
+        "Check systemd status",
+        "Look at log files",
+        "All of above"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What is runlevel?",
+      "options": [
+        "CPU frequency",
+        "System state defining which services run",
+        "Network speed",
+        "Memory size"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What runlevel is single-user mode?",
+      "options": [
+        "0",
+        "1",
+        "3",
+        "5"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What runlevel is multi-user with GUI?",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What command changes runlevel?",
+      "options": [
+        "init",
+        "runlevel",
+        "telinit",
+        "systemctl"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does /etc/inittab configure?",
+      "options": [
+        "Network",
+        "Initial processes in SysV",
+        "File systems",
+        "Users"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What is the purpose of respawn in init?",
+      "options": [
+        "Restart if stopped",
+        "Spawn processes",
+        "Create users",
+        "Mount filesystems"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "How can daemon logs be accessed?",
+      "options": [
+        "journalctl",
+        "syslog",
+        "Log files",
+        "All of above"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What should daemon do if configuration file is missing?",
+      "options": [
+        "Crash",
+        "Use defaults or fail gracefully",
+        "Ignore",
+        "Create file"
+      ],
+      "answer": 1
+    }
+  ]
+}
