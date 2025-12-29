@@ -467,7 +467,9 @@
   <!-- Lessons page: list of lessons with last score -->
   <div class="quiz-container" id="lessonsPage">
     <h2>Lessons</h2>
-    <div id="lessonsList"></div>
+    <div id="lessonsList">
+      <p style="color: var(--text-muted);">Loading lessons...</p>
+    </div>
   </div>
   
   <div class="quiz-container" id="quizContainer" style="display:none;">
@@ -644,17 +646,21 @@
       lessons = [];
       let loadedCount = 0;
       let errorCount = 0;
+      const failedFiles = [];
 
       for (const filename of LESSON_FILES) {
         try {
           const res = await fetch(filename);
           if (!res.ok) {
-            throw new Error("HTTP " + res.status);
+            throw new Error("HTTP " + res.status + " - File not found or server error");
           }
           const data = await res.json();
           
           // Handle array of questions
           if (Array.isArray(data)) {
+            if (data.length === 0) {
+              throw new Error("File is empty");
+            }
             const transformedQuestions = data.map(transformQuestion);
             lessons.push({
               id: filename,
@@ -662,21 +668,29 @@
               questions: transformedQuestions
             });
             loadedCount++;
+            console.log("✓ Loaded:", filename, "(" + transformedQuestions.length + " questions)");
           } else {
-            console.warn("Unexpected format in", filename);
+            throw new Error("Unexpected format - expected array of questions");
           }
         } catch (err) {
-          console.error("Failed to load", filename, ":", err);
+          console.error("✗ Failed to load", filename, ":", err.message);
           errorCount++;
+          failedFiles.push(filename);
         }
       }
 
       if (lessons.length === 0) {
-        lessonsListEl.textContent = "Failed to load any lessons. Please check that JSON files exist.";
+        lessonsListEl.innerHTML = "<p style='color: var(--danger);'>Failed to load any lessons. Please check that JSON files exist and are accessible.</p>";
       } else {
         renderLessonsList();
         if (errorCount > 0) {
-          console.warn(`Loaded ${loadedCount} lessons, ${errorCount} failed`);
+          const errorMsg = document.createElement("p");
+          errorMsg.style.cssText = "color: var(--danger); font-size: 12px; margin-top: 8px;";
+          errorMsg.textContent = `Warning: ${errorCount} lesson(s) failed to load: ${failedFiles.join(", ")}`;
+          lessonsListEl.appendChild(errorMsg);
+          console.warn(`Loaded ${loadedCount} lessons, ${errorCount} failed:`, failedFiles);
+        } else {
+          console.log(`✓ Successfully loaded all ${loadedCount} lessons`);
         }
       }
     }
