@@ -1,0 +1,502 @@
+[
+  {
+    "question": "What does TCP/IP stand for?",
+    "answers": [
+      "Transmission Control Protocol/Internet Protocol",
+      "Transfer Control Protocol/Internet Protocol",
+      "Transport Control Protocol/Internal Protocol",
+      "Transmission Communication Protocol/Internet Protocol"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Is TCP/IP hardware dependent?",
+    "answers": [
+      "No",
+      "Yes",
+      "Only on Linux",
+      "Only on Windows"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the Internet NOT?",
+    "answers": [
+      "A single network",
+      "A collection of private networks owned by ISPs that interconnect at peering points",
+      "Only government networks",
+      "Only academic networks"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What does ICANN NOT control?",
+    "answers": [
+      "All ISPs",
+      "Allocation of Internet addresses and domain names",
+      "All websites",
+      "Email systems"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is ISOC parent organization of?",
+    "answers": [
+      "IETF (Internet Engineering Task Force)",
+      "Internet Society - umbrella organization for technical development",
+      "Internet Security Organization",
+      "International Standards Organization"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is ISOC?",
+    "answers": [
+      "Internet Society - umbrella organization for technical development",
+      "IETF (Internet Engineering Task Force)",
+      "ICANN",
+      "W3C"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What are RFCs?",
+    "answers": [
+      "Requests for Comments - protocol standards and bulletins",
+      "Request For Code",
+      "Remote File Copy",
+      "Rapid File Check"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is TCP's RFC number?",
+    "answers": [
+      "RFC 793",
+      "RFC 791",
+      "RFC 1",
+      "RFC 826"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What does IP do?",
+    "answers": [
+      "Routes data packets from one machine to another",
+      "Encrypts data",
+      "Compresses data",
+      "Stores data"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is UDP's RFC number?",
+    "answers": [
+      "RFC 768",
+      "RFC 792",
+      "RFC 791",
+      "RFC 793"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What does ICMP define?",
+    "answers": [
+      "Low-level support for IP including error messages and debugging",
+      "High-level protocols",
+      "Application protocols",
+      "User interfaces"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is ARP's RFC number?",
+    "answers": [
+      "RFC 826",
+      "RFC 791",
+      "RFC 792",
+      "RFC 793"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What does ARP do?",
+    "answers": [
+      "Translates IP addresses to hardware addresses",
+      "Routes packets",
+      "Encrypts data",
+      "Compresses data"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is ICMP's RFC number?",
+    "answers": [
+      "RFC 792",
+      "RFC 768",
+      "RFC 791",
+      "RFC 793"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What does TCP implement?",
+    "answers": [
+      "Reliable, full duplex, flow-controlled, error-corrected conversations",
+      "Unverified, one-way data delivery",
+      "Encrypted delivery",
+      "Compressed delivery"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is IP's RFC number?",
+    "answers": [
+      "RFC 791",
+      "RFC 793",
+      "RFC 792",
+      "RFC 768"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What does UDP implement?",
+    "answers": [
+      "Unverified, one-way data delivery",
+      "Reliable, full duplex, flow-controlled, error-corrected conversations",
+      "One-way delivery",
+      "Unreliable delivery"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "How many bytes are IPv6 addresses?",
+    "answers": [
+      "16 bytes",
+      "4 bytes",
+      "8 bytes",
+      "32 bytes"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "When did Asia-Pacific run out of IPv4 addresses?",
+    "answers": [
+      "April 19, 2011",
+      "January 1, 2000",
+      "December 31, 2020",
+      "June 30, 2015"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "How many bytes are IPv6 addresses?",
+    "answers": [
+      "16 bytes",
+      "4 bytes",
+      "8 bytes",
+      "32 bytes"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What does IPv6 integrate into the basic protocol?",
+    "answers": [
+      "Security and authentication",
+      "Compression",
+      "Encryption only",
+      "Nothing new"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Do home networks typically default to IPv6?",
+    "answers": [
+      "No",
+      "Yes, most do",
+      "Only on WiFi",
+      "Never"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What protocol do mobile devices typically default to on carrier data?",
+    "answers": [
+      "IPv6",
+      "IPv4",
+      "Equal mix",
+      "Neither"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What does NAT NOT do?",
+    "answers": [
+      "Encrypt traffic",
+      "Lets entire networks hide behind a single IPv4 address",
+      "Speed up routing",
+      "Nothing"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is CIDR?",
+    "answers": [
+      "Classless Inter-Domain Routing for flexible network subdivision",
+      "Centralized Internet Domain Routing",
+      "Classified IP Domain Registry",
+      "Cloud Internet Data Routing"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What form does data NOT travel in on networks?",
+    "answers": [
+      "Files",
+      "Packets",
+      "Streams",
+      "Blocks"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the maximum length of packets imposed by?",
+    "answers": [
+      "The link layer",
+      "The application",
+      "The network layer",
+      "The transport layer"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What does each packet consist of?",
+    "answers": [
+      "A header and a payload",
+      "Only data",
+      "Only header",
+      "Only checksum"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What does packet header tell?",
+    "answers": [
+      "Where the packet came from and where it's going",
+      "Only destination",
+      "Only source",
+      "Nothing"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the data unit at TCP layer called?",
+    "answers": [
+      "Segment",
+      "Frame",
+      "Packet",
+      "Datagram"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the data unit at IP layer called?",
+    "answers": [
+      "Datagram or packet",
+      "Frame",
+      "Segment",
+      "Message"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the data unit at link layer called?",
+    "answers": [
+      "Frame",
+      "Segment",
+      "Packet",
+      "Message"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the data unit at application layer called?",
+    "answers": [
+      "Message",
+      "Frame",
+      "Packet",
+      "Segment"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is framing?",
+    "answers": [
+      "Adding headers and separators to packets",
+      "Creating frames",
+      "Building networks",
+      "Encrypting data"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What are the two parts of link layer?",
+    "answers": [
+      "MAC (Media Access Control) and LLC (Logical Link Control)",
+      "Physical and Data",
+      "Network and Transport",
+      "Session and Presentation"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What does MAC sublayer deal with?",
+    "answers": [
+      "The media and transmits packets onto the wire",
+      "Logical connections",
+      "Applications",
+      "Users"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What does LLC sublayer handle?",
+    "answers": [
+      "The framing",
+      "Physical transmission",
+      "Routing",
+      "Encryption"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the correct expansion of MTU?",
+    "answers": [
+      "Maximum Transmission Unit",
+      "Maximum Transfer Unit - size limit for packets",
+      "Media Transfer Unit",
+      "Multiple Transfer Unit"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the traditional Ethernet frame payload size?",
+    "answers": [
+      "1,500 bytes",
+      "1,000 bytes",
+      "2,000 bytes",
+      "500 bytes"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Does IPv4 split packets to conform to MTU?",
+    "answers": [
+      "Yes",
+      "No",
+      "Only sometimes",
+      "Never"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What addressing schemes are used in combination?",
+    "answers": [
+      "MAC addresses, IPv4/IPv6 addresses, and hostnames",
+      "Only IP",
+      "Only MAC",
+      "Only hostnames"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "How many bytes is an Ethernet hardware address?",
+    "answers": [
+      "6 bytes",
+      "4 bytes",
+      "8 bytes",
+      "2 bytes"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What do first three bytes of MAC address identify?",
+    "answers": [
+      "Manufacturer (IEEE OUI)",
+      "Device type",
+      "Serial number",
+      "Network"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Are Ethernet hardware addresses always immutable?",
+    "answers": [
+      "No, many interfaces allow overriding",
+      "In theory yes, but many interfaces allow overriding",
+      "Always yes",
+      "Always no"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Do IP addresses identify machines or interfaces?",
+    "answers": [
+      "Network interfaces",
+      "Machines",
+      "Users",
+      "Applications"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Are MAC addresses hardware independent?",
+    "answers": [
+      "No",
+      "Yes",
+      "Only IPv6",
+      "Only IPv4"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is a port?",
+    "answers": [
+      "A 16-bit number extending IP addresses to address processes",
+      "A physical connector",
+      "An IP address",
+      "A MAC address"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the valid port range?",
+    "answers": [
+      "1-65,535",
+      "0-65,535",
+      "1-1024",
+      "1024-65535"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Are TCP and UDP port spaces the same?",
+    "answers": [
+      "No, entirely separate and unrelated",
+      "Yes, same space",
+      "Partially related",
+      "Identical"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Below what port number do programs need root/capability to bind?",
+    "answers": [
+      "1,024",
+      "100",
+      "500",
+      "2,048"
+    ],
+    "correct_answer": 0
+  }
+]

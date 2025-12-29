@@ -1,220 +1,502 @@
-{
-  "metadata": {
-    "source_file": "SNA_Process_Control.pdf",
-    "total_questions": 21,
-    "format": "multiple_choice",
-    "options_per_question": 4
+[
+  {
+    "question": "What is a process?",
+    "answers": [
+      "A running program; an abstraction for managing and monitoring memory, process time, and I/O resources",
+      "A file on disk",
+      "A network connection",
+      "A user account"
+    ],
+    "correct_answer": 0
   },
-  "questions": [
-    {
-      "question": "What is a process?",
-      "options": [
-        "Execution thread",
-        "Running program with address space",
-        "Memory segment",
-        "Kernel function"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "What does PID represent?",
-      "options": [
-        "Process Information Data",
-        "Process ID number",
-        "Primary ID",
-        "Program Identifier"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "What does PPID stand for?",
-      "options": [
-        "Primary Process ID",
-        "Parent Process ID",
-        "Program Process ID",
-        "Priority ID"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "What does fork() system call do?",
-      "options": [
-        "Terminates process",
-        "Copies process into new process",
-        "Changes program",
-        "Sends signal"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "What does exec family of routines do?",
-      "options": [
-        "Execute multiple processes",
-        "Begin execution of new program",
-        "Change directory",
-        "Delete files"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "What must happen before a process disappears?",
-      "options": [
-        "Parent must wait",
-        "Kernel must acknowledge",
-        "Process must signal",
-        "Parent must wait via wait()"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "What happens to orphan processes?",
-      "options": [
-        "They die",
-        "Kernel makes them children of init/systemd",
-        "They become zombies",
-        "They migrate"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "What are signals?",
-      "options": [
-        "Network packets",
-        "Process-level interrupt requests",
-        "File permissions",
-        "Memory blocks"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "What signal is sent by pressing <Control-C>?",
-      "options": [
-        "TERM",
-        "KILL",
-        "INT",
-        "QUIT"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "Which signal cannot be caught or blocked?",
-      "options": [
-        "TERM",
-        "INT",
-        "KILL",
-        "HUP"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "What does 'catching a signal' mean?",
-      "options": [
-        "Blocking signal",
-        "Designating handler routine",
-        "Ignoring signal",
-        "Sending signal"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "What is the default action of TERM signal?",
-      "options": [
-        "Stop",
-        "Continue",
-        "Terminate",
-        "Dump core"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "Which signal is used by daemons to reread config?",
-      "options": [
-        "QUIT",
-        "TERM",
-        "HUP",
-        "USR1"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "What does 'kill' command do by default?",
-      "options": [
-        "Send KILL",
-        "Send TERM",
-        "Send INT",
-        "Send HUP"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "What does KILL signal (9) do?",
-      "options": [
-        "Request termination",
-        "Unblockably terminate at kernel level",
-        "Stop process",
-        "Pause process"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "What tool is main for monitoring processes?",
-      "options": [
-        "top",
-        "htop",
-        "ps",
-        "pstat"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "What information does ps show?",
-      "options": [
-        "Only running processes",
-        "PID, UID, priority, terminal",
-        "Memory usage only",
-        "Network connections"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "What is a zombie process?",
-      "options": [
-        "Running process",
-        "Finished but status not collected",
-        "Sleeping process",
-        "Suspended process"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "What command provides real-time process monitoring?",
-      "options": [
-        "ps",
-        "top",
-        "ls",
-        "find"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "What can process owner do?",
-      "options": [
-        "Delete any file",
-        "Send signals and reduce priority",
-        "Change UID",
-        "Modify kernel"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "What defines process scheduling priority?",
-      "options": [
-        "UID",
-        "Niceness value",
-        "GID",
-        "PID"
-      ],
-      "answer": 1
-    }
-  ]
-}
+  {
+    "question": "What does a process consist of?",
+    "answers": [
+      "An address space and a set of data structures within the kernel",
+      "Only executable code",
+      "Only data files",
+      "Only configuration files"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is a thread?",
+    "answers": [
+      "An execution context within a process",
+      "A process itself",
+      "A file handle",
+      "A network socket"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is PID?",
+    "answers": [
+      "Process ID number",
+      "Process identification data",
+      "Parent ID",
+      "Priority ID"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is PPID?",
+    "answers": [
+      "Parent PID, the PID of the parent from which a process was cloned",
+      "Previous PID",
+      "Primary PID",
+      "Process priority ID"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is niceness?",
+    "answers": [
+      "Process's scheduling priority",
+      "Process name",
+      "Process size",
+      "Process state"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What system call does a parent process use to copy itself?",
+    "answers": [
+      "fork",
+      "exec",
+      "clone",
+      "copy"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What does exec do after a fork?",
+    "answers": [
+      "Begin execution of a new program",
+      "Copy the process",
+      "Delete the process",
+      "Pause the process"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What system call acknowledges a process's death?",
+    "answers": [
+      "wait",
+      "kill",
+      "exit",
+      "stop"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "If a parent dies before its children, who adopts the orphan processes?",
+    "answers": [
+      "init or systemd",
+      "root",
+      "The kernel",
+      "Nobody"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What are signals?",
+    "answers": [
+      "Process-level interrupt requests",
+      "Network packets",
+      "File descriptors",
+      "Memory addresses"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What happens when a signal is received with no handler?",
+    "answers": [
+      "Kernel takes some default action on behalf of the process",
+      "Signal is ignored",
+      "Process crashes",
+      "Nothing happens"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is signal number 9?",
+    "answers": [
+      "KILL",
+      "TERM",
+      "HUP",
+      "INT"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Can the KILL signal be caught or blocked?",
+    "answers": [
+      "No",
+      "Yes",
+      "Only by root",
+      "Only in kernel mode"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What signal number is INT?",
+    "answers": [
+      "2",
+      "1",
+      "9",
+      "15"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What keyboard combination sends INT signal?",
+    "answers": [
+      "Control-C",
+      "Control-Z",
+      "Control-D",
+      "Control-X"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What signal number is TERM?",
+    "answers": [
+      "15",
+      "9",
+      "1",
+      "2"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is TERM signal used for?",
+    "answers": [
+      "Request to terminate execution completely with cleanup",
+      "Immediate kill",
+      "Pause execution",
+      "Reload configuration"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What signal number is HUP?",
+    "answers": [
+      "1",
+      "2",
+      "9",
+      "15"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is HUP commonly used for by daemons?",
+    "answers": [
+      "Reread configuration file and adjust to changes without restarting",
+      "Terminate immediately",
+      "Pause execution",
+      "Create checkpoint"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What keyboard combination sends TSTP signal?",
+    "answers": [
+      "Control-Z",
+      "Control-C",
+      "Control-D",
+      "Control-X"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What signal number is CONT?",
+    "answers": [
+      "19",
+      "17",
+      "18",
+      "20"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What does CONT signal do?",
+    "answers": [
+      "Continue after stop",
+      "Terminate process",
+      "Kill process",
+      "Pause process"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the default signal sent by kill without a signal number?",
+    "answers": [
+      "TERM",
+      "KILL",
+      "HUP",
+      "INT"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Does kill without a signal number guarantee the process will die?",
+    "answers": [
+      "No",
+      "Yes",
+      "Only for root",
+      "Only for user processes"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What command kills processes by name?",
+    "answers": [
+      "killall",
+      "kill",
+      "pkill",
+      "terminate"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What command searches for processes by name and sends signals?",
+    "answers": [
+      "pkill",
+      "killall",
+      "kill",
+      "grep"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is a zombie process?",
+    "answers": [
+      "Process that finished execution but hasn't had its status collected by parent",
+      "A crashed process",
+      "A sleeping process",
+      "A suspended process"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the main tool for monitoring processes?",
+    "answers": [
+      "ps",
+      "top",
+      "htop",
+      "monitor"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "How do zombies appear in ps listing?",
+    "answers": [
+      "<exiting> or <defunct>",
+      "<zombie>",
+      "<dead>",
+      "<stopped>"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What ps command gives a useful overview of all processes?",
+    "answers": [
+      "ps aux",
+      "ps -a",
+      "ps -l",
+      "ps all"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Which ps option shows more info and is faster than aux?",
+    "answers": [
+      "lax",
+      "aux",
+      "ef",
+      "all"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What command determines the PID of a process by name?",
+    "answers": [
+      "pidof or pgrep",
+      "ps",
+      "find",
+      "locate"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What does top provide?",
+    "answers": [
+      "Real-time, regularly updated, interactive summary of processes and resource usage",
+      "Static process list",
+      "Only CPU usage",
+      "Only memory usage"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "How often does top update by default?",
+    "answers": [
+      "Every 1-2 seconds",
+      "Every 5 seconds",
+      "Every 10 seconds",
+      "Once per minute"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Which processes appear at the top in top?",
+    "answers": [
+      "Most CPU-consumptive processes",
+      "Oldest processes",
+      "Newest processes",
+      "Alphabetically sorted"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is an alternative to top with more features?",
+    "answers": [
+      "htop",
+      "ktop",
+      "xtop",
+      "stop"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What does a high niceness value mean?",
+    "answers": [
+      "Low priority for the process",
+      "High priority",
+      "Normal priority",
+      "No priority"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the niceness range in Linux?",
+    "answers": [
+      "-20 to +19",
+      "0 to 20",
+      "-10 to +10",
+      "1 to 100"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What command sets niceness at process creation?",
+    "answers": [
+      "nice",
+      "renice",
+      "priority",
+      "sched"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What command adjusts niceness of a running process?",
+    "answers": [
+      "renice",
+      "nice",
+      "priority",
+      "adjust"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Where do ps and top read process status information from?",
+    "answers": [
+      "/proc directory",
+      "/sys directory",
+      "/dev directory",
+      "/var directory"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "How are process-specific subdirectories in /proc named?",
+    "answers": [
+      "By PID",
+      "By process name",
+      "By username",
+      "Alphabetically"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What commands trace system calls and signals?",
+    "answers": [
+      "strace and truss",
+      "ps and top",
+      "trace and track",
+      "monitor and watch"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What are runaway processes?",
+    "answers": [
+      "Processes that soak up more CPU, disk, or network resources than expected",
+      "Escaped processes",
+      "Orphan processes",
+      "Zombie processes"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What command checks system load averages?",
+    "answers": [
+      "uptime",
+      "loadavg",
+      "sysload",
+      "checkload"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is cron?",
+    "answers": [
+      "Traditional tool for running commands on a predetermined schedule",
+      "A process manager",
+      "A network daemon",
+      "A file system"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is a crontab?",
+    "answers": [
+      "A cron configuration file",
+      "A cron process",
+      "A cron log",
+      "A cron daemon"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Where are crontab files stored?",
+    "answers": [
+      "/var/spool/cron",
+      "/etc/cron",
+      "/var/cron",
+      "/usr/cron"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What command installs a crontab file?",
+    "answers": [
+      "crontab filename",
+      "install crontab filename",
+      "cron install filename",
+      "add crontab filename"
+    ],
+    "correct_answer": 0
+  }
+]

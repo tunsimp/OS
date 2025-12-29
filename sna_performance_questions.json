@@ -1,0 +1,502 @@
+[
+  {
+    "question": "What should you collect for performance tuning?",
+    "answers": [
+      "Historical information about your system",
+      "Only current data",
+      "Only errors",
+      "Nothing"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "How should you tune your system?",
+    "answers": [
+      "In a way that lets you compare current results to previous baseline",
+      "Randomly",
+      "Without documentation",
+      "All at once"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Should you intentionally overload systems?",
+    "answers": [
+      "No",
+      "Yes",
+      "Only in production",
+      "Only for testing"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What tools are recommended for routine observation?",
+    "answers": [
+      "Simple and lightweight like sar or vmstat",
+      "Heavy monitoring suites",
+      "Manual checking",
+      "No tools"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "When making changes, how many things should you change at once?",
+    "answers": [
+      "Only one thing at a time",
+      "Everything",
+      "Multiple things",
+      "As many as possible"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Should you document each change you make?",
+    "answers": [
+      "Yes",
+      "No",
+      "Only major changes",
+      "Only failures"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Should you have a rollback plan?",
+    "answers": [
+      "Yes, always",
+      "No",
+      "Only sometimes",
+      "Never"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What should you ensure the system has for performance?",
+    "answers": [
+      "Enough memory",
+      "Only CPU",
+      "Only disk",
+      "Only network"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What should you eliminate where possible for performance?",
+    "answers": [
+      "Storage resources' dependence on mechanical operations",
+      "All storage",
+      "SSDs",
+      "RAM"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "How can you spread traffic for performance?",
+    "answers": [
+      "Among several systems with a load balancer",
+      "Single system only",
+      "No balancing",
+      "Manual distribution"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "In everyday world, how important is CPU for performance?",
+    "answers": [
+      "Actually relatively unimportant",
+      "Most important",
+      "Only factor",
+      "Critical"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Is using memory as expensive as using disk?",
+    "answers": [
+      "Yes",
+      "No",
+      "Memory is free",
+      "Disk is free"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is a common performance bottleneck?",
+    "answers": [
+      "Disk bandwidth/Storage I/O",
+      "CPU only",
+      "RAM only",
+      "Network only"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Do network latencies involve entire communities?",
+    "answers": [
+      "Yes",
+      "No",
+      "Only local",
+      "Only remote"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What are two ways CPU cycles can be stolen in VMs?",
+    "answers": [
+      "Hypervisor enforcing quota or physical hardware oversubscription",
+      "Only quota",
+      "Only oversubscription",
+      "Never stolen"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What metric shows stolen CPU cycles in Linux?",
+    "answers": [
+      "st metric in top, vmstat, and mpstat",
+      "cpu",
+      "mem",
+      "disk"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the first step in performance problem analysis?",
+    "answers": [
+      "Formulate the question",
+      "Gather data",
+      "Fix issues",
+      "Reboot"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What file contains CPU type and description info on Linux?",
+    "answers": [
+      "/proc/cpuinfo",
+      "/sys/cpu",
+      "/etc/cpu",
+      "/var/cpu"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What file contains memory size and usage on Linux?",
+    "answers": [
+      "/proc/meminfo",
+      "/sys/mem",
+      "/etc/memory",
+      "/var/mem"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What file contains disk statistics on Linux?",
+    "answers": [
+      "/proc/diskstats",
+      "/sys/disk",
+      "/etc/disk",
+      "/var/disk"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What command analyzes CPU usage with time intervals?",
+    "answers": [
+      "vmstat",
+      "top",
+      "ps",
+      "cpu"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What command generates vmstat-like output for each processor?",
+    "answers": [
+      "mpstat",
+      "ps",
+      "top",
+      "cpu"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "How many load average values does uptime show?",
+    "answers": [
+      "Three (1, 5, and 15-minute averages)",
+      "One",
+      "Two",
+      "Four"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What two numbers summarize memory activity?",
+    "answers": [
+      "Total active virtual memory and current paging rate",
+      "Only total memory",
+      "Only used memory",
+      "Only free memory"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the goal for memory paging?",
+    "answers": [
+      "Reduce activity or increase memory until paging remains acceptable",
+      "Maximum paging",
+      "No paging ever",
+      "Unlimited paging"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What command determines swap space in use?",
+    "answers": [
+      "swapon -s",
+      "swap -s",
+      "free -s",
+      "mem -s"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What does si represent in vmstat?",
+    "answers": [
+      "Page-in (page recovered from swap)",
+      "Swap in",
+      "System interrupt",
+      "Signal in"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What does so represent in vmstat?",
+    "answers": [
+      "Page-out (data written to swap after ejection)",
+      "Swap out",
+      "System output",
+      "Signal out"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What command analyzes disk I/O?",
+    "answers": [
+      "iostat",
+      "diskstat",
+      "io",
+      "disk"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What does tps show in iostat?",
+    "answers": [
+      "Transfers per second",
+      "Time per second",
+      "Tasks per second",
+      "Threads per second"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "How many I/O scheduling algorithms are in current Linux kernels?",
+    "answers": [
+      "Three",
+      "One",
+      "Two",
+      "Four"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What I/O scheduler is best for mechanical hard disks?",
+    "answers": [
+      "Completely Fair Queuing",
+      "Deadline",
+      "NOOP",
+      "Random"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What I/O scheduler minimizes latency for each request?",
+    "answers": [
+      "Deadline",
+      "CFQ",
+      "NOOP",
+      "Random"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What I/O scheduler is best for SSD drives?",
+    "answers": [
+      "NOOP",
+      "CFQ",
+      "Deadline",
+      "Random"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is NOOP scheduler?",
+    "answers": [
+      "Simple FIFO queue",
+      "Complex algorithm",
+      "Priority-based",
+      "Random"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the first diagnostic step when server gets slow?",
+    "answers": [
+      "Run ps auxww or top to look for runaway processes",
+      "Reboot",
+      "Check network",
+      "Restart services"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What CPU usage suggests a process is likely at fault?",
+    "answers": [
+      "More than 50%",
+      "More than 10%",
+      "More than 1%",
+      "Any usage"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "If no CPU contention, what should you check?",
+    "answers": [
+      "Run vmstat to see paging activity",
+      "Reboot",
+      "Check disk",
+      "Check network"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Must disk traffic processes use CPU time?",
+    "answers": [
+      "Yes",
+      "No",
+      "Only sometimes",
+      "Never"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Are network overloading problems easy to diagnose?",
+    "answers": [
+      "No, they come and go very quickly",
+      "Yes, always visible",
+      "Easy to find",
+      "Always permanent"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What are possible causes of performance crises?",
+    "answers": [
+      "Server-related delays (NFS, Kerberos, DNS)",
+      "Only CPU",
+      "Only memory",
+      "Only disk"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "How should evidence be summarized in analysis?",
+    "answers": [
+      "Both narratively and graphically",
+      "Only text",
+      "Only graphs",
+      "No summary needed"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Should you develop a conclusion statement in analysis?",
+    "answers": [
+      "Yes",
+      "No",
+      "Optional",
+      "Never"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Should you critically appraise the data?",
+    "answers": [
+      "Yes",
+      "No",
+      "Optional",
+      "Never"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Should you familiarize with trend collection tools?",
+    "answers": [
+      "Yes",
+      "No",
+      "Optional",
+      "Not needed"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What type of load balancer can spread traffic?",
+    "answers": [
+      "Physical or virtual",
+      "Only physical",
+      "Only virtual",
+      "Neither"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Should you double-check system configuration?",
+    "answers": [
+      "Yes, system and individual applications",
+      "No",
+      "Only system",
+      "Only applications"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Should you organize disks to balance load?",
+    "answers": [
+      "Yes, maximize I/O throughput",
+      "No",
+      "Random organization",
+      "Sequential only"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Should you monitor network traffic saturation?",
+    "answers": [
+      "Yes, and ensure low error rate",
+      "No",
+      "Only errors",
+      "Only traffic"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Should you identify fundamentally inadequate systems?",
+    "answers": [
+      "Yes",
+      "No",
+      "Ignore",
+      "Upgrade everything"
+    ],
+    "correct_answer": 0
+  }
+]

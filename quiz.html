@@ -608,22 +608,76 @@
       return result;
     }
 
-    // --- Load lessons from JSON file ---
-    const LESSONS_JSON_FILE = "sna_questions_all_files.json"; // change this to another file if needed
+    // --- Load lessons from JSON files ---
+    const LESSON_FILES = [
+      "sna_access_control_questions.json",
+      "sna_booting_questions.json",
+      "sna_containers_questions.json",
+      "sna_dns_questions.json",
+      "sna_monitoring_questions.json",
+      "sna_network_services_questions.json",
+      "sna_performance_questions.json",
+      "sna_process_control_questions.json",
+      "sna_tcpip_questions.json",
+      "sna_virtualization_questions.json"
+    ];
+
+    // Transform question format from {answers, correct_answer} to {options, answer}
+    function transformQuestion(q) {
+      return {
+        question: q.question,
+        options: q.answers || q.options || [],
+        answer: q.correct_answer !== undefined ? q.correct_answer : q.answer
+      };
+    }
+
+    // Generate lesson title from filename
+    function getLessonTitle(filename) {
+      return filename
+        .replace(/^sna_/, "")
+        .replace(/_questions\.json$/, "")
+        .replace(/_/g, " ")
+        .replace(/\b\w/g, l => l.toUpperCase());
+    }
 
     async function loadLessonsFromJson() {
-      try {
-        const res = await fetch(LESSONS_JSON_FILE);
-        if (!res.ok) {
-          throw new Error("HTTP " + res.status);
+      lessons = [];
+      let loadedCount = 0;
+      let errorCount = 0;
+
+      for (const filename of LESSON_FILES) {
+        try {
+          const res = await fetch(filename);
+          if (!res.ok) {
+            throw new Error("HTTP " + res.status);
+          }
+          const data = await res.json();
+          
+          // Handle array of questions
+          if (Array.isArray(data)) {
+            const transformedQuestions = data.map(transformQuestion);
+            lessons.push({
+              id: filename,
+              title: getLessonTitle(filename),
+              questions: transformedQuestions
+            });
+            loadedCount++;
+          } else {
+            console.warn("Unexpected format in", filename);
+          }
+        } catch (err) {
+          console.error("Failed to load", filename, ":", err);
+          errorCount++;
         }
-        const data = await res.json();
-        lessons = buildLessonsFromData(data);
+      }
+
+      if (lessons.length === 0) {
+        lessonsListEl.textContent = "Failed to load any lessons. Please check that JSON files exist.";
+      } else {
         renderLessonsList();
-      } catch (err) {
-        console.error("Failed to load lessons JSON:", err);
-        lessonsListEl.textContent =
-          "Failed to load lessons from JSON (" + LESSONS_JSON_FILE + ").";
+        if (errorCount > 0) {
+          console.warn(`Loaded ${loadedCount} lessons, ${errorCount} failed`);
+        }
       }
     }
 
@@ -632,7 +686,13 @@
       if (!lesson) return;
       currentLessonId = lessonId;
       currentQuestions = lesson.questions;
-      shuffledQuestions = [...currentQuestions].sort(() => Math.random() - 0.5);
+      
+      // Create deep copies of questions to avoid modifying originals, then shuffle
+      shuffledQuestions = currentQuestions.map(q => ({
+        ...q,
+        options: [...q.options]
+      })).sort(() => Math.random() - 0.5);
+      
       currentQuestionIndex = 0;
       score = 0;
       userAnswers = [];
@@ -655,7 +715,23 @@
       optionsEl.innerHTML = "";
       feedbackEl.textContent = "";
 
-      currentQuestion.options.forEach((option, index) => {
+      // Shuffle options and track the new correct answer index
+      const originalOptions = [...currentQuestion.options];
+      const originalAnswerIndex = currentQuestion.answer;
+      
+      // Create array of indices and shuffle them
+      const indices = originalOptions.map((_, i) => i);
+      const shuffledIndices = [...indices].sort(() => Math.random() - 0.5);
+      
+      // Map original answer index to new shuffled position
+      const newAnswerIndex = shuffledIndices.indexOf(originalAnswerIndex);
+      
+      // Update the question object with shuffled options and new answer index
+      currentQuestion.shuffledOptions = shuffledIndices.map(i => originalOptions[i]);
+      currentQuestion.shuffledAnswer = newAnswerIndex;
+
+      // Display shuffled options
+      currentQuestion.shuffledOptions.forEach((option, index) => {
         const btn = document.createElement("button");
         const optionLabel = String.fromCharCode(65 + index); // A, B, C, D
         btn.textContent = optionLabel + ". " + option;
@@ -666,7 +742,10 @@
 
     function checkAnswer(selectedIndex, selectedButton) {
       const currentQuestion = shuffledQuestions[currentQuestionIndex];
-      const correctIndex = currentQuestion.answer;
+      // Use shuffled answer index if available, otherwise fall back to original
+      const correctIndex = currentQuestion.shuffledAnswer !== undefined 
+        ? currentQuestion.shuffledAnswer 
+        : currentQuestion.answer;
 
       // Highlight correct and wrong answers
       if (selectedIndex === correctIndex) {
@@ -682,10 +761,11 @@
       // Disable all buttons
       Array.from(optionsEl.children).forEach(btn => (btn.disabled = true));
 
-      // Save user choice and actual correct answer
+      // Save user choice and actual correct answer (use shuffled options if available)
+      const optionsToSave = currentQuestion.shuffledOptions || currentQuestion.options;
       userAnswers.push({
         question: currentQuestion.question,
-        options: currentQuestion.options,
+        options: optionsToSave,
         userAnswerIndex: selectedIndex,
         correctAnswerIndex: correctIndex
       });

@@ -1,220 +1,502 @@
-{
-  "metadata": {
-    "source_file": "SNA_Containers.pdf",
-    "total_questions": 21,
-    "format": "multiple_choice",
-    "options_per_question": 4
+[
+  {
+    "question": "What problem does containerization solve in modern web applications?",
+    "answers": [
+      "Incompatible dependencies required by separate applications lead to systems that are underutilized",
+      "Slow network connections",
+      "Insufficient CPU power",
+      "Limited disk space"
+    ],
+    "correct_answer": 0
   },
-  "questions": [
-    {
-      "question": "What is a container?",
-      "options": [
-        "Physical box",
-        "Isolated group of processes with private filesystem",
-        "Shipping container",
-        "Database"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "How do containers provide isolation?",
-      "options": [
-        "Multiple kernels",
-        "Namespaces and control groups",
-        "Virtual machines",
-        "Hardware partition"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "What is Docker?",
-      "options": [
-        "Database system",
-        "Open source container engine",
-        "Web server",
-        "Filesystem"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "What is a container image?",
-      "options": [
-        "Picture of container",
-        "Template for a container",
-        "Snapshot",
-        "Backup"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "How many read/write layers do containers have?",
-      "options": [
-        "One",
-        "Multiple",
-        "None",
-        "Dynamic number"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "What kernel feature isolates namespaces?",
-      "options": [
-        "Cgroups",
-        "Namespaces",
-        "SELinux",
-        "AppArmor"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "What do control groups (cgroups) do?",
-      "options": [
-        "Isolate processes",
-        "Prevent resource runaway",
-        "Encrypt data",
-        "Manage users"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "What is seccomp?",
-      "options": [
-        "Security compiler",
-        "Secure computing mode for fine-grained control",
-        "System compression",
-        "Security checkpoint"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "What is Docker daemon called?",
-      "options": [
-        "docker",
-        "dockerd",
-        "docker-service",
-        "container-d"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "What is a volume in Docker?",
-      "options": [
-        "Disk partition",
-        "Independent writable directory",
-        "Network drive",
-        "Memory area"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "What is container networking default option?",
-      "options": [
-        "Host",
-        "Bridge",
-        "Overlay",
-        "Custom"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "What is a bridge in container networking?",
-      "options": [
-        "Network device",
-        "Connects two networks",
-        "Container to container link",
-        "Docker command"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "What does union filesystem do?",
-      "options": [
-        "Combines directories",
-        "Encrypts data",
-        "Compresses files",
-        "Partitions disk"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "What is a Dockerfile?",
-      "options": [
-        "Configuration file",
-        "Recipe for building image",
-        "Document folder",
-        "Data file"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "What does 'docker build' do?",
-      "options": [
-        "Start container",
-        "Reads Dockerfile and creates image",
-        "Remove image",
-        "Deploy container"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "Can multiple containers share base layers?",
-      "options": [
-        "Never",
-        "Only with copy",
-        "Yes, improving efficiency",
-        "Only on same host"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "What is the main benefit of containers vs VMs?",
-      "options": [
-        "Better security",
-        "Lower overhead, faster startup",
-        "More isolation",
-        "Better hardware support"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "What is container networking bridge?",
-      "options": [
-        "VPN connection",
-        "Linux kernel feature connecting networks",
-        "Virtual network",
-        "USB bridge"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "Can containers access files outside their filesystem?",
-      "options": [
-        "Yes, always",
-        "No, without explicit volumes",
-        "Only as root",
-        "With special permission"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "What prevents containers from interfering with each other?",
-      "options": [
-        "Separate disks",
-        "Isolation mechanisms",
-        "Different UID",
-        "Separate networks only"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "What is docker-compose used for?",
-      "options": [
-        "Build images",
-        "Run single container",
-        "Manage multi-container applications",
-        "Delete containers"
-      ],
-      "answer": 2
-    }
-  ]
-}
+  {
+    "question": "What is a container image?",
+    "answers": [
+      "A standard, portable file that packages an application and its prerequisites",
+      "A virtual machine template",
+      "A disk partition",
+      "A network configuration file"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Which are examples of container engines?",
+    "answers": [
+      "Docker, rkt, systemd-nspawn",
+      "VMware, VirtualBox, Hyper-V",
+      "Apache, Nginx, IIS",
+      "MySQL, PostgreSQL, MongoDB"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "How many containers can run simultaneously without conflicts?",
+    "answers": [
+      "Tens or hundreds",
+      "Only one",
+      "Maximum of ten",
+      "Exactly one per CPU core"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is a container in technical terms?",
+    "answers": [
+      "An isolated group of processes restricted to a private root filesystem and process namespace",
+      "A virtual machine with its own kernel",
+      "A network segment",
+      "A disk partition"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Can applications running within a container access files outside their container?",
+    "answers": [
+      "No",
+      "Yes",
+      "Only with root privileges",
+      "Only if explicitly configured"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Do applications running in containers need to be modified?",
+    "answers": [
+      "No, they are not aware of their containerized state",
+      "Yes, extensive modifications required",
+      "Only for network applications",
+      "Only for database applications"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What kernel feature isolates processes in containers?",
+    "answers": [
+      "Namespaces",
+      "Threads",
+      "Sockets",
+      "File descriptors"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the purpose of control groups (cgroup) in containers?",
+    "answers": [
+      "Prevent runaway containers from consuming all available CPU and memory",
+      "Isolate network traffic",
+      "Manage file permissions",
+      "Control user access"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What do capabilities allow processes to do?",
+    "answers": [
+      "Execute certain sensitive kernel operations and system calls",
+      "Access network resources",
+      "Modify files",
+      "Create users"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What does seccomp provide?",
+    "answers": [
+      "More fine-grained control than capabilities",
+      "Network isolation",
+      "File system encryption",
+      "User authentication"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is a container image template for?",
+    "answers": [
+      "A container",
+      "A virtual machine",
+      "A network",
+      "A database"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "How are container images organized?",
+    "answers": [
+      "As union filesystems that resemble the root filesystem of a typical Linux distribution",
+      "As single large files",
+      "As compressed archives",
+      "As encrypted volumes"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "When Docker creates a container, what layer does it add to the read-only image?",
+    "answers": [
+      "A read/write layer",
+      "A network layer",
+      "A security layer",
+      "A compression layer"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Where are changes made by containerized processes saved?",
+    "answers": [
+      "Within the read/write layer",
+      "In the base image",
+      "On the host filesystem",
+      "In a separate database"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Can many containers share the same immutable base layers?",
+    "answers": [
+      "Yes",
+      "No",
+      "Only if they're the same type",
+      "Only with special configuration"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the benefit of containers sharing base layers?",
+    "answers": [
+      "Improving storage efficiency and reducing startup times",
+      "Better security",
+      "Faster networking",
+      "Simpler configuration"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the default way to connect containers to the network?",
+    "answers": [
+      "Use a network namespace and a bridge within the host",
+      "Direct connection to the internet",
+      "Virtual network adapter",
+      "Dedicated physical network card"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What type of IP addresses do containers have by default?",
+    "answers": [
+      "Private IP addresses that aren't reachable from outside the host",
+      "Public IP addresses",
+      "IPv6 only",
+      "No IP addresses"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "How does the host handle traffic between containers and the outside world?",
+    "answers": [
+      "Acts as a poor man's IP router and proxies traffic",
+      "Direct routing",
+      "NAT only",
+      "VPN tunneling"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the docker command?",
+    "answers": [
+      "An executable command that handles all management tasks for the Docker system",
+      "A configuration file",
+      "A network protocol",
+      "A programming language"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is dockerd?",
+    "answers": [
+      "The persistent daemon process that implements container and image operations",
+      "A command-line tool",
+      "A configuration file",
+      "A network service"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "When dockerd runs a container, what layer does it create?",
+    "answers": [
+      "A writable filesystem layer that is separate from the source image",
+      "A new kernel layer",
+      "A network layer only",
+      "No new layers"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Can containers modify files in the source image?",
+    "answers": [
+      "No, writes are confined to the container's own read/write layer",
+      "Yes, directly",
+      "Only with root access",
+      "Only during creation"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What command downloads images from Docker Hub?",
+    "answers": [
+      "docker pull",
+      "docker download",
+      "docker get",
+      "docker fetch"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What command shows locally available images?",
+    "answers": [
+      "docker images",
+      "docker list",
+      "docker show",
+      "docker ls"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What does the -it flag do in docker run?",
+    "answers": [
+      "Starts an interactive terminal session",
+      "Installs tools",
+      "Initiates transfer",
+      "Iterates tasks"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What does the -d flag do in docker run?",
+    "answers": [
+      "Runs the container in the background (daemon mode)",
+      "Deletes the container",
+      "Downloads updates",
+      "Detaches networking"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What does the -p flag do in docker run?",
+    "answers": [
+      "Tunnels a port from the host to the container",
+      "Pauses the container",
+      "Prints logs",
+      "Provides root access"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What command shows running containers?",
+    "answers": [
+      "docker ps",
+      "docker list",
+      "docker show",
+      "docker status"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What command creates a new process in an existing container?",
+    "answers": [
+      "docker exec",
+      "docker run",
+      "docker create",
+      "docker spawn"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What command stops a running container?",
+    "answers": [
+      "docker stop",
+      "docker kill",
+      "docker halt",
+      "docker end"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What command starts a stopped container?",
+    "answers": [
+      "docker start",
+      "docker run",
+      "docker resume",
+      "docker continue"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What command removes a stopped container?",
+    "answers": [
+      "docker rm",
+      "docker delete",
+      "docker remove",
+      "docker destroy"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is a Docker volume?",
+    "answers": [
+      "An independent, writable directory within a container maintained separately from the union filesystem",
+      "A network mount",
+      "A container image",
+      "A configuration file"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "If a container is removed, what happens to data in the volume?",
+    "answers": [
+      "The data persists and can be accessed from the host",
+      "The data is deleted",
+      "The data is encrypted",
+      "The data is moved to another container"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Can volumes be shared among multiple containers?",
+    "answers": [
+      "Yes",
+      "No",
+      "Only read-only",
+      "Only with special permissions"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What flag adds a volume to a container?",
+    "answers": [
+      "-v",
+      "-volume",
+      "-d",
+      "-mount"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What command lists volumes on the system?",
+    "answers": [
+      "docker volume ls",
+      "docker list volumes",
+      "docker show volumes",
+      "docker volumes"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What are bind mounts?",
+    "answers": [
+      "Mounts that mount volumes on the host and in containers simultaneously",
+      "Network mounts",
+      "Temporary mounts",
+      "Read-only mounts"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the name of the Docker bridge on the host?",
+    "answers": [
+      "docker0",
+      "bridge0",
+      "veth0",
+      "eth0"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What command lists Docker networks?",
+    "answers": [
+      "docker network ls",
+      "docker list networks",
+      "docker show networks",
+      "docker networks"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What does bridge networking do?",
+    "answers": [
+      "Connects the host's network to the container namespace with containers on a private network",
+      "Creates a public network",
+      "Disables networking",
+      "Uses VPN"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What does host networking do?",
+    "answers": [
+      "Container shares the network stack with the host, including all its interfaces",
+      "Creates isolated network",
+      "Disables networking",
+      "Uses bridge only"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is a Dockerfile?",
+    "answers": [
+      "A recipe for building container images",
+      "A running container config",
+      "A volume definition",
+      "A network setup"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What does a Dockerfile contain?",
+    "answers": [
+      "A series of instructions and shell commands",
+      "Only environment variables",
+      "Only file copies",
+      "Only network config"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What command builds an image from a Dockerfile?",
+    "answers": [
+      "docker build",
+      "docker create",
+      "docker make",
+      "docker compile"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the first step in the image build process?",
+    "answers": [
+      "Begin with a base image",
+      "Write Dockerfile",
+      "Install dependencies",
+      "Configure networking"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "How are application changes saved during image building?",
+    "answers": [
+      "By committing changes as new layers",
+      "Direct file modification",
+      "Database updates",
+      "Log files"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What command inspects container configuration?",
+    "answers": [
+      "docker inspect",
+      "docker show",
+      "docker info",
+      "docker config"
+    ],
+    "correct_answer": 0
+  }
+]

@@ -1,0 +1,492 @@
+[
+  {
+    "question": "What are the broadly defined boot process tasks?",
+    "answers": [
+      "Finding/loading/running bootstrap code, kernel, startup scripts, and maintaining state",
+      "Only loading kernel",
+      "Only running scripts",
+      "Only starting services"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Where is system firmware boot code NOT typically stored?",
+    "answers": [
+      "RAM",
+      "ROM (Read-Only Memory)",
+      "Hard disk",
+      "USB drive"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What does system firmware probe for during boot?",
+    "answers": [
+      "Hardware and disks",
+      "Only hardware",
+      "Only disks",
+      "Nothing"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What does firmware NOT typically run during boot?",
+    "answers": [
+      "Complete diagnostics",
+      "Simple set of health checks",
+      "No checks",
+      "Only memory test"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What are the two types of system firmware?",
+    "answers": [
+      "BIOS and UEFI",
+      "BIOS and EFI",
+      "Legacy and Modern",
+      "Old and New"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Where does legacy BIOS look for boot code?",
+    "answers": [
+      "Master Boot Record (MBR) on boot devices",
+      "GPT partition",
+      "EFI partition",
+      "Root directory"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What does legacy BIOS use instead of GPT?",
+    "answers": [
+      "MBR",
+      "GPT partition table",
+      "FAT partition",
+      "NTFS"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is ESP?",
+    "answers": [
+      "EFI System Partition",
+      "Extended System Partition",
+      "Extra System Partition",
+      "Encrypted System Partition"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is NOT a purpose of boot loader?",
+    "answers": [
+      "Format disk",
+      "Identify and load appropriate OS kernel and set configuration arguments",
+      "Only load kernel",
+      "Only set arguments"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is GRUB?",
+    "answers": [
+      "The GRand Unified Boot loader",
+      "GNU Regular Universal Bootloader",
+      "General Runtime Universal Boot",
+      "Great Robust Universal Bootloader"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What PID does the kernel start as?",
+    "answers": [
+      "0",
+      "1",
+      "2",
+      "100"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Is init a kernel program or user-level program?",
+    "answers": [
+      "User-level program",
+      "Kernel program",
+      "Both",
+      "Neither"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What does init ensure?",
+    "answers": [
+      "System runs right complement of services and daemons at any time",
+      "Only boots",
+      "Only shuts down",
+      "Nothing"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is NOT a characteristic of single-user mode?",
+    "answers": [
+      "Multiple users",
+      "Minimal, root shell",
+      "Graphical mode",
+      "Network mode"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is multiuser mode?",
+    "answers": [
+      "Filesystems mounted, network configured, services running",
+      "Single user only",
+      "No network",
+      "No GUI"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What does init do at startup?",
+    "answers": [
+      "Sets hostname, timezone, checks disks, mounts filesystems, configures network",
+      "Only mounts disks",
+      "Only network",
+      "Only checks disks"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is run level 6?",
+    "answers": [
+      "Reboot",
+      "Halt - shuts down system",
+      "Single user",
+      "Multiuser"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is run level 1?",
+    "answers": [
+      "Single-user mode",
+      "Halt",
+      "Multiuser",
+      "Reboot"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is run level 3?",
+    "answers": [
+      "Multiuser mode with networking",
+      "Single user",
+      "Halt",
+      "Reboot"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is run level 5?",
+    "answers": [
+      "X11 - multiuser with networking and GUI",
+      "Single user",
+      "Halt",
+      "Reboot"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is run level 0?",
+    "answers": [
+      "Halt - shuts down system",
+      "Reboot",
+      "Single user",
+      "Multiuser"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What does systemd use instead of run levels?",
+    "answers": [
+      "Targets",
+      "Modes",
+      "Levels",
+      "States"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the most commonly used systemd target for halt?",
+    "answers": [
+      "poweroff.target",
+      "halt.target",
+      "shutdown.target",
+      "stop.target"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is systemd target for single-user mode?",
+    "answers": [
+      "rescue.target",
+      "single.target",
+      "emergency.target",
+      "root.target"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is systemd target for multiuser with GUI?",
+    "answers": [
+      "graphical.target",
+      "gui.target",
+      "x11.target",
+      "desktop.target"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is systemd target for reboot?",
+    "answers": [
+      "reboot.target",
+      "restart.target",
+      "boot.target",
+      "reload.target"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What command manages systemd?",
+    "answers": [
+      "systemctl",
+      "systemd",
+      "service",
+      "init"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What does systemd also manage besides init functions?",
+    "answers": [
+      "Network connections (networkd), logs (journald), logins (logind)",
+      "Only services",
+      "Only network",
+      "Only logs"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Which command is NOT used to halt the system?",
+    "answers": [
+      "stop",
+      "halt",
+      "end",
+      "quit"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What command reboots the system?",
+    "answers": [
+      "reboot",
+      "restart",
+      "boot",
+      "reload"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Which command provides the most flexible way to shut down the system?",
+    "answers": [
+      "shutdown",
+      "halt",
+      "poweroff",
+      "stop"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is emergency.target NOT used for?",
+    "answers": [
+      "Normal boot",
+      "Bare-bones shell for system recovery",
+      "Shutdown",
+      "Reboot"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Is run level 4 normally used by init?",
+    "answers": [
+      "No, not normally used",
+      "Yes, always",
+      "Only on servers",
+      "Only on desktops"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What does graphical.target map to in traditional run levels?",
+    "answers": [
+      "runlevel5.target",
+      "runlevel3.target - multiuser with networking",
+      "runlevel1.target",
+      "runlevel2.target"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Does init remove old files from /tmp?",
+    "answers": [
+      "No",
+      "Yes",
+      "Only on boot",
+      "Only on shutdown"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "question": "Does init configure packet filters?",
+    "answers": [
+      "No",
+      "Yes",
+      "Only firewalls",
+      "Only routers"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "question": "Does firmware know about motherboard devices?",
+    "answers": [
+      "No",
+      "Yes, typically",
+      "Only some",
+      "Never"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "question": "Can firmware UI let you designate boot device?",
+    "answers": [
+      "No",
+      "Yes",
+      "Only on UEFI",
+      "Only on BIOS"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "question": "Does firmware have priority list for boot medium?",
+    "answers": [
+      "No",
+      "Yes",
+      "Only UEFI",
+      "Only BIOS"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "question": "Are spontaneous processes part of kernel implementation?",
+    "answers": [
+      "No",
+      "Yes",
+      "Some are",
+      "None are"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "question": "What does init system management daemon do?",
+    "answers": [
+      "Makes sure system runs right services at any time",
+      "Only boots",
+      "Only shuts down",
+      "Nothing"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Is server mode similar to multiuser mode?",
+    "answers": [
+      "Yes, but with no GUI on console",
+      "No, completely different",
+      "Same as single user",
+      "Same as GUI mode"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "When does init typically check disks with fsck?",
+    "answers": [
+      "Only on errors",
+      "Yes",
+      "No",
+      "Only manual"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Does init set time zone?",
+    "answers": [
+      "Yes",
+      "No",
+      "Only manually",
+      "Only on first boot"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "How does init typically set the computer name?",
+    "answers": [
+      "Only on install",
+      "Yes",
+      "No",
+      "Only manually"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Does init start daemons and network services?",
+    "answers": [
+      "Yes",
+      "No",
+      "Only daemons",
+      "Only network"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "How do you change run level?",
+    "answers": [
+      "init <number>",
+      "runlevel <number>",
+      "level <number>",
+      "change <number>"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Does systemd manage kernel log entries?",
+    "answers": [
+      "Yes, with journald",
+      "No",
+      "Only syslog",
+      "Only dmesg"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Does systemd manage logins?",
+    "answers": [
+      "Yes, with logind",
+      "No",
+      "Only getty",
+      "Only SSH"
+    ],
+    "correct_answer": 0
+  }
+]

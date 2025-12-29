@@ -1,220 +1,502 @@
-{
-  "metadata": {
-    "source_file": "SNA_Network_Services.pdf",
-    "total_questions": 21,
-    "format": "multiple_choice",
-    "options_per_question": 4
+[
+  {
+    "question": "What does a web page consist of?",
+    "answers": [
+      "Objects, each can be stored on different servers",
+      "Single file only",
+      "Only HTML",
+      "Only images"
+    ],
+    "correct_answer": 0
   },
-  "questions": [
-    {
-      "question": "What does HTTP stand for?",
-      "options": [
-        "HyperText Transfer Portal",
-        "HyperText Transfer Protocol",
-        "High Transfer Text Protocol",
-        "Host Transfer Protocol"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "Which port does HTTP use by default?",
-      "options": [
-        "8080",
-        "443",
-        "80",
-        "3000"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "What is a web page composed of?",
-      "options": [
-        "Only HTML files",
-        "Objects stored on different servers",
-        "JavaScript files only",
-        "CSS stylesheets only"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "What is the main difference between persistent and non-persistent HTTP?",
-      "options": [
-        "Persistent uses UDP",
-        "Non-persistent closes TCP connection after each object",
-        "Persistent uses different ports",
-        "Non-persistent is more secure"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "What HTTP method uploads a new file to the server?",
-      "options": [
-        "GET",
-        "POST",
-        "PUT",
-        "DELETE"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "What does 'stateless' mean in the context of HTTP?",
-      "options": [
-        "Server cannot store files",
-        "Server maintains no information about past requests",
-        "Connection is always open",
-        "Server can only handle one request at a time"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "What is the primary purpose of HTTP cookies?",
-      "options": [
-        "Improve website loading speed",
-        "Store client-side session information",
-        "Encrypt data transmission",
-        "Compress HTTP responses"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "Which of the following is NOT an HTTP request method?",
-      "options": [
-        "GET",
-        "POST",
-        "RECEIVE",
-        "PUT"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "What is a web cache (proxy server)?",
-      "options": [
-        "Hardware that stores files",
-        "Server that acts as both client and server",
-        "Application that improves website graphics",
-        "Tool to monitor network traffic"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "What does SMTP protocol handle?",
-      "options": [
-        "Email retrieval",
-        "Email delivery and sending",
-        "Web page transfer",
-        "Domain name resolution"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "Which port does SMTP use by default?",
-      "options": [
-        "25",
-        "110",
-        "143",
-        "587"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "What is the purpose of the HEAD HTTP method?",
-      "options": [
-        "Delete server headers",
-        "Request headers only without response body",
-        "Modify HTTP headers",
-        "Establish connection"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "How many RTTs (Round Trip Times) does persistent HTTP require for multiple objects?",
-      "options": [
-        "One RTT per object",
-        "Two RTTs per object",
-        "One RTT for all objects",
-        "Three RTTs per object"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "What does IMAP protocol provide?",
-      "options": [
-        "Email sending only",
-        "Message storage and retrieval",
-        "Network routing",
-        "Domain registration"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "Which component handles incoming mail in the mail system?",
-      "options": [
-        "MTA",
-        "UA",
-        "DA (Delivery Agent)",
-        "MSA"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "What is the role of load balancer in a web application stack?",
-      "options": [
-        "Increase database capacity",
-        "Forward requests to healthy servers",
-        "Encrypt HTTP traffic",
-        "Store static files"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "Which open source caching software is known for excellent configuration language?",
-      "options": [
-        "Squid",
-        "Varnish",
-        "Apache mod_cache",
-        "NGINX"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "What is the standard payload size of an Ethernet frame?",
-      "options": [
-        "1024 bytes",
-        "2000 bytes",
-        "1500 bytes",
-        "512 bytes"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "What does a web application firewall search for?",
-      "options": [
-        "Slow requests",
-        "Malicious requests",
-        "Large files",
-        "Unknown protocols"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "What format are Packer configurations written in?",
-      "options": [
-        "YAML",
-        "XML",
-        "JSON",
-        "Python"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "How are HTTP response messages structured?",
-      "options": [
-        "Data first, then headers",
-        "Status line, headers, blank line, data",
-        "Headers only, no data",
-        "Only status code"
-      ],
-      "answer": 1
-    }
-  ]
-}
+  {
+    "question": "Can web page objects be on different servers?",
+    "answers": [
+      "Yes",
+      "No",
+      "Only same domain",
+      "Only same network"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is an object in web context?",
+    "answers": [
+      "HTML file, JPEG image, Java applet, audio file, etc.",
+      "Only HTML",
+      "Only images",
+      "Only text"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is HTTP?",
+    "answers": [
+      "Hypertext Transfer Protocol - Web's application-layer protocol",
+      "Hardware Transfer Protocol",
+      "Host Transfer Protocol",
+      "HTTP Transfer Protocol"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the client in HTTP client/server model?",
+    "answers": [
+      "Browser that requests, receives, and displays Web objects",
+      "Web server",
+      "Database",
+      "Router"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the server in HTTP?",
+    "answers": [
+      "Web server that sends objects in response to requests",
+      "Browser",
+      "Client",
+      "Database"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What transport protocol does HTTP use?",
+    "answers": [
+      "TCP",
+      "UDP",
+      "ICMP",
+      "IP"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What port does HTTP client connect to?",
+    "answers": [
+      "Port 80",
+      "Port 443",
+      "Port 8080",
+      "Port 21"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Is HTTP stateless?",
+    "answers": [
+      "Yes, server maintains no information about past client requests",
+      "No",
+      "Only HTTP/1.0",
+      "Only HTTP/2.0"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "In non-persistent HTTP, how many objects per TCP connection?",
+    "answers": [
+      "At most one",
+      "Multiple",
+      "Unlimited",
+      "Exactly two"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "In persistent HTTP, how many objects per connection?",
+    "answers": [
+      "Multiple objects",
+      "Only one",
+      "Exactly two",
+      "None"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Which HTTP version uses persistent connections?",
+    "answers": [
+      "HTTP 1.1",
+      "HTTP 1.0",
+      "HTTP 0.9",
+      "HTTP 3.0"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "How many RTTs per object in non-persistent HTTP?",
+    "answers": [
+      "2 RTTs",
+      "1 RTT",
+      "3 RTTs",
+      "0 RTTs"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is a disadvantage of non-persistent HTTP?",
+    "answers": [
+      "OS overhead for each TCP connection",
+      "Too fast",
+      "Too simple",
+      "No overhead"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is GET method for?",
+    "answers": [
+      "Requesting resources from server",
+      "Sending data to server",
+      "Deleting resources",
+      "Updating resources"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is POST method for?",
+    "answers": [
+      "Sending user input from client to server in entity body",
+      "Getting resources",
+      "Deleting data",
+      "Requesting headers"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What does HEAD method request?",
+    "answers": [
+      "Only headers that would be returned by GET",
+      "Full response",
+      "Body only",
+      "Nothing"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What does PUT method do?",
+    "answers": [
+      "Uploads new file to server, replacing existing file at URL",
+      "Downloads file",
+      "Deletes file",
+      "Reads file"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Is HTTP request/response in ASCII format?",
+    "answers": [
+      "Yes, human-readable format",
+      "No, binary",
+      "Only responses",
+      "Only requests"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What does SMTP do?",
+    "answers": [
+      "Protocol for exchanging e-mail messages",
+      "Web transfer",
+      "File transfer",
+      "Remote login"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What RFC defines SMTP?",
+    "answers": [
+      "RFC 5321",
+      "RFC 7231",
+      "RFC 2822",
+      "RFC 1234"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What RFC defines email message syntax?",
+    "answers": [
+      "RFC 2822",
+      "RFC 5321",
+      "RFC 7231",
+      "RFC 1234"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Does SMTP use persistent connections?",
+    "answers": [
+      "Yes",
+      "No",
+      "Only sometimes",
+      "Never"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What format does SMTP require for message?",
+    "answers": [
+      "7-bit ASCII",
+      "8-bit",
+      "UTF-8",
+      "Binary"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "How does SMTP determine end of message?",
+    "answers": [
+      "CRLF.CRLF",
+      "EOF",
+      "NULL",
+      "END"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Is HTTP client pull or push?",
+    "answers": [
+      "Client pull",
+      "Client push",
+      "Server pull",
+      "Server push"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Is SMTP client pull or push?",
+    "answers": [
+      "Client push",
+      "Client pull",
+      "Server pull",
+      "Server push"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is IMAP?",
+    "answers": [
+      "Internet Mail Access Protocol for retrieving email from server",
+      "Email sending protocol",
+      "Web protocol",
+      "File transfer"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is IMAP's RFC?",
+    "answers": [
+      "RFC 3501",
+      "RFC 5321",
+      "RFC 2822",
+      "RFC 7231"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Does IMAP store messages on server?",
+    "answers": [
+      "Yes",
+      "No",
+      "Only temporarily",
+      "Never"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Can IMAP manage folders on server?",
+    "answers": [
+      "Yes",
+      "No",
+      "Only local",
+      "Never"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What protocol do Gmail, Hotmail, Yahoo use?",
+    "answers": [
+      "HTTP for web interface on top of SMTP/IMAP",
+      "Only SMTP",
+      "Only IMAP",
+      "Only POP"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What package provides mail utilities on Ubuntu?",
+    "answers": [
+      "mailutils",
+      "mail",
+      "sendmail",
+      "postfix"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is Postfix?",
+    "answers": [
+      "Mail server/MTA (Mail Transfer Agent)",
+      "Mail client",
+      "Web server",
+      "DNS server"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What are Postfix configuration types?",
+    "answers": [
+      "No configuration, Internet site, Internet with smarthost, Satellite system, Local only",
+      "Only one type",
+      "Only two types",
+      "Unlimited types"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is Internet site configuration?",
+    "answers": [
+      "Mail sent and received directly using SMTP",
+      "No network",
+      "Only local",
+      "Only satellite"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is satellite system configuration?",
+    "answers": [
+      "All mail sent to smarthost for delivery",
+      "Direct SMTP",
+      "No mail",
+      "Local only"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is Local only configuration?",
+    "answers": [
+      "Only mail for local users, no network",
+      "Internet mail",
+      "Smarthost",
+      "Satellite"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What command sends test mail?",
+    "answers": [
+      "mail",
+      "sendmail",
+      "smtp",
+      "email"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Where are received emails stored?",
+    "answers": [
+      "/var/mail/<username>",
+      "/home/mail",
+      "/etc/mail",
+      "/usr/mail"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What port is SMTP typically on?",
+    "answers": [
+      "Port 25",
+      "Port 80",
+      "Port 443",
+      "Port 110"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Does persistent HTTP reduce response time?",
+    "answers": [
+      "Yes, as little as one RTT for all referenced objects",
+      "No",
+      "Same time",
+      "Slower"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Can browsers open multiple parallel TCP connections?",
+    "answers": [
+      "Yes, often do for non-persistent HTTP",
+      "No",
+      "Only one",
+      "Never"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Does SMTP handle multiple objects in one message?",
+    "answers": [
+      "Yes, multipart message",
+      "No, one per message",
+      "Never multiple",
+      "Only two"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Does HTTP encapsulate each object separately?",
+    "answers": [
+      "Yes, in its own response message",
+      "No",
+      "Multiple per message",
+      "Never"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Are header lines in email different from SMTP commands?",
+    "answers": [
+      "Yes, To:/From:/Subject: are different from MAIL FROM:/RCPT TO:",
+      "No, same",
+      "Sometimes",
+      "Never"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What separates header from body in email?",
+    "answers": [
+      "Blank line",
+      "Separator line",
+      "Delimiter",
+      "Nothing"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Can web page base HTML file include multiple objects?",
+    "answers": [
+      "Yes, several referenced objects",
+      "No, only one",
+      "Maximum two",
+      "Never"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Is each web object addressable by URL?",
+    "answers": [
+      "Yes",
+      "No",
+      "Only images",
+      "Only HTML"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Does SMTP require handshake?",
+    "answers": [
+      "Yes, HELO command",
+      "No",
+      "Only sometimes",
+      "Never"
+    ],
+    "correct_answer": 0
+  }
+]

@@ -1,0 +1,502 @@
+[
+  {
+    "question": "What do access control decisions depend on in standard Unix?",
+    "answers": [
+      "Which user is attempting to perform an operation or membership in a UNIX group",
+      "Time of day",
+      "Network location",
+      "File size"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Who owns the objects you create?",
+    "answers": [
+      "You",
+      "Root",
+      "The group",
+      "The system"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Which special user account can act as the owner of any object?",
+    "answers": [
+      "root",
+      "admin",
+      "superuser",
+      "system"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the UID of the root account?",
+    "answers": [
+      "1",
+      "0",
+      "-1",
+      "999"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "question": "What file maps UIDs to usernames?",
+    "answers": [
+      "/etc/users",
+      "/etc/passwd",
+      "/etc/accounts",
+      "/etc/shadow"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "question": "What file maps GIDs to group names?",
+    "answers": [
+      "/etc/group",
+      "/etc/groups",
+      "/etc/gids",
+      "/etc/groupnames"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What can the owner of a process do?",
+    "answers": [
+      "Send the process signals and reduce the process's scheduling priority",
+      "Only view the process",
+      "Only kill the process",
+      "Nothing without root"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "How many UID types does a process have?",
+    "answers": [
+      "Three (real, effective, saved)",
+      "One",
+      "Two",
+      "Four"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Are the real and effective UIDs normally the same?",
+    "answers": [
+      "No",
+      "Yes",
+      "Only for root",
+      "Only for regular users"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "question": "What UID is used to determine file access permissions?",
+    "answers": [
+      "Real UID",
+      "Filesystem UID",
+      "Effective UID",
+      "Saved UID"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "question": "What is another name for the root account?",
+    "answers": [
+      "Administrator account",
+      "Superuser account",
+      "System account",
+      "Master account"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "question": "Can root perform any valid operation on any file or process?",
+    "answers": [
+      "No",
+      "Yes",
+      "Only on system files",
+      "Only during boot"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "question": "Which is an example of a restricted operation?",
+    "answers": [
+      "Creating device files",
+      "Reading text files",
+      "Running user programs",
+      "Viewing directories"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What do setuid and setgid execution allow?",
+    "answers": [
+      "Specially marked executable files to run with elevated permissions",
+      "Any file to run as root",
+      "Files to be deleted",
+      "Files to be copied"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "When a setuid program runs, what does the kernel change?",
+    "answers": [
+      "The effective UID or GID of the process to the UID or GID of the file",
+      "The real UID only",
+      "The file permissions",
+      "The file ownership"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Are programs that run setuid to root prone to security problems?",
+    "answers": [
+      "No",
+      "Yes",
+      "Only if poorly written",
+      "Never"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "question": "Is allowing direct root login a good idea?",
+    "answers": [
+      "No, it's a bad idea",
+      "Yes, it's recommended",
+      "Only on servers",
+      "Only on workstations"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What does Ubuntu do with root logins by default?",
+    "answers": [
+      "Forbids them",
+      "Allows them",
+      "Requires a password",
+      "Requires two-factor authentication"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Why are root logins problematic?",
+    "answers": [
+      "Leave no record of what operations were performed as root or who did them",
+      "Too slow",
+      "Too secure",
+      "Difficult to use"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What command substitutes user identity?",
+    "answers": [
+      "su",
+      "sudo",
+      "switch",
+      "login"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What does su prompt for?",
+    "answers": [
+      "The root password",
+      "Your own password",
+      "Both passwords",
+      "No password"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Does su record the commands executed as root?",
+    "answers": [
+      "No",
+      "Yes",
+      "Only on Linux",
+      "Only with a flag"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What does su create in the logs?",
+    "answers": [
+      "An entry stating who became root and when",
+      "All commands executed",
+      "File modifications",
+      "Network activity"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the recommended primary method of access to the root account?",
+    "answers": [
+      "sudo",
+      "su",
+      "Direct login",
+      "SSH"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What does sudo take as its argument?",
+    "answers": [
+      "A command line to be executed as root",
+      "A username",
+      "A password",
+      "A configuration file"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What file contains the list of authorized sudo accounts?",
+    "answers": [
+      "/etc/sudoers",
+      "/etc/sudo.conf",
+      "/etc/sudo_users",
+      "/etc/authorized_users"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What password does sudo prompt for?",
+    "answers": [
+      "The user's own password",
+      "The root password",
+      "Both passwords",
+      "No password"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "How long can sudo commands be executed without re-entering a password?",
+    "answers": [
+      "Five minutes (configurable)",
+      "One minute",
+      "Ten minutes",
+      "Unlimited"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What does sudo keep a log of?",
+    "answers": [
+      "Command lines executed, hosts, people who ran them, directories, and times",
+      "Only command names",
+      "Only timestamps",
+      "Nothing"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is an advantage of sudo over su?",
+    "answers": [
+      "Accountability is much improved because of command logging",
+      "Faster execution",
+      "Better security by default",
+      "Simpler syntax"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Can sudo users do specific chores without unlimited root privileges?",
+    "answers": [
+      "No",
+      "Yes",
+      "Only with special configuration",
+      "Only on certain systems"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "question": "How many people need to know the real root password when using sudo?",
+    "answers": [
+      "Only one or two",
+      "Everyone",
+      "All administrators",
+      "Nobody"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is a disadvantage of sudo?",
+    "answers": [
+      "Any breach in a sudoer's personal account can be equivalent to breaching root",
+      "Too slow",
+      "Too complex",
+      "Not widely supported"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Can sudo's command logging be subverted?",
+    "answers": [
+      "No, never",
+      "Yes, by tricks such as shell escapes or sudo sh",
+      "Only by root",
+      "Only on older systems"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "question": "How can you disable the root account on Linux?",
+    "answers": [
+      "passwd -l",
+      "passwd -d",
+      "passwd -r",
+      "passwd -x"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the main advantage of disabling the root account?",
+    "answers": [
+      "Needn't record and manage root's password, eliminating possibility of compromise",
+      "Better performance",
+      "Easier administration",
+      "More features"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "How do you unlock the root account on Ubuntu?",
+    "answers": [
+      "sudo passwd -u root",
+      "sudo passwd -l root",
+      "passwd -u root",
+      "unlock root"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What UID range is typically for system accounts?",
+    "answers": [
+      "Under 10",
+      "1-100",
+      "100-1000",
+      "Over 1000"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is PAM?",
+    "answers": [
+      "Pluggable Authentication Modules",
+      "Process Access Manager",
+      "Password Authentication Mechanism",
+      "Privileged Access Management"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Is PAM an authentication or access control technology?",
+    "answers": [
+      "Authentication",
+      "Access control",
+      "Both",
+      "Neither"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is Kerberos?",
+    "answers": [
+      "Network cryptographic authentication system using a trusted third party",
+      "A firewall",
+      "An access control list",
+      "A file encryption tool"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What are filesystem ACLs?",
+    "answers": [
+      "Generalization of traditional permission model permitting permissions for multiple users and groups",
+      "Access control for networks",
+      "Encryption keys",
+      "Backup configurations"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "How many capabilities do Linux capabilities divide root powers into?",
+    "answers": [
+      "About 30",
+      "About 10",
+      "About 50",
+      "About 100"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What do Linux namespaces do?",
+    "answers": [
+      "Segregate processes into hierarchical partitions from which they see only a subset of the system",
+      "Group files",
+      "Manage networks",
+      "Control permissions"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Can jailed processes in a namespace tell they've been confined?",
+    "answers": [
+      "Yes, always",
+      "No, they are not aware",
+      "Only with tools",
+      "Only root can tell"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "question": "What is the standard UNIX model of access control called?",
+    "answers": [
+      "Discretionary access control",
+      "Mandatory access control",
+      "Role-based access control",
+      "Rule-based access control"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is MAC?",
+    "answers": [
+      "Mandatory access control",
+      "Media access control",
+      "Manual access control",
+      "Multiple access control"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What does MAC allow administrators to do?",
+    "answers": [
+      "Write access control policies that override or supplement discretionary permissions",
+      "Only monitor access",
+      "Only log access",
+      "Disable all access"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is SELinux?",
+    "answers": [
+      "Security-Enhanced Linux from the U.S. National Security Agency",
+      "Standard Enterprise Linux",
+      "Simple Encrypted Linux",
+      "Server Edition Linux"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is AppArmor?",
+    "answers": [
+      "A product of Canonical implementing MAC for service securement",
+      "An antivirus",
+      "A firewall",
+      "A backup tool"
+    ],
+    "correct_answer": 0
+  }
+]

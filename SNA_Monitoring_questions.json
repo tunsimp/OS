@@ -1,220 +1,502 @@
-{
-  "metadata": {
-    "source_file": "SNA_Monitoring.pdf",
-    "total_questions": 21,
-    "format": "multiple_choice",
-    "options_per_question": 4
+[
+  {
+    "question": "Why is monitoring important?",
+    "answers": [
+      "Spot problems before they affect users or put data at risk",
+      "Increase CPU usage",
+      "Reduce costs only",
+      "Speed up networks"
+    ],
+    "correct_answer": 0
   },
-  "questions": [
-    {
-      "question": "What is the primary goal of system monitoring?",
-      "options": [
-        "Increase bandwidth",
-        "Ensure infrastructure operates as expected",
-        "Reduce costs",
-        "Speed up applications"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "Which monitoring platform specializes in real-time notification of errors?",
-      "options": [
-        "Graphite",
-        "InfluxDB",
-        "Nagios and Icinga",
-        "Prometheus"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "What are the three types of data in monitoring?",
-      "options": [
-        "Static, dynamic, temporal",
-        "Real-time metrics, events, aggregated trends",
-        "Network, storage, compute",
-        "Logs, files, streams"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "What is the modern approach to monitoring data?",
-      "options": [
-        "File-based storage",
-        "Time-series database with summarization",
-        "Real-time only",
-        "Batch processing"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "Which statement about notifications is MOST important?",
-      "options": [
-        "More notifications are always better",
-        "Notifications must be actionable",
-        "Email is the only option",
-        "Silence all alerts"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "What is a main advantage of Sensu monitoring platform?",
-      "options": [
-        "Cheapest option",
-        "Can run legacy plugins from Nagios",
-        "Requires no configuration",
-        "Only for Linux"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "Which tool monitors load averages on a system?",
-      "options": [
-        "ping",
-        "SNMP",
-        "uptime command",
-        "DNS lookup"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "What does logwatch do?",
-      "options": [
-        "Monitor network packets",
-        "Monitor application logs",
-        "Monitor file changes",
-        "Monitor user login"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "Which security monitoring approach validates system state against baseline?",
-      "options": [
-        "Port scanning",
-        "System integrity verification",
-        "Packet capture",
-        "Traffic analysis"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "Name a popular open source HIDS platform:",
-      "options": [
-        "Snort",
-        "OSSEC",
-        "iptables",
-        "tcpdump"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "What is mtree used for?",
-      "options": [
-        "Time synchronization",
-        "System integrity verification",
-        "Memory testing",
-        "Mount filesystem"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "What does monitoring platforms do with metrics?",
-      "options": [
-        "Delete them",
-        "Evaluate using admin-set rules",
-        "Store in RAM only",
-        "Send to cloud only"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "Which is a time-series monitoring platform with integrated alerting?",
-      "options": [
-        "Graphite",
-        "Prometheus",
-        "Nagios",
-        "Sensu"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "What feature helps avoid monitoring burnout?",
-      "options": [
-        "Increase all alerts",
-        "Monitor everything",
-        "Define what really needs 24/7 attention",
-        "Disable logging"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "Which tool pairs with Graphite for visualization?",
-      "options": [
-        "Prometheus",
-        "Grafana",
-        "Sensu",
-        "Icinga"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "What should happen before a service goes to production?",
-      "options": [
-        "No testing",
-        "Added to monitoring system",
-        "Certified by auditor",
-        "Installed at night"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "What is the purpose of run books in monitoring?",
-      "options": [
-        "Run applications",
-        "Document incident response procedures",
-        "Monitor bandwidth",
-        "Track licenses"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "Which monitoring tool uses ping to check network status?",
-      "options": [
-        "Graphite",
-        "Network monitoring tools",
-        "InfluxDB",
-        "Prometheus"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "What data management feature does InfluxDB provide?",
-      "options": [
-        "Basic storage",
-        "Richer data management features",
-        "No data retention",
-        "File-based only"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "What is AIDE abbreviation stand for?",
-      "options": [
-        "Advanced Internet Data Exchange",
-        "Advanced Intrusion Detection Environment",
-        "Application Interface Development",
-        "Automated Infrastructure Deployment"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "How often does monitoring platform typically update by default?",
-      "options": [
-        "Every hour",
-        "Every 1-2 seconds",
-        "Only on demand",
-        "Never automatically"
-      ],
-      "answer": 1
-    }
-  ]
-}
+  {
+    "question": "What is a goal of monitoring?",
+    "answers": [
+      "Ensure IT infrastructure operates as expected",
+      "Increase complexity",
+      "Reduce staff",
+      "Eliminate documentation"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What are the three data types in monitoring?",
+    "answers": [
+      "Real-time metrics, events, aggregated historic trends",
+      "Only logs",
+      "Only alerts",
+      "Only metrics"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What do first-generation platforms like Nagios focus on?",
+    "answers": [
+      "Detecting and responding to problems as they occurred",
+      "Cloud storage",
+      "AI analysis",
+      "Backup systems"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the modern approach to monitoring organization?",
+    "answers": [
+      "Organize around a data store specialized for time-series data",
+      "Use only email alerts",
+      "Manual monitoring",
+      "Spreadsheets"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Should notifications be actionable?",
+    "answers": [
+      "Yes",
+      "No",
+      "Only sometimes",
+      "Never"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What do purely informational notifications do?",
+    "answers": [
+      "Train staff to ignore notifications",
+      "Improve alerting",
+      "Increase response time",
+      "Enhance security"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Beyond email, what notification method is mentioned?",
+    "answers": [
+      "SMS notifications",
+      "Postal mail",
+      "Fax",
+      "Telegram"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is an example of first-generation monitoring platform?",
+    "answers": [
+      "Nagios",
+      "Kubernetes",
+      "Docker",
+      "Ansible"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is Icinga?",
+    "answers": [
+      "A first-generation monitoring platform",
+      "A container engine",
+      "A programming language",
+      "A database"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "For how many hosts do Nagios and Icinga work well?",
+    "answers": [
+      "Fewer than a thousand",
+      "Millions",
+      "Only ten",
+      "Exactly one thousand"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is Sensu?",
+    "answers": [
+      "Both open source and commercially supported monitoring platform",
+      "Only commercial",
+      "Only open source",
+      "A database"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Can Sensu run legacy monitoring plug-ins?",
+    "answers": [
+      "Yes, from Nagios, Icinga, or Zabbix",
+      "No",
+      "Only Nagios",
+      "Only Icinga"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is Graphite?",
+    "answers": [
+      "Flexible time-series database with easy query language",
+      "A web server",
+      "A container platform",
+      "A programming language"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What does Prometheus include?",
+    "answers": [
+      "Integrated collection, trending, and alerting components",
+      "Only graphing",
+      "Only storage",
+      "Only alerts"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is InfluxDB described as?",
+    "answers": [
+      "Extraordinarily developer-friendly time-series monitoring platform",
+      "A relational database",
+      "A web framework",
+      "A scripting language"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What charting platform works with Graphite?",
+    "answers": [
+      "Grafana",
+      "Tableau",
+      "Excel",
+      "PowerBI"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What command is used for network monitoring via ping for IPv4?",
+    "answers": [
+      "ping",
+      "ping4",
+      "netping",
+      "icmp"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What command is used for IPv6 ping?",
+    "answers": [
+      "ping6",
+      "ping -6",
+      "pingv6",
+      "icmp6"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What protocol is used for network monitoring?",
+    "answers": [
+      "SNMP (Simple Network Management Protocol)",
+      "HTTP",
+      "FTP",
+      "SMTP"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Where can load averages be read from?",
+    "answers": [
+      "/proc/loadavg",
+      "/var/load",
+      "/sys/load",
+      "/etc/load"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Which commands show load averages?",
+    "answers": [
+      "uptime, w, sar, and top",
+      "Only top",
+      "Only w",
+      "Only sar"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What tool is mentioned for log monitoring?",
+    "answers": [
+      "logwatch",
+      "logview",
+      "logmon",
+      "syslog"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What does system integrity verification validate?",
+    "answers": [
+      "Current state of the system against a known-good baseline",
+      "Network speed",
+      "CPU temperature",
+      "Disk space only"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Which tools are mentioned for integrity verification?",
+    "answers": [
+      "Tripwire and OSSEC",
+      "Nagios and Icinga",
+      "Docker and Kubernetes",
+      "Git and SVN"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What are the two types of intrusion detection?",
+    "answers": [
+      "Host-based (HIDS) and network-based (NIDS)",
+      "Only network",
+      "Only host",
+      "Application-based"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What are two popular open source HIDS platforms?",
+    "answers": [
+      "OSSEC and AIDE",
+      "Nagios and Icinga",
+      "Prometheus and Grafana",
+      "Docker and Kubernetes"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What should you avoid in monitoring?",
+    "answers": [
+      "Monitoring burn-out",
+      "Documentation",
+      "Automation",
+      "Logging"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What should you define for monitoring?",
+    "answers": [
+      "What circumstances require 24\u00d77 attention",
+      "Everything",
+      "Nothing",
+      "Only errors"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What should you eliminate in monitoring?",
+    "answers": [
+      "Monitoring noise",
+      "All alerts",
+      "Documentation",
+      "Logs"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What should you create for everything in monitoring?",
+    "answers": [
+      "Run books",
+      "Scripts",
+      "Containers",
+      "VMs"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What should you monitor according to best practices?",
+    "answers": [
+      "The monitoring platform itself",
+      "Only production servers",
+      "Only databases",
+      "Only networks"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "When should servers be added to monitoring?",
+    "answers": [
+      "Before going into production",
+      "After deployment",
+      "When problems occur",
+      "Never"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What improves when you monitor systems?",
+    "answers": [
+      "Admin's quality of life",
+      "Only uptime",
+      "Only performance",
+      "Only security"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is worse: service outage or monitoring outage?",
+    "answers": [
+      "Service outage",
+      "Monitoring outage",
+      "Both equal",
+      "Neither matters"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What should dashboards transform data into?",
+    "answers": [
+      "Infographic gold",
+      "Raw numbers",
+      "Text files",
+      "Binary data"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What should you pick for dashboards?",
+    "answers": [
+      "Most important metrics indicating health or performance",
+      "All available metrics",
+      "Random metrics",
+      "No metrics"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "How should data series be displayed on dashboards?",
+    "answers": [
+      "As charts, easy to assess at a glance",
+      "As tables only",
+      "As text only",
+      "Hidden"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is a consideration when selecting monitor platforms?",
+    "answers": [
+      "Data-gathering flexibility",
+      "Only cost",
+      "Only UI",
+      "Only vendor"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Is automated discovery a consideration for monitoring platforms?",
+    "answers": [
+      "Yes",
+      "No",
+      "Only for large networks",
+      "Only for small networks"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Are reporting features important in monitoring platforms?",
+    "answers": [
+      "Yes",
+      "No",
+      "Only sometimes",
+      "Never"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What does mtree do?",
+    "answers": [
+      "System integrity verification",
+      "Mount filesystems",
+      "Monitor trees",
+      "Make directories"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Can monitoring scripts be run from cron?",
+    "answers": [
+      "Yes",
+      "No",
+      "Only with sudo",
+      "Only as root"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Do historical trends help with monitoring?",
+    "answers": [
+      "Yes, for baseline comparison and dashboard presentations",
+      "No benefit",
+      "Only for reports",
+      "Only for audits"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Should data be summarized as it ages in modern monitoring?",
+    "answers": [
+      "Yes, to limit storage requirements",
+      "No, keep all raw data",
+      "Delete immediately",
+      "Never store"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What happens with time-series data as it ages?",
+    "answers": [
+      "Store applies increasingly high levels of summarization",
+      "Deleted immediately",
+      "Compressed only",
+      "Archived unchanged"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Are notifications the only option for monitoring actions?",
+    "answers": [
+      "No, many other options exist like automated actions and logging",
+      "Yes, only notifications",
+      "Only emails",
+      "Only SMS"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Can LED lighting systems be used for monitoring?",
+    "answers": [
+      "Yes, for at-a-glance status indication",
+      "No, never",
+      "Only in homes",
+      "Only for decoration"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is user interface quality a factor in?",
+    "answers": [
+      "Selecting monitoring platforms",
+      "Only performance",
+      "Only security",
+      "Not important"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Is cost a consideration for monitoring platforms?",
+    "answers": [
+      "Yes",
+      "No",
+      "Never",
+      "Only for small companies"
+    ],
+    "correct_answer": 0
+  }
+]

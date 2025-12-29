@@ -1,220 +1,502 @@
-{
-  "metadata": {
-    "source_file": "SNA_Virtualization.pdf",
-    "total_questions": 21,
-    "format": "multiple_choice",
-    "options_per_question": 4
+[
+  {
+    "question": "What is a hypervisor also known as?",
+    "answers": [
+      "Virtual machine monitor",
+      "Virtual machine manager",
+      "Virtual server",
+      "Virtual controller"
+    ],
+    "correct_answer": 0
   },
-  "questions": [
-    {
-      "question": "What is the main purpose of a hypervisor?",
-      "options": [
-        "Increase bandwidth",
-        "Mediate between VMs and hardware",
-        "Manage user accounts",
-        "Compile code"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "What does full virtualization do?",
-      "options": [
-        "Partially emulate hardware",
-        "Fully emulate underlying hardware",
-        "Use special CPU",
-        "Share operating system"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "What is a key limitation of full virtualization?",
-      "options": [
-        "High performance",
-        "No overhead",
-        "Performance penalty due to translation",
-        "Requires no modification"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "What is paravirtualization?",
-      "options": [
-        "Partial virtualization",
-        "Modified guests cooperate with hypervisor",
-        "Full hardware emulation",
-        "Container-based"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "Which hypervisor uses paravirtualization?",
-      "options": [
-        "KVM",
-        "Xen",
-        "VMware",
-        "VirtualBox"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "What enables hardware-assisted virtualization?",
-      "options": [
-        "Software algorithms",
-        "CPU features like Intel VT",
-        "Kernel modules",
-        "Network optimization"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "What does KVM stand for?",
-      "options": [
-        "Kernel Virtual Machine",
-        "Key Value Map",
-        "Knowledge Virtual Module",
-        "Kernel Visualization Module"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "What is a Type 1 hypervisor?",
-      "options": [
-        "User-space application",
-        "Bare-metal/native hypervisor",
-        "Container",
-        "Emulator"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "Example of Type 2 hypervisor:",
-      "options": [
-        "XenServer",
-        "VMware ESXi",
-        "VirtualBox",
-        "Hyper-V"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "What is live migration?",
-      "options": [
-        "Moving files",
-        "Moving VMs between hypervisors without downtime",
-        "Updating kernel",
-        "Rebooting system"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "What is memory dance in VM migration?",
-      "options": [
-        "Animation technique",
-        "Copying memory changes between source and destination",
-        "Memory leak",
-        "Disk activity"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "What are virtual machine images?",
-      "options": [
-        "Screenshot files",
-        "Templates of configured operating systems",
-        "Network diagrams",
-        "Backup files"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "Can VM images be portable across different hardware?",
-      "options": [
-        "Never",
-        "Sometimes",
-        "Yes, with conversion tools",
-        "Only if same CPU"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "What is containerization?",
-      "options": [
-        "Shipping containers",
-        "OS-level virtualization without hypervisor",
-        "File storage",
-        "Data backup"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "Which OS provides FreeBSD jails?",
-      "options": [
-        "Linux",
-        "Windows",
-        "FreeBSD",
-        "macOS"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "What is Packer used for?",
-      "options": [
-        "Packaging files",
-        "Building VM images from specification",
-        "Backup software",
-        "File compression"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "What format does Packer use?",
-      "options": [
-        "XML",
-        "YAML",
-        "JSON",
-        "INI"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "What is Vagrant?",
-      "options": [
-        "Virtualization platform",
-        "Wrapper on top of virtualization platforms",
-        "Operating system",
-        "Container engine"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "What can Vagrant simplify?",
-      "options": [
-        "Web browsing",
-        "Virtual environment provisioning",
-        "Email",
-        "File compression"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "What is the containers-on-VMs architecture used for?",
-      "options": [
-        "Testing",
-        "Containerized apps on public clouds",
-        "File storage",
-        "Database replication"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "What resource overhead do containers have?",
-      "options": [
-        "Very high",
-        "Moderate",
-        "Low, near-native performance",
-        "Unknown"
-      ],
-      "answer": 2
-    }
-  ]
-}
+  {
+    "question": "Which hypervisor is an example of paravirtualization?",
+    "answers": [
+      "Xen",
+      "KVM",
+      "VMware",
+      "VirtualBox"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What does KVM stand for?",
+    "answers": [
+      "Kernel-based Virtual Machine",
+      "Key Virtual Monitor",
+      "Kernel Virtual Manager",
+      "Key Value Machine"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Which is NOT an example of a bare-metal hypervisor?",
+    "answers": [
+      "VMware Workstation",
+      "VMware ESXi",
+      "VirtualBox",
+      "QEMU"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Which is NOT an example of a Type 1 hypervisor?",
+    "answers": [
+      "VMware Workstation",
+      "XenServer",
+      "VirtualBox",
+      "Docker"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Which is NOT an example of a Type 2 hypervisor?",
+    "answers": [
+      "VMware ESXi",
+      "VirtualBox",
+      "XenServer",
+      "KVM"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the main characteristic of Type 2 hypervisors?",
+    "answers": [
+      "Runs on top of another OS",
+      "Runs directly on hardware without a supporting OS",
+      "Requires containers",
+      "Uses paravirtualization only"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the main characteristic of Type 1 hypervisors?",
+    "answers": [
+      "Runs directly on hardware without a supporting OS",
+      "User-space applications running on top of another OS",
+      "Requires special CPU features",
+      "Cannot run Windows"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What does full virtualization emulate?",
+    "answers": [
+      "All underlying hardware components",
+      "Only CPU",
+      "Only memory",
+      "Only network devices"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the main disadvantage of paravirtualization?",
+    "answers": [
+      "Requires guest OS modification",
+      "Performance penalty due to hardware translation",
+      "Limited OS support",
+      "High memory usage"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the advantage of paravirtualization?",
+    "answers": [
+      "Performance improvement by an order of magnitude or more",
+      "Runs guests without modification",
+      "Best performance",
+      "Lowest overhead"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the most common emulation package used with hypervisors?",
+    "answers": [
+      "QEMU",
+      "VirtualBox",
+      "VMware Tools",
+      "Bochs"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the key characteristic of paravirtualization?",
+    "answers": [
+      "Guest OS actively cooperates with the hypervisor",
+      "No guest modification needed",
+      "Uses hardware acceleration",
+      "Requires Type 2 hypervisor"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the main advantage of full virtualization?",
+    "answers": [
+      "Runs guests without modification",
+      "Performance improvement by an order of magnitude or more",
+      "No OS modification needed",
+      "Works on any hardware"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the main disadvantage of full virtualization?",
+    "answers": [
+      "Performance penalty due to hardware translation",
+      "Guest operating systems need substantial updates",
+      "Poor performance",
+      "High cost"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Which hypervisor converts the Linux kernel into a hypervisor?",
+    "answers": [
+      "KVM",
+      "Xen",
+      "VMware ESXi",
+      "VirtualBox"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What CPU features facilitate hardware-assisted virtualization?",
+    "answers": [
+      "Intel VT and AMD-V",
+      "SSE and AVX",
+      "Hyper-Threading",
+      "Turbo Boost"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is hardware-assisted virtualization NOT also known as?",
+    "answers": [
+      "Paravirtualization",
+      "Accelerated virtualization",
+      "Full virtualization",
+      "Native virtualization"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What components are virtualized by hardware in hardware-assisted virtualization?",
+    "answers": [
+      "CPU and memory controller",
+      "Only CPU",
+      "Only memory",
+      "All devices"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "In paravirtualization, do guest OSes need to know they're virtualized?",
+    "answers": [
+      "Yes",
+      "No",
+      "Only for Linux",
+      "Only for Windows"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the performance level of hardware-assisted virtualization?",
+    "answers": [
+      "Very good",
+      "Poor",
+      "Moderate",
+      "Same as full virtualization"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is live migration in virtualization?",
+    "answers": [
+      "Moving VMs between hypervisors without service interruption",
+      "Copying VM files",
+      "Creating VM snapshots",
+      "Backing up VMs"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the 'memory dance' in live migration?",
+    "answers": [
+      "Copying memory changes from source to destination until identical",
+      "Swapping memory between VMs",
+      "Compressing memory",
+      "Encrypting memory transfers"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Which is a benefit of live migration?",
+    "answers": [
+      "High availability",
+      "Increased storage capacity",
+      "Load balancing",
+      "Disaster recovery"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What are virtual machine images?",
+    "answers": [
+      "Templates of configured operating systems",
+      "Running VM instances",
+      "VM configuration files",
+      "VM log files"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "How can you create a VM image?",
+    "answers": [
+      "Take a snapshot of a virtual machine",
+      "Copy the VM folder",
+      "Export logs",
+      "Backup the hypervisor"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Are VM images always portable among different hardware systems?",
+    "answers": [
+      "Yes, even if hardware differs",
+      "No, hardware must match",
+      "Only within same vendor",
+      "Only for Linux VMs"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Can VM images be converted between different hypervisors?",
+    "answers": [
+      "Yes, conversion tools exist",
+      "No, incompatible formats",
+      "Only between same vendors",
+      "Only for open source hypervisors"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What type of virtualization is containerization?",
+    "answers": [
+      "OS-level virtualization",
+      "Hardware virtualization",
+      "Full virtualization",
+      "Paravirtualization"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Does full virtualization use a hypervisor?",
+    "answers": [
+      "Yes",
+      "No",
+      "Only Type 2",
+      "Only Type 1"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What does each container have that is private?",
+    "answers": [
+      "Root filesystem and process namespace",
+      "Kernel",
+      "Hardware drivers",
+      "Network stack"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What do containers share with the host OS?",
+    "answers": [
+      "Kernel and other services",
+      "Nothing",
+      "Only network",
+      "Only filesystem"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Can contained processes typically access files outside their containers?",
+    "answers": [
+      "No",
+      "Yes",
+      "Only with root",
+      "Only with permissions"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the resource overhead of OS-level virtualization?",
+    "answers": [
+      "Low, near-native performance",
+      "High",
+      "Moderate",
+      "Same as VMs"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is NOT a limitation of containerization compared to VMs?",
+    "answers": [
+      "Poor performance",
+      "Precludes use of multiple operating systems",
+      "High overhead",
+      "Complex setup"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Which is an example of Linux containerization?",
+    "answers": [
+      "LXC",
+      "VMware",
+      "VirtualBox",
+      "Hyper-V"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Which is an example of FreeBSD OS-level virtualization?",
+    "answers": [
+      "FreeBSD jails",
+      "Docker",
+      "LXC",
+      "Kubernetes"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the standard architecture for containerized apps in public cloud?",
+    "answers": [
+      "Containers-on-VMs",
+      "VMs only",
+      "Containers only",
+      "Bare metal containers"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is Packer used for?",
+    "answers": [
+      "Building VM images from specification files",
+      "Running containers",
+      "Managing networks",
+      "Monitoring systems"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What format are Packer configurations written in?",
+    "answers": [
+      "JSON",
+      "XML",
+      "YAML",
+      "INI"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Can Packer build images for multiple platforms?",
+    "answers": [
+      "Yes, for various virtualization and cloud platforms",
+      "No, only one platform",
+      "Only for VMware",
+      "Only for AWS"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the advantage of using Packer over manual image creation?",
+    "answers": [
+      "Modify templates instead of manual changes",
+      "Faster execution",
+      "Better security",
+      "Lower cost"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is Vagrant?",
+    "answers": [
+      "A wrapper on top of virtualization platforms",
+      "A hypervisor",
+      "A container engine",
+      "An operating system"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Is Vagrant itself a hypervisor?",
+    "answers": [
+      "No",
+      "Yes",
+      "Only Type 2",
+      "Only for development"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Which platforms can Vagrant work with?",
+    "answers": [
+      "VMware, VirtualBox, and Docker",
+      "Only VMware",
+      "Only VirtualBox",
+      "Only Docker"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is Vagrant's primary mission?",
+    "answers": [
+      "Create disposable, preconfigured development environments",
+      "Run production servers",
+      "Monitor systems",
+      "Backup VMs"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What does Vagrant simplify?",
+    "answers": [
+      "Virtual environment provisioning and configuration",
+      "Code compilation",
+      "Database management",
+      "Network routing"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What should Vagrant development environments do?",
+    "answers": [
+      "Closely mirror production environments",
+      "Be completely different from production",
+      "Run faster than production",
+      "Use less resources"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What infrastructure model arose from virtualization?",
+    "answers": [
+      "Cloud computing",
+      "Grid computing",
+      "Distributed computing",
+      "Edge computing"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "From a user's perspective, how does a virtual server behave?",
+    "answers": [
+      "Like a full-fledged physical server",
+      "Slower than physical",
+      "With limitations",
+      "Differently than physical"
+    ],
+    "correct_answer": 0
+  }
+]

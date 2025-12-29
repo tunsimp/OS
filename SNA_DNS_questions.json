@@ -1,220 +1,502 @@
-{
-  "metadata": {
-    "source_file": "SNA_DNS.pdf",
-    "total_questions": 21,
-    "format": "multiple_choice",
-    "options_per_question": 4
+[
+  {
+    "question": "What is DNS?",
+    "answers": [
+      "Domain Name System - distributed database for name resolution",
+      "Domain Network Service",
+      "Data Name System",
+      "Directory Name Service"
+    ],
+    "correct_answer": 0
   },
-  "questions": [
-    {
-      "question": "What does DNS stand for?",
-      "options": [
-        "Data Network Service",
-        "Domain Name System",
-        "Digital Network Standard",
-        "Distributed Name Service"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "Why is DNS distributed hierarchically instead of centralized?",
-      "options": [
-        "Faster servers available",
-        "Avoids single point of failure, manages traffic volume",
-        "Uses less power",
-        "Easier to understand"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "How many logical root name servers exist worldwide?",
-      "options": [
-        "3",
-        "7",
-        "13",
-        "256"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "What does ICANN manage?",
-      "options": [
-        "Internet security",
-        "Root DNS domain and address allocation",
-        "Website content",
-        "Email services"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "What is a Top-Level Domain (TLD)?",
-      "options": [
-        ".co.uk",
-        ".com, .org, .edu",
-        "www.example",
-        "mail.google"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "Who is responsible for .com and .net TLDs?",
-      "options": [
-        "ICANN",
-        "Network Solutions",
-        "Root servers",
-        "ISPs"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "What role does a local DNS server play?",
-      "options": [
-        "Only for internal networks",
-        "Returns cached translations or forwards to hierarchy",
-        "Stores all DNS records",
-        "Only processes recursive queries"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "In an iterated DNS query, what does the contacted server reply with?",
-      "options": [
-        "The IP address directly",
-        "Name of server to contact next",
-        "Error message",
-        "Random IP"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "What is the main advantage of DNS caching?",
-      "options": [
-        "More disk space needed",
-        "Improves response time",
-        "Requires more processing",
-        "Increases traffic"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "What DNS record type maps hostname to IP address?",
-      "options": [
-        "NS",
-        "A",
-        "MX",
-        "CNAME"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "What does CNAME record represent?",
-      "options": [
-        "Canonical name mapping",
-        "Cache name record",
-        "Connection mode",
-        "Custom network"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "What is the purpose of MX record?",
-      "options": [
-        "Hostname mapping",
-        "Mapping to mail server",
-        "Maximum exchanges",
-        "Memory exchange"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "What happens if TTL expires on cached DNS entry?",
-      "options": [
-        "Entry is kept forever",
-        "Entry is removed from cache",
-        "Query is blocked",
-        "Entry becomes permanent"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "How many steps are required to resolve www.amazon.com?",
-      "options": [
-        "1",
-        "2",
-        "3",
-        "5"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "What security protocol provides DNS authentication?",
-      "options": [
-        "SSL/TLS",
-        "DNSSEC",
-        "AES",
-        "RSA"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "Which command can be used to query DNS?",
-      "options": [
-        "dig",
-        "nslookup",
-        "host",
-        "All of above"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "What file contains static hostname-to-IP mappings?",
-      "options": [
-        "/etc/hosts",
-        "/etc/network",
-        "/etc/domain",
-        "/etc/dns"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "Who must be contacted to register a domain name?",
-      "options": [
-        "Root server",
-        "DNS registrar",
-        "ISP",
-        "IANA"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "What must a DNS registrar insert into TLD server?",
-      "options": [
-        "Only A records",
-        "NS and A records",
-        "Only NS records",
-        "All records"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "What is a DDoS attack on DNS likely to target?",
-      "options": [
-        "Only local servers",
-        "Root or TLD servers",
-        "Client machines",
-        "Email servers"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "In a recursive DNS query, where is the burden placed?",
-      "options": [
-        "Client",
-        "Contacted server",
-        "Root server",
-        "Local network"
-      ],
-      "answer": 1
-    }
-  ]
-}
+  {
+    "question": "Is DNS implemented as which layer protocol?",
+    "answers": [
+      "Application-layer",
+      "Network layer",
+      "Transport layer",
+      "Physical layer"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Why not centralize DNS?",
+    "answers": [
+      "Single point of failure, traffic volume, distance, maintenance",
+      "Too expensive",
+      "Too simple",
+      "Not possible"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is one DNS service?",
+    "answers": [
+      "Hostname-to-IP-address translation",
+      "File transfer",
+      "Email delivery",
+      "Web hosting"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Does DNS provide host aliasing?",
+    "answers": [
+      "Yes, canonical and alias names",
+      "No",
+      "Only for email",
+      "Only for web"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Can DNS do load distribution?",
+    "answers": [
+      "Yes, many IP addresses for one name",
+      "No",
+      "Only for databases",
+      "Only for DNS servers"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "How many logical root name servers exist worldwide?",
+    "answers": [
+      "13",
+      "5",
+      "50",
+      "100"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Who manages root DNS domain?",
+    "answers": [
+      "ICANN (Internet Corporation for Assigned Names and Numbers)",
+      "IANA",
+      "IETF",
+      "W3C"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is DNSSEC?",
+    "answers": [
+      "Provides security (authentication, message integrity)",
+      "DNS speed",
+      "DNS cache",
+      "DNS backup"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What are TLD servers responsible for?",
+    "answers": [
+      ".com, .org, .net, .edu and country domains",
+      "Only .com",
+      "Only country codes",
+      "Root domains"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Who is authoritative registry for .com and .net?",
+    "answers": [
+      "Network Solutions",
+      "ICANN",
+      "Verisign",
+      "Google"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Who manages .edu TLD?",
+    "answers": [
+      "Educause",
+      "Network Solutions",
+      "ICANN",
+      "Universities"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What are authoritative DNS servers?",
+    "answers": [
+      "Organization's own DNS servers providing authoritative hostname to IP mappings",
+      "Root servers",
+      "TLD servers",
+      "Local servers"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Where is DNS query sent from a host?",
+    "answers": [
+      "To its local DNS server",
+      "To root servers",
+      "To TLD servers",
+      "To authoritative servers"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Does local DNS server belong to hierarchy?",
+    "answers": [
+      "No, not strictly",
+      "Yes",
+      "Sometimes",
+      "Only for large ISPs"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "In iterated query, what does contacted server reply with?",
+    "answers": [
+      "Name of server to contact",
+      "IP address",
+      "Error message",
+      "Nothing"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "In recursive query, where is the burden of name resolution?",
+    "answers": [
+      "On contacted name server",
+      "On client",
+      "On root server",
+      "Distributed"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Does DNS caching improve response time?",
+    "answers": [
+      "Yes",
+      "No",
+      "Only sometimes",
+      "Makes it worse"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is TTL in DNS?",
+    "answers": [
+      "Time To Live - how long cache entries persist",
+      "Total Transfer Length",
+      "Time To Load",
+      "Transfer Time Limit"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Can cached entries be out-of-date?",
+    "answers": [
+      "Yes, if host changes IP before TTL expires",
+      "No, never",
+      "Only for TLD",
+      "Only for root"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What type of DNS record maps hostname to IP?",
+    "answers": [
+      "A record",
+      "NS record",
+      "CNAME record",
+      "MX record"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What does NS record contain?",
+    "answers": [
+      "Hostname of authoritative name server for domain",
+      "IP address",
+      "Alias name",
+      "Mail server"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is CNAME record for?",
+    "answers": [
+      "Alias name for canonical (real) name",
+      "IP address",
+      "Name server",
+      "Mail server"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What does MX record contain?",
+    "answers": [
+      "Name of SMTP mail server associated with name",
+      "IP address",
+      "Web server",
+      "FTP server"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the format of DNS resource records?",
+    "answers": [
+      "(name, value, type, ttl)",
+      "Only name and value",
+      "Only type and ttl",
+      "name and type only"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Do DNS query and reply messages have the same format?",
+    "answers": [
+      "Yes",
+      "No",
+      "Only queries",
+      "Only replies"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "To register a domain, where do you apply?",
+    "answers": [
+      "A registrar for appropriate top-level domain",
+      "Directly to ICANN",
+      "To your ISP",
+      "To DNS root"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What must you identify when registering a domain?",
+    "answers": [
+      "Technical contact, administrative contact, and name servers",
+      "Only payment method",
+      "Only domain name",
+      "Only contact person"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "How many name servers minimum for domain registration?",
+    "answers": [
+      "Two or more",
+      "One",
+      "Three",
+      "Five"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Are domain registration fees expensive?",
+    "answers": [
+      "No, quite inexpensive",
+      "Very expensive",
+      "Free",
+      "Depends on TLD only"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "For creating subdomains, is authority local?",
+    "answers": [
+      "Yes, within your organization",
+      "No",
+      "Only for .com",
+      "Only for .edu"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What command queries DNS?",
+    "answers": [
+      "dig",
+      "query",
+      "dns",
+      "lookup"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is another DNS query command?",
+    "answers": [
+      "nslookup",
+      "dnslook",
+      "lookup",
+      "query"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is a simple DNS query command?",
+    "answers": [
+      "host",
+      "dig",
+      "nslookup",
+      "resolve"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Can you trace DNS queries?",
+    "answers": [
+      "Yes",
+      "No",
+      "Only with root",
+      "Only on servers"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What file is used for static DNS lookups?",
+    "answers": [
+      "/etc/hosts",
+      "/etc/dns",
+      "/etc/resolve",
+      "/etc/names"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What file is client resolver configuration?",
+    "answers": [
+      "/etc/resolv.conf",
+      "/etc/dns.conf",
+      "/etc/resolver",
+      "/etc/nameserver"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What does /etc/resolv.conf list?",
+    "answers": [
+      "Name servers to which host can send queries",
+      "All DNS records",
+      "DNS cache",
+      "Zone files"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is a DDoS attack on DNS?",
+    "answers": [
+      "Bombard servers with traffic",
+      "Poison cache",
+      "Intercept queries",
+      "Modify records"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is DNS cache poisoning?",
+    "answers": [
+      "Returning bogus replies to DNS queries",
+      "Clearing cache",
+      "Backing up cache",
+      "Encrypting cache"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is DNS spoofing?",
+    "answers": [
+      "Intercept DNS queries, return bogus replies",
+      "Speed up DNS",
+      "Cache results",
+      "Load balance"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Why haven't DDoS attacks on root servers been successful?",
+    "answers": [
+      "Traffic filtering and local DNS cache of TLD servers",
+      "Too many root servers",
+      "Unlimited bandwidth",
+      "Perfect security"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Are attacks on TLD servers more dangerous?",
+    "answers": [
+      "Potentially yes",
+      "No",
+      "Same as root",
+      "Less dangerous"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Does DNS handle more reads or writes?",
+    "answers": [
+      "Many more reads than writes",
+      "Equal",
+      "More writes",
+      "No reads"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Does DNS performance matter?",
+    "answers": [
+      "Yes, almost every Internet transaction interacts with DNS",
+      "No",
+      "Only for websites",
+      "Only for email"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Is DNS organizationally decentralized?",
+    "answers": [
+      "Yes, millions of organizations responsible for their records",
+      "No",
+      "Only ICANN",
+      "Only ISPs"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Is DNS a humongous distributed database?",
+    "answers": [
+      "Yes, about a billion records",
+      "No, small database",
+      "Medium size",
+      "Centralized"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Does DNS need to be bulletproof?",
+    "answers": [
+      "Yes, for reliability and security",
+      "No",
+      "Only for .com",
+      "Only for root"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "How many DNS queries does Comcast handle daily?",
+    "answers": [
+      "600 billion",
+      "600 million",
+      "6 billion",
+      "60 billion"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What file might contain systemd DNS resolver config?",
+    "answers": [
+      "/run/systemd/resolve/resolv.conf",
+      "/etc/systemd/dns.conf",
+      "/var/systemd/resolve",
+      "/sys/systemd/dns"
+    ],
+    "correct_answer": 0
+  }
+]
