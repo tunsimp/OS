@@ -1,863 +1,970 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Quiz Website</title>
-  <style>
-    :root {
-      --bg: #050816;
-      --bg-elevated: #111827;
-      --accent: #6366f1;
-      --accent-soft: rgba(99,102,241,0.15);
-      --accent-strong: #4f46e5;
-      --text-main: #e5e7eb;
-      --text-muted: #9ca3af;
-      --border-subtle: #1f2937;
-      --danger: #f97373;
-      --success: #22c55e;
-      --radius-lg: 20px;
-      --radius-pill: 999px;
-      --shadow-soft: 0 18px 45px rgba(15,23,42,0.7);
-      --transition-fast: 150ms ease-out;
-    }
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Quiz Website</title>
+    <style>
+      :root {
+        --bg: #050816;
+        --bg-elevated: #111827;
+        --accent: #6366f1;
+        --accent-soft: rgba(99, 102, 241, 0.15);
+        --accent-strong: #4f46e5;
+        --text-main: #e5e7eb;
+        --text-muted: #9ca3af;
+        --border-subtle: #1f2937;
+        --danger: #f97373;
+        --success: #22c55e;
+        --radius-lg: 20px;
+        --radius-pill: 999px;
+        --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.7);
+        --transition-fast: 150ms ease-out;
+      }
 
-    *,
-    *::before,
-    *::after {
-      box-sizing: border-box;
-    }
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
 
-    body {
-      margin: 0;
-      min-height: 100vh;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: radial-gradient(circle at top, #1f2937 0, #020617 55%, #000 100%);
-      color: var(--text-main);
-      display: flex;
-      justify-content: center;
-      padding: 24px 10px;
-    }
-
-    .app-shell {
-      width: 100%;
-      max-width: 880px;
-      background: linear-gradient(145deg, rgba(15,23,42,0.96), rgba(2,6,23,0.96));
-      border-radius: 32px;
-      border: 1px solid rgba(148,163,184,0.18);
-      box-shadow: var(--shadow-soft);
-      padding: 20px 20px 24px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .app-shell::before {
-      content: "";
-      position: absolute;
-      inset: -40%;
-      background:
-        radial-gradient(circle at 0% 0%, rgba(59,130,246,0.16), transparent 55%),
-        radial-gradient(circle at 100% 0%, rgba(236,72,153,0.12), transparent 55%);
-      opacity: 0.8;
-      pointer-events: none;
-      z-index: -1;
-    }
-
-    h1 {
-      margin: 0 0 4px;
-      text-align: left;
-      font-size: 24px;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      color: #f9fafb;
-    }
-
-    .subtitle {
-      text-align: left;
-      font-size: 13px;
-      color: var(--text-muted);
-      margin-bottom: 18px;
-    }
-
-    .pill-strip {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 4px 12px;
-      border-radius: var(--radius-pill);
-      background: rgba(15,23,42,0.8);
-      border: 1px solid rgba(148,163,184,0.4);
-      font-size: 11px;
-      color: var(--text-muted);
-    }
-
-    .pill-dot {
-      width: 7px;
-      height: 7px;
-      border-radius: 999px;
-      background: var(--accent);
-      box-shadow: 0 0 0 4px rgba(99,102,241,0.4);
-    }
-
-    .pill-strip strong {
-      color: #e5e7eb;
-      font-weight: 600;
-    }
-
-    .top-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 18px;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-
-    .quiz-container {
-      background: radial-gradient(circle at top left, rgba(99,102,241,0.18), transparent 55%),
-                  radial-gradient(circle at bottom right, rgba(16,185,129,0.15), transparent 55%),
-                  var(--bg-elevated);
-      border-radius: var(--radius-lg);
-      padding: 18px 18px 18px;
-      border: 1px solid rgba(148,163,184,0.3);
-      margin-bottom: 18px;
-    }
-
-    #lessonsPage h2,
-    #quizContainer h2,
-    #summary h2 {
-      margin: 0 0 12px;
-      font-size: 18px;
-      font-weight: 600;
-      color: #e5e7eb;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-    }
-
-    #lessonsList {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
-    .lesson-card {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 12px;
-      padding: 12px 14px;
-      border-radius: 14px;
-      background: rgba(15,23,42,0.9);
-      border: 1px solid rgba(55,65,81,0.9);
-      transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast), background var(--transition-fast);
-    }
-
-    .lesson-card:hover {
-      transform: translateY(-1px);
-      border-color: rgba(129,140,248,0.9);
-      background: radial-gradient(circle at top left, rgba(99,102,241,0.21), rgba(15,23,42,0.96));
-      box-shadow: 0 8px 24px rgba(15,23,42,0.85);
-    }
-
-    .lesson-main {
-      flex: 1;
-      min-width: 0;
-    }
-
-    .lesson-title {
-      font-size: 15px;
-      font-weight: 600;
-      margin: 0 0 4px;
-      color: #e5e7eb;
-    }
-
-    .lesson-meta {
-      font-size: 12px;
-      color: var(--text-muted);
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      align-items: center;
-    }
-
-    .lesson-meta span {
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-    }
-
-    .lesson-meta strong {
-      color: #f9fafb;
-      font-weight: 500;
-    }
-
-    .badge {
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      padding: 2px 8px;
-      border-radius: 999px;
-      border: 1px solid rgba(148,163,184,0.5);
-      color: var(--text-muted);
-    }
-
-    .score-pill {
-      padding: 2px 8px;
-      border-radius: 999px;
-      background: rgba(22,163,74,0.16);
-      color: #bbf7d0;
-      border: 1px solid rgba(34,197,94,0.5);
-      font-size: 11px;
-      font-weight: 500;
-    }
-
-    .score-pill.empty {
-      background: rgba(55,65,81,0.65);
-      color: #e5e7eb;
-      border-color: rgba(75,85,99,0.9);
-    }
-
-    .lesson-actions {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    button {
-      font-family: inherit;
-      border: none;
-      cursor: pointer;
-      outline: none;
-    }
-
-    .btn-primary {
-      padding: 7px 14px;
-      border-radius: 999px;
-      background: linear-gradient(135deg, var(--accent), var(--accent-strong));
-      color: white;
-      font-size: 13px;
-      font-weight: 600;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      box-shadow: 0 10px 25px rgba(79,70,229,0.6);
-      transition: transform var(--transition-fast), box-shadow var(--transition-fast), filter var(--transition-fast);
-      white-space: nowrap;
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-1px);
-      filter: brightness(1.05);
-      box-shadow: 0 12px 30px rgba(79,70,229,0.8);
-    }
-
-    .btn-primary:active {
-      transform: translateY(0);
-      box-shadow: 0 8px 20px rgba(79,70,229,0.7);
-    }
-
-    .btn-ghost {
-      padding: 6px 14px;
-      border-radius: 999px;
-      background: transparent;
-      border: 1px solid rgba(148,163,184,0.5);
-      color: var(--text-muted);
-      font-size: 12px;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      transition: background var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast), transform var(--transition-fast);
-    }
-
-    .btn-ghost:hover {
-      background: rgba(15,23,42,0.9);
-      border-color: rgba(148,163,184,0.9);
-      color: #e5e7eb;
-      transform: translateY(-1px);
-    }
-
-    #question {
-      margin-bottom: 10px;
-      font-size: 18px;
-      font-weight: 600;
-      color: #f9fafb;
-    }
-
-    .options button {
-      display: block;
-      margin: 6px 0;
-      padding: 10px 12px;
-      width: 100%;
-      border-radius: 12px;
-      background: rgba(15,23,42,0.9);
-      border: 1px solid rgba(55,65,81,0.9);
-      cursor: pointer;
-      font-size: 15px;
-      text-align: left;
-      color: var(--text-main);
-      transition: background var(--transition-fast), border-color var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
-    }
-
-    .options button:hover:not(:disabled) {
-      background: rgba(17,24,39,1);
-      border-color: rgba(129,140,248,0.9);
-      box-shadow: 0 6px 18px rgba(15,23,42,0.85);
-      transform: translateY(-1px);
-    }
-
-    .options button:disabled {
-      cursor: default;
-      opacity: 0.9;
-      box-shadow: none;
-      transform: none;
-    }
-
-    .correct {
-      background: linear-gradient(135deg, rgba(22,163,74,0.15), rgba(16,185,129,0.28));
-      border-color: rgba(52,211,153,0.9) !important;
-      box-shadow: 0 0 0 1px rgba(34,197,94,0.8);
-    }
-
-    .wrong {
-      background: linear-gradient(135deg, rgba(239,68,68,0.2), rgba(248,113,113,0.25));
-      border-color: rgba(248,113,113,1) !important;
-      box-shadow: 0 0 0 1px rgba(248,113,113,0.9);
-    }
-
-    #feedback {
-      margin-top: 12px;
-      font-weight: 500;
-      font-size: 14px;
-      color: var(--text-main);
-      min-height: 18px;
-    }
-
-    #restart {
-      margin-top: 6px;
-      padding: 7px 16px;
-      cursor: pointer;
-      border-radius: 999px;
-      border: 1px solid rgba(148,163,184,0.7);
-      background: rgba(15,23,42,0.9);
-      color: var(--text-main);
-      font-size: 12px;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      display: block;
-    }
-
-    #restart:hover {
-      background: rgba(23,37,84,0.9);
-      border-color: rgba(129,140,248,0.9);
-    }
-
-    #summary {
-      display: none;
-      border-radius: var(--radius-lg);
-      padding: 16px 18px 18px;
-      background: rgba(15,23,42,0.9);
-      border: 1px solid rgba(55,65,81,0.9);
-      margin-top: 12px;
-      max-height: 260px;
-      overflow-y: auto;
-      -webkit-overflow-scrolling: touch;
-    }
-
-    #summary h2 {
-      margin-top: 0;
-      margin-bottom: 8px;
-    }
-
-    .summary-item {
-      margin-bottom: 10px;
-      padding: 10px 10px 8px;
-      border-radius: 12px;
-      border: 1px solid rgba(55,65,81,0.8);
-      background: rgba(17,24,39,0.95);
-      font-size: 13px;
-    }
-
-    .summary-item p {
-      margin: 0 0 3px;
-    }
-
-    .summary-correct {
-      color: #bbf7d0;
-      font-weight: 600;
-    }
-
-    .summary-wrong {
-      color: #fecaca;
-      font-weight: 600;
-    }
-
-    @media (max-width: 640px) {
       body {
-        padding: 16px 10px;
+        margin: 0;
+        min-height: 100vh;
+        font-family:
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          sans-serif;
+        background: radial-gradient(
+          circle at top,
+          #1f2937 0,
+          #020617 55%,
+          #000 100%
+        );
+        color: var(--text-main);
+        display: flex;
+        justify-content: center;
+        padding: 24px 10px;
       }
 
       .app-shell {
-        padding: 16px 14px 20px;
-        border-radius: 22px;
+        width: 100%;
+        max-width: 880px;
+        background: linear-gradient(
+          145deg,
+          rgba(15, 23, 42, 0.96),
+          rgba(2, 6, 23, 0.96)
+        );
+        border-radius: 32px;
+        border: 1px solid rgba(148, 163, 184, 0.18);
+        box-shadow: var(--shadow-soft);
+        padding: 20px 20px 24px;
+        position: relative;
+        overflow: hidden;
       }
 
-      .top-row {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
+      .app-shell::before {
+        content: "";
+        position: absolute;
+        inset: -40%;
+        background:
+          radial-gradient(
+            circle at 0% 0%,
+            rgba(59, 130, 246, 0.16),
+            transparent 55%
+          ),
+          radial-gradient(
+            circle at 100% 0%,
+            rgba(236, 72, 153, 0.12),
+            transparent 55%
+          );
+        opacity: 0.8;
+        pointer-events: none;
+        z-index: -1;
       }
 
       h1 {
-        font-size: 20px;
+        margin: 0 0 4px;
+        text-align: left;
+        font-size: 24px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: #f9fafb;
       }
 
       .subtitle {
-        font-size: 12px;
-        margin-bottom: 10px;
+        text-align: left;
+        font-size: 13px;
+        color: var(--text-muted);
+        margin-bottom: 18px;
       }
 
       .pill-strip {
-        align-self: stretch;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 4px 12px;
+        border-radius: var(--radius-pill);
+        background: rgba(15, 23, 42, 0.8);
+        border: 1px solid rgba(148, 163, 184, 0.4);
+        font-size: 11px;
+        color: var(--text-muted);
+      }
+
+      .pill-dot {
+        width: 7px;
+        height: 7px;
+        border-radius: 999px;
+        background: var(--accent);
+        box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.4);
+      }
+
+      .pill-strip strong {
+        color: #e5e7eb;
+        font-weight: 600;
+      }
+
+      .top-row {
+        display: flex;
         justify-content: space-between;
-        font-size: 10px;
+        align-items: center;
+        margin-bottom: 18px;
+        gap: 12px;
+        flex-wrap: wrap;
       }
 
       .quiz-container {
-        padding: 12px 10px 12px;
+        background:
+          radial-gradient(
+            circle at top left,
+            rgba(99, 102, 241, 0.18),
+            transparent 55%
+          ),
+          radial-gradient(
+            circle at bottom right,
+            rgba(16, 185, 129, 0.15),
+            transparent 55%
+          ),
+          var(--bg-elevated);
+        border-radius: var(--radius-lg);
+        padding: 18px 18px 18px;
+        border: 1px solid rgba(148, 163, 184, 0.3);
+        margin-bottom: 18px;
       }
 
-      #question {
-        font-size: 16px;
+      #lessonsPage h2,
+      #quizContainer h2,
+      #summary h2 {
+        margin: 0 0 12px;
+        font-size: 18px;
+        font-weight: 600;
+        color: #e5e7eb;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
       }
 
-      .options button {
-        font-size: 14px;
-        padding: 9px 10px;
+      #lessonsList {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
       }
 
       .lesson-card {
-        flex-direction: column;
-        align-items: flex-start;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 12px;
+        padding: 12px 14px;
+        border-radius: 14px;
+        background: rgba(15, 23, 42, 0.9);
+        border: 1px solid rgba(55, 65, 81, 0.9);
+        transition:
+          transform var(--transition-fast),
+          box-shadow var(--transition-fast),
+          border-color var(--transition-fast),
+          background var(--transition-fast);
+      }
+
+      .lesson-card:hover {
+        transform: translateY(-1px);
+        border-color: rgba(129, 140, 248, 0.9);
+        background: radial-gradient(
+          circle at top left,
+          rgba(99, 102, 241, 0.21),
+          rgba(15, 23, 42, 0.96)
+        );
+        box-shadow: 0 8px 24px rgba(15, 23, 42, 0.85);
+      }
+
+      .lesson-main {
+        flex: 1;
+        min-width: 0;
+      }
+
+      .lesson-title {
+        font-size: 15px;
+        font-weight: 600;
+        margin: 0 0 4px;
+        color: #e5e7eb;
+      }
+
+      .lesson-meta {
+        font-size: 12px;
+        color: var(--text-muted);
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        align-items: center;
+      }
+
+      .lesson-meta span {
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+      }
+
+      .lesson-meta strong {
+        color: #f9fafb;
+        font-weight: 500;
+      }
+
+      .badge {
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        padding: 2px 8px;
+        border-radius: 999px;
+        border: 1px solid rgba(148, 163, 184, 0.5);
+        color: var(--text-muted);
+      }
+
+      .score-pill {
+        padding: 2px 8px;
+        border-radius: 999px;
+        background: rgba(22, 163, 74, 0.16);
+        color: #bbf7d0;
+        border: 1px solid rgba(34, 197, 94, 0.5);
+        font-size: 11px;
+        font-weight: 500;
+      }
+
+      .score-pill.empty {
+        background: rgba(55, 65, 81, 0.65);
+        color: #e5e7eb;
+        border-color: rgba(75, 85, 99, 0.9);
       }
 
       .lesson-actions {
-        align-self: stretch;
-        justify-content: flex-end;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      button {
+        font-family: inherit;
+        border: none;
+        cursor: pointer;
+        outline: none;
+      }
+
+      .btn-primary {
+        padding: 7px 14px;
+        border-radius: 999px;
+        background: linear-gradient(
+          135deg,
+          var(--accent),
+          var(--accent-strong)
+        );
+        color: white;
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        box-shadow: 0 10px 25px rgba(79, 70, 229, 0.6);
+        transition:
+          transform var(--transition-fast),
+          box-shadow var(--transition-fast),
+          filter var(--transition-fast);
+        white-space: nowrap;
+      }
+
+      .btn-primary:hover {
+        transform: translateY(-1px);
+        filter: brightness(1.05);
+        box-shadow: 0 12px 30px rgba(79, 70, 229, 0.8);
+      }
+
+      .btn-primary:active {
+        transform: translateY(0);
+        box-shadow: 0 8px 20px rgba(79, 70, 229, 0.7);
+      }
+
+      .btn-ghost {
+        padding: 6px 14px;
+        border-radius: 999px;
+        background: transparent;
+        border: 1px solid rgba(148, 163, 184, 0.5);
+        color: var(--text-muted);
+        font-size: 12px;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        transition:
+          background var(--transition-fast),
+          border-color var(--transition-fast),
+          color var(--transition-fast),
+          transform var(--transition-fast);
+      }
+
+      .btn-ghost:hover {
+        background: rgba(15, 23, 42, 0.9);
+        border-color: rgba(148, 163, 184, 0.9);
+        color: #e5e7eb;
+        transform: translateY(-1px);
+      }
+
+      #question {
+        margin-bottom: 10px;
+        font-size: 18px;
+        font-weight: 600;
+        color: #f9fafb;
+      }
+
+      .options button {
+        display: block;
+        margin: 6px 0;
+        padding: 10px 12px;
+        width: 100%;
+        border-radius: 12px;
+        background: rgba(15, 23, 42, 0.9);
+        border: 1px solid rgba(55, 65, 81, 0.9);
+        cursor: pointer;
+        font-size: 15px;
+        text-align: left;
+        color: var(--text-main);
+        transition:
+          background var(--transition-fast),
+          border-color var(--transition-fast),
+          transform var(--transition-fast),
+          box-shadow var(--transition-fast);
+      }
+
+      .options button:hover:not(:disabled) {
+        background: rgba(17, 24, 39, 1);
+        border-color: rgba(129, 140, 248, 0.9);
+        box-shadow: 0 6px 18px rgba(15, 23, 42, 0.85);
+        transform: translateY(-1px);
+      }
+
+      .options button:disabled {
+        cursor: default;
+        opacity: 0.9;
+        box-shadow: none;
+        transform: none;
+      }
+
+      .correct {
+        background: linear-gradient(
+          135deg,
+          rgba(22, 163, 74, 0.15),
+          rgba(16, 185, 129, 0.28)
+        );
+        border-color: rgba(52, 211, 153, 0.9) !important;
+        box-shadow: 0 0 0 1px rgba(34, 197, 94, 0.8);
+      }
+
+      .wrong {
+        background: linear-gradient(
+          135deg,
+          rgba(239, 68, 68, 0.2),
+          rgba(248, 113, 113, 0.25)
+        );
+        border-color: rgba(248, 113, 113, 1) !important;
+        box-shadow: 0 0 0 1px rgba(248, 113, 113, 0.9);
+      }
+
+      #feedback {
+        margin-top: 12px;
+        font-weight: 500;
+        font-size: 14px;
+        color: var(--text-main);
+        min-height: 18px;
+      }
+
+      #restart {
+        margin-top: 6px;
+        padding: 7px 16px;
+        cursor: pointer;
+        border-radius: 999px;
+        border: 1px solid rgba(148, 163, 184, 0.7);
+        background: rgba(15, 23, 42, 0.9);
+        color: var(--text-main);
+        font-size: 12px;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        display: block;
+      }
+
+      #restart:hover {
+        background: rgba(23, 37, 84, 0.9);
+        border-color: rgba(129, 140, 248, 0.9);
       }
 
       #summary {
-        max-height: 220px;
+        display: none;
+        border-radius: var(--radius-lg);
+        padding: 16px 18px 18px;
+        background: rgba(15, 23, 42, 0.9);
+        border: 1px solid rgba(55, 65, 81, 0.9);
+        margin-top: 12px;
+        max-height: 260px;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
       }
-    }
-  </style>
-</head>
-<body>
 
-  <div class="app-shell">
-    <div class="top-row">
-      <div>
-        <h1>My Quiz Website</h1>
-        <p class="subtitle">Practice questions from course lectures.</p>
+      #summary h2 {
+        margin-top: 0;
+        margin-bottom: 8px;
+      }
+
+      .summary-item {
+        margin-bottom: 10px;
+        padding: 10px 10px 8px;
+        border-radius: 12px;
+        border: 1px solid rgba(55, 65, 81, 0.8);
+        background: rgba(17, 24, 39, 0.95);
+        font-size: 13px;
+      }
+
+      .summary-item p {
+        margin: 0 0 3px;
+      }
+
+      .summary-correct {
+        color: #bbf7d0;
+        font-weight: 600;
+      }
+
+      .summary-wrong {
+        color: #fecaca;
+        font-weight: 600;
+      }
+
+      @media (max-width: 640px) {
+        body {
+          padding: 16px 10px;
+        }
+
+        .app-shell {
+          padding: 16px 14px 20px;
+          border-radius: 22px;
+        }
+
+        .top-row {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 10px;
+        }
+
+        h1 {
+          font-size: 20px;
+        }
+
+        .subtitle {
+          font-size: 12px;
+          margin-bottom: 10px;
+        }
+
+        .pill-strip {
+          align-self: stretch;
+          justify-content: space-between;
+          font-size: 10px;
+        }
+
+        .quiz-container {
+          padding: 12px 10px 12px;
+        }
+
+        #question {
+          font-size: 16px;
+        }
+
+        .options button {
+          font-size: 14px;
+          padding: 9px 10px;
+        }
+
+        .lesson-card {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .lesson-actions {
+          align-self: stretch;
+          justify-content: flex-end;
+        }
+
+        #summary {
+          max-height: 220px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="app-shell">
+      <div class="top-row">
+        <div>
+          <h1>My Quiz Website</h1>
+          <p class="subtitle">Practice questions from course lectures.</p>
+        </div>
+        <div class="pill-strip">
+          <span class="pill-dot"></span>
+          <span
+            ><strong>Progress aware</strong> • Tracks best score per
+            lesson</span
+          >
+        </div>
       </div>
-      <div class="pill-strip">
-        <span class="pill-dot"></span>
-        <span><strong>Progress aware</strong> • Tracks best score per lesson</span>
+
+      <!-- Lessons page: list of lessons with last score -->
+      <div class="quiz-container" id="lessonsPage">
+        <h2>Lessons</h2>
+        <div id="lessonsList">
+          <p style="color: var(--text-muted)">Loading lessons...</p>
+        </div>
       </div>
-    </div>
 
-  <!-- Lessons page: list of lessons with last score -->
-  <div class="quiz-container" id="lessonsPage">
-    <h2>Lessons</h2>
-    <div id="lessonsList">
-      <p style="color: var(--text-muted);">Loading lessons...</p>
-    </div>
-  </div>
-  
-  <div class="quiz-container" id="quizContainer" style="display:none;">
-    <h2 id="question"></h2>
-    <div class="options" id="options"></div>
-    <div id="feedback"></div>
-  </div>
+      <div class="quiz-container" id="quizContainer" style="display: none">
+        <h2 id="question"></h2>
+        <div class="options" id="options"></div>
+        <div id="feedback"></div>
+      </div>
 
-  <button id="restart" style="display: none;">Restart</button>
+      <button id="restart" style="display: none">Restart</button>
 
-  <div id="summary">
-    <h2>Review</h2>
-    <div id="summaryContent"></div>
-  </div>
+      <div id="summary">
+        <h2>Review</h2>
+        <div id="summaryContent"></div>
+      </div>
 
-  <script>
-    // --- Lesson modules loaded from external JSON ---
-    let lessons = [];
+      <script>
+        // --- Lesson modules loaded from external JSON ---
+        let lessons = [];
 
-    let currentLessonId = null;
-    let currentQuestions = [];
-    let shuffledQuestions = [];
-    let currentQuestionIndex = 0;
-    let score = 0;
-    let userAnswers = []; // To store your choices and correct answers
+        let currentLessonId = null;
+        let currentQuestions = [];
+        let shuffledQuestions = [];
+        let currentQuestionIndex = 0;
+        let score = 0;
+        let userAnswers = []; // To store your choices and correct answers
 
-    const lessonsPage = document.getElementById("lessonsPage");
-    const lessonsListEl = document.getElementById("lessonsList");
-    const quizContainer = document.getElementById("quizContainer");
-    const questionEl = document.getElementById("question");
-    const optionsEl = document.getElementById("options");
-    const feedbackEl = document.getElementById("feedback");
-    const restartBtn = document.getElementById("restart");
-    const summaryEl = document.getElementById("summary");
-    const summaryContentEl = document.getElementById("summaryContent");
+        const lessonsPage = document.getElementById("lessonsPage");
+        const lessonsListEl = document.getElementById("lessonsList");
+        const quizContainer = document.getElementById("quizContainer");
+        const questionEl = document.getElementById("question");
+        const optionsEl = document.getElementById("options");
+        const feedbackEl = document.getElementById("feedback");
+        const restartBtn = document.getElementById("restart");
+        const summaryEl = document.getElementById("summary");
+        const summaryContentEl = document.getElementById("summaryContent");
 
-    // --- Local storage helpers for per-lesson scores ---
-    const SCORE_STORAGE_KEY = "quizLessonScores";
+        // --- Local storage helpers for per-lesson scores ---
+        const SCORE_STORAGE_KEY = "quizLessonScores";
 
-    function loadScoresFromStorage() {
-      try {
-        const raw = localStorage.getItem(SCORE_STORAGE_KEY);
-        return raw ? JSON.parse(raw) : {};
-      } catch (e) {
-        return {};
-      }
-    }
-
-    function saveScoreForLesson(lessonId, scoreValue, total) {
-      const allScores = loadScoresFromStorage();
-      allScores[lessonId] = {
-        score: scoreValue,
-        total,
-        date: new Date().toISOString()
-      };
-      localStorage.setItem(SCORE_STORAGE_KEY, JSON.stringify(allScores));
-    }
-
-    // Render lessons list page with scores
-    function renderLessonsList() {
-      const scores = loadScoresFromStorage();
-      lessonsListEl.innerHTML = "";
-
-      lessons.forEach(lesson => {
-        const card = document.createElement("div");
-        card.className = "lesson-card";
-
-        const main = document.createElement("div");
-        main.className = "lesson-main";
-
-        const title = document.createElement("p");
-        title.className = "lesson-title";
-        title.textContent = lesson.title;
-        main.appendChild(title);
-
-        const meta = document.createElement("div");
-        meta.className = "lesson-meta";
-        const q = document.createElement("span");
-        q.textContent = "Questions: " + (lesson.questions ? lesson.questions.length : 0);
-        meta.appendChild(q);
-
-        const info = scores[lesson.id];
-        const scoreSpan = document.createElement("span");
-        const hasScore = Boolean(info);
-        scoreSpan.className = hasScore ? "score-pill" : "score-pill empty";
-        scoreSpan.textContent = hasScore
-          ? info.score + " / " + info.total
-          : "Not attempted yet";
-        meta.appendChild(scoreSpan);
-
-        main.appendChild(meta);
-        card.appendChild(main);
-
-        const actions = document.createElement("div");
-        actions.className = "lesson-actions";
-        const startBtn = document.createElement("button");
-        startBtn.className = "btn-primary";
-        startBtn.textContent = "Start";
-        startBtn.onclick = () => startLesson(lesson.id);
-        actions.appendChild(startBtn);
-        card.appendChild(actions);
-
-        lessonsListEl.appendChild(card);
-      });
-    }
-
-    // --- Build lessons array from various JSON formats ---
-    function buildLessonsFromData(data) {
-      // Format 1: { lessons: [ { id, title, questions } ] }
-      if (Array.isArray(data.lessons)) {
-        return data.lessons;
-      }
-      // Format 2: { metadata: {...}, questions: [ ... ] }
-      if (Array.isArray(data.questions)) {
-        const title =
-          (data.metadata && data.metadata.source_file) || "Lesson 1";
-        return [
-          {
-            id: title,
-            title: title,
-            questions: data.questions
+        function loadScoresFromStorage() {
+          try {
+            const raw = localStorage.getItem(SCORE_STORAGE_KEY);
+            return raw ? JSON.parse(raw) : {};
+          } catch (e) {
+            return {};
           }
-        ];
-      }
-      // Format 3: { "Some.pdf": [ ... ], "Other.pdf": [ ... ] }
-      const result = [];
-      Object.keys(data || {}).forEach(key => {
-        const val = data[key];
-        if (Array.isArray(val)) {
-          const base = key.replace(/\.pdf$/i, "").replace(/^SNA_/, "");
-          result.push({
-            id: key,
-            title: base.replace(/_/g, " "),
-            questions: val
+        }
+
+        function saveScoreForLesson(lessonId, scoreValue, total) {
+          const allScores = loadScoresFromStorage();
+          allScores[lessonId] = {
+            score: scoreValue,
+            total,
+            date: new Date().toISOString(),
+          };
+          localStorage.setItem(SCORE_STORAGE_KEY, JSON.stringify(allScores));
+        }
+
+        // Render lessons list page with scores
+        function renderLessonsList() {
+          const scores = loadScoresFromStorage();
+          lessonsListEl.innerHTML = "";
+
+          lessons.forEach((lesson) => {
+            const card = document.createElement("div");
+            card.className = "lesson-card";
+
+            const main = document.createElement("div");
+            main.className = "lesson-main";
+
+            const title = document.createElement("p");
+            title.className = "lesson-title";
+            title.textContent = lesson.title;
+            main.appendChild(title);
+
+            const meta = document.createElement("div");
+            meta.className = "lesson-meta";
+            const q = document.createElement("span");
+            q.textContent =
+              "Questions: " + (lesson.questions ? lesson.questions.length : 0);
+            meta.appendChild(q);
+
+            const info = scores[lesson.id];
+            const scoreSpan = document.createElement("span");
+            const hasScore = Boolean(info);
+            scoreSpan.className = hasScore ? "score-pill" : "score-pill empty";
+            scoreSpan.textContent = hasScore
+              ? info.score + " / " + info.total
+              : "Not attempted yet";
+            meta.appendChild(scoreSpan);
+
+            main.appendChild(meta);
+            card.appendChild(main);
+
+            const actions = document.createElement("div");
+            actions.className = "lesson-actions";
+            const startBtn = document.createElement("button");
+            startBtn.className = "btn-primary";
+            startBtn.textContent = "Start";
+            startBtn.onclick = () => startLesson(lesson.id);
+            actions.appendChild(startBtn);
+            card.appendChild(actions);
+
+            lessonsListEl.appendChild(card);
           });
         }
-      });
-      return result;
-    }
 
-    // --- Load lessons from JSON files ---
-    const LESSON_FILES = [
-      "lecture1_go_overview_1.json",
-      "lecture2_go_overview_2.json",
-      "lecture3_socket_tcp.json",
-      "lecture4_socket_udp.json",
-      "lecture5_data_serialization.json",
-      "lecture7_VM.json",
-      "lecture9_HTTP.json",
-      "lecture10_database.json",
-      "lecture11_storage.json",
-      "lecture13_grpc.json"
-    ];
-
-    // Transform question format from {answers, correct_answer} to {options, answer}
-    function transformQuestion(q) {
-      return {
-        question: q.question,
-        options: q.answers || q.options || [],
-        answer: q.correct_answer !== undefined ? q.correct_answer : q.answer
-      };
-    }
-
-    // Generate lesson title from filename
-    function getLessonTitle(filename) {
-      const withoutExt = filename.replace(/\.json$/i, "");
-      const lectureMatch = withoutExt.match(/^lecture(\d+)_(.+)$/i);
-      if (lectureMatch) {
-        const topic = lectureMatch[2]
-          .replace(/_/g, " ")
-          .replace(/\b\w/g, l => l.toUpperCase());
-        return "Lecture " + lectureMatch[1] + ": " + topic;
-      }
-      return withoutExt
-        .replace(/_/g, " ")
-        .replace(/\b\w/g, l => l.toUpperCase());
-    }
-
-    async function loadLessonsFromJson() {
-      lessons = [];
-      let loadedCount = 0;
-      let errorCount = 0;
-      const failedFiles = [];
-
-      for (const filename of LESSON_FILES) {
-        try {
-          const res = await fetch(filename);
-          if (!res.ok) {
-            throw new Error("HTTP " + res.status + " - File not found or server error");
+        // --- Build lessons array from various JSON formats ---
+        function buildLessonsFromData(data) {
+          // Format 1: { lessons: [ { id, title, questions } ] }
+          if (Array.isArray(data.lessons)) {
+            return data.lessons;
           }
-          const data = await res.json();
-          
-          // Handle array of questions
-          if (Array.isArray(data)) {
-            if (data.length === 0) {
-              throw new Error("File is empty");
+          // Format 2: { metadata: {...}, questions: [ ... ] }
+          if (Array.isArray(data.questions)) {
+            const title =
+              (data.metadata && data.metadata.source_file) || "Lesson 1";
+            return [
+              {
+                id: title,
+                title: title,
+                questions: data.questions,
+              },
+            ];
+          }
+          // Format 3: { "Some.pdf": [ ... ], "Other.pdf": [ ... ] }
+          const result = [];
+          Object.keys(data || {}).forEach((key) => {
+            const val = data[key];
+            if (Array.isArray(val)) {
+              const base = key.replace(/\.pdf$/i, "").replace(/^SNA_/, "");
+              result.push({
+                id: key,
+                title: base.replace(/_/g, " "),
+                questions: val,
+              });
             }
-            const transformedQuestions = data.map(transformQuestion);
-            lessons.push({
-              id: filename,
-              title: getLessonTitle(filename),
-              questions: transformedQuestions
-            });
-            loadedCount++;
-            console.log("✓ Loaded:", filename, "(" + transformedQuestions.length + " questions)");
+          });
+          return result;
+        }
+
+        // --- Load lessons from JSON files ---
+        const LESSON_FILES = [
+          "lecture1_go_overview_1.json",
+          "lecture2_go_overview_2.json",
+          "lecture3_socket_tcp.json",
+          "lecture4_socket_udp.json",
+          "lecture5_data_serialization.json",
+          "lecture7_VM.json",
+          "lecture9_HTTP.json",
+          "lecture10_database.json",
+          "lecture11_storage.json",
+          "lecture13_grpc.json",
+          "lecture14_websocket.json",
+          "lecture12_rest.json",
+          "lecture15_nosql.json",
+        ];
+
+        // Transform question format from {answers, correct_answer} to {options, answer}
+        function transformQuestion(q) {
+          return {
+            question: q.question,
+            options: q.answers || q.options || [],
+            answer:
+              q.correct_answer !== undefined ? q.correct_answer : q.answer,
+          };
+        }
+
+        // Generate lesson title from filename
+        function getLessonTitle(filename) {
+          const withoutExt = filename.replace(/\.json$/i, "");
+          const lectureMatch = withoutExt.match(/^lecture(\d+)_(.+)$/i);
+          if (lectureMatch) {
+            const topic = lectureMatch[2]
+              .replace(/_/g, " ")
+              .replace(/\b\w/g, (l) => l.toUpperCase());
+            return "Lecture " + lectureMatch[1] + ": " + topic;
+          }
+          return withoutExt
+            .replace(/_/g, " ")
+            .replace(/\b\w/g, (l) => l.toUpperCase());
+        }
+
+        async function loadLessonsFromJson() {
+          lessons = [];
+          let loadedCount = 0;
+          let errorCount = 0;
+          const failedFiles = [];
+
+          for (const filename of LESSON_FILES) {
+            try {
+              const res = await fetch(filename);
+              if (!res.ok) {
+                throw new Error(
+                  "HTTP " + res.status + " - File not found or server error",
+                );
+              }
+              const data = await res.json();
+
+              // Handle array of questions
+              if (Array.isArray(data)) {
+                if (data.length === 0) {
+                  throw new Error("File is empty");
+                }
+                const transformedQuestions = data.map(transformQuestion);
+                lessons.push({
+                  id: filename,
+                  title: getLessonTitle(filename),
+                  questions: transformedQuestions,
+                });
+                loadedCount++;
+                console.log(
+                  "✓ Loaded:",
+                  filename,
+                  "(" + transformedQuestions.length + " questions)",
+                );
+              } else {
+                throw new Error(
+                  "Unexpected format - expected array of questions",
+                );
+              }
+            } catch (err) {
+              console.error("✗ Failed to load", filename, ":", err.message);
+              errorCount++;
+              failedFiles.push(filename);
+            }
+          }
+
+          if (lessons.length === 0) {
+            lessonsListEl.innerHTML =
+              "<p style='color: var(--danger);'>Failed to load any lessons. Please check that JSON files exist and are accessible.</p>";
           } else {
-            throw new Error("Unexpected format - expected array of questions");
+            renderLessonsList();
+            if (errorCount > 0) {
+              const errorMsg = document.createElement("p");
+              errorMsg.style.cssText =
+                "color: var(--danger); font-size: 12px; margin-top: 8px;";
+              errorMsg.textContent = `Warning: ${errorCount} lesson(s) failed to load: ${failedFiles.join(", ")}`;
+              lessonsListEl.appendChild(errorMsg);
+              console.warn(
+                `Loaded ${loadedCount} lessons, ${errorCount} failed:`,
+                failedFiles,
+              );
+            } else {
+              console.log(`✓ Successfully loaded all ${loadedCount} lessons`);
+            }
           }
-        } catch (err) {
-          console.error("✗ Failed to load", filename, ":", err.message);
-          errorCount++;
-          failedFiles.push(filename);
         }
-      }
 
-      if (lessons.length === 0) {
-        lessonsListEl.innerHTML = "<p style='color: var(--danger);'>Failed to load any lessons. Please check that JSON files exist and are accessible.</p>";
-      } else {
-        renderLessonsList();
-        if (errorCount > 0) {
-          const errorMsg = document.createElement("p");
-          errorMsg.style.cssText = "color: var(--danger); font-size: 12px; margin-top: 8px;";
-          errorMsg.textContent = `Warning: ${errorCount} lesson(s) failed to load: ${failedFiles.join(", ")}`;
-          lessonsListEl.appendChild(errorMsg);
-          console.warn(`Loaded ${loadedCount} lessons, ${errorCount} failed:`, failedFiles);
-        } else {
-          console.log(`✓ Successfully loaded all ${loadedCount} lessons`);
-        }
-      }
-    }
+        function startLesson(lessonId) {
+          const lesson = lessons.find((l) => l.id === lessonId);
+          if (!lesson) return;
+          currentLessonId = lessonId;
+          currentQuestions = lesson.questions;
 
-    function startLesson(lessonId) {
-      const lesson = lessons.find(l => l.id === lessonId);
-      if (!lesson) return;
-      currentLessonId = lessonId;
-      currentQuestions = lesson.questions;
-      
-      // Create deep copies of questions to avoid modifying originals, then shuffle
-      shuffledQuestions = currentQuestions.map(q => ({
-        ...q,
-        options: [...q.options]
-      })).sort(() => Math.random() - 0.5);
-      
-      currentQuestionIndex = 0;
-      score = 0;
-      userAnswers = [];
+          // Create deep copies of questions to avoid modifying originals, then shuffle
+          shuffledQuestions = currentQuestions
+            .map((q) => ({
+              ...q,
+              options: [...q.options],
+            }))
+            .sort(() => Math.random() - 0.5);
 
-      lessonsPage.style.display = "none";
-      quizContainer.style.display = "block";
-      summaryEl.style.display = "none";
-      restartBtn.style.display = "none";
-      feedbackEl.textContent = "";
+          currentQuestionIndex = 0;
+          score = 0;
+          userAnswers = [];
 
-      loadQuestion();
-    }
+          lessonsPage.style.display = "none";
+          quizContainer.style.display = "block";
+          summaryEl.style.display = "none";
+          restartBtn.style.display = "none";
+          feedbackEl.textContent = "";
 
-    // Initialize lesson select on page load (after JSON load)
-    loadLessonsFromJson();
-
-    function loadQuestion() {
-      const currentQuestion = shuffledQuestions[currentQuestionIndex];
-      questionEl.textContent = currentQuestion.question;
-      optionsEl.innerHTML = "";
-      feedbackEl.textContent = "";
-
-      // Shuffle options and track the new correct answer index
-      const originalOptions = [...currentQuestion.options];
-      const originalAnswerIndex = currentQuestion.answer;
-      
-      // Create array of indices and shuffle them
-      const indices = originalOptions.map((_, i) => i);
-      const shuffledIndices = [...indices].sort(() => Math.random() - 0.5);
-      
-      // Map original answer index to new shuffled position
-      const newAnswerIndex = shuffledIndices.indexOf(originalAnswerIndex);
-      
-      // Update the question object with shuffled options and new answer index
-      currentQuestion.shuffledOptions = shuffledIndices.map(i => originalOptions[i]);
-      currentQuestion.shuffledAnswer = newAnswerIndex;
-
-      // Display shuffled options
-      currentQuestion.shuffledOptions.forEach((option, index) => {
-        const btn = document.createElement("button");
-        const optionLabel = String.fromCharCode(65 + index); // A, B, C, D
-        btn.textContent = optionLabel + ". " + option;
-        btn.addEventListener("click", () => checkAnswer(index, btn));
-        optionsEl.appendChild(btn);
-      });
-    }
-
-    function checkAnswer(selectedIndex, selectedButton) {
-      const currentQuestion = shuffledQuestions[currentQuestionIndex];
-      // Use shuffled answer index if available, otherwise fall back to original
-      const correctIndex = currentQuestion.shuffledAnswer !== undefined 
-        ? currentQuestion.shuffledAnswer 
-        : currentQuestion.answer;
-
-      // Highlight correct and wrong answers
-      if (selectedIndex === correctIndex) {
-        selectedButton.classList.add("correct");
-        feedbackEl.textContent = "Correct!";
-        score++;
-      } else {
-        selectedButton.classList.add("wrong");
-        optionsEl.children[correctIndex].classList.add("correct");
-        feedbackEl.textContent = "Incorrect.";
-      }
-
-      // Disable all buttons
-      Array.from(optionsEl.children).forEach(btn => (btn.disabled = true));
-
-      // Save user choice and actual correct answer (use shuffled options if available)
-      const optionsToSave = currentQuestion.shuffledOptions || currentQuestion.options;
-      userAnswers.push({
-        question: currentQuestion.question,
-        options: optionsToSave,
-        userAnswerIndex: selectedIndex,
-        correctAnswerIndex: correctIndex
-      });
-
-      // Wait 2 seconds, then move on
-      setTimeout(() => {
-        currentQuestionIndex++;
-        if (currentQuestionIndex < shuffledQuestions.length) {
           loadQuestion();
-        } else {
-          finishQuiz();
         }
-      }, 1500);
-    }
 
-    function finishQuiz() {
-      quizContainer.style.display = "none";
-      feedbackEl.textContent = "Your score: " + score + " / " + shuffledQuestions.length;
-      restartBtn.style.display = "inline-block";
-      restartBtn.onclick = restartQuiz;
-      if (currentLessonId) {
-        saveScoreForLesson(currentLessonId, score, shuffledQuestions.length);
-        renderLessonsList();
-      }
-      lessonsPage.style.display = "block";
-      showSummary();
-    }
+        // Initialize lesson select on page load (after JSON load)
+        loadLessonsFromJson();
 
-    function showSummary() {
-      summaryEl.style.display = "block";
-      summaryContentEl.innerHTML = "";
+        function loadQuestion() {
+          const currentQuestion = shuffledQuestions[currentQuestionIndex];
+          questionEl.textContent = currentQuestion.question;
+          optionsEl.innerHTML = "";
+          feedbackEl.textContent = "";
 
-      userAnswers.forEach((item, i) => {
-        const summaryItem = document.createElement("div");
-        summaryItem.classList.add("summary-item");
-        
-        // Question text
-        const questionText = document.createElement("p");
-        questionText.textContent = (i+1) + ". " + item.question;
-        summaryItem.appendChild(questionText);
+          // Shuffle options and track the new correct answer index
+          const originalOptions = [...currentQuestion.options];
+          const originalAnswerIndex = currentQuestion.answer;
 
-        // Show answers
-        item.options.forEach((opt, idx) => {
-          const answerLine = document.createElement("p");
-          const optionLabel = String.fromCharCode(65 + idx); // A, B, C, D
-          
-          // Correct answer
-          if (idx === item.correctAnswerIndex) {
-            answerLine.innerHTML = "• " + optionLabel + ". " + opt + " " + `<span class="summary-correct">(Correct)</span>`;
-          } 
-          // User choice but not correct
-          else if (idx === item.userAnswerIndex) {
-            answerLine.innerHTML = "• " + optionLabel + ". " + opt + " " + `<span class="summary-wrong">(Your pick)</span>`;
-          } 
-          // Neither correct nor user's
-          else {
-            answerLine.textContent = "• " + optionLabel + ". " + opt;
+          // Create array of indices and shuffle them
+          const indices = originalOptions.map((_, i) => i);
+          const shuffledIndices = [...indices].sort(() => Math.random() - 0.5);
+
+          // Map original answer index to new shuffled position
+          const newAnswerIndex = shuffledIndices.indexOf(originalAnswerIndex);
+
+          // Update the question object with shuffled options and new answer index
+          currentQuestion.shuffledOptions = shuffledIndices.map(
+            (i) => originalOptions[i],
+          );
+          currentQuestion.shuffledAnswer = newAnswerIndex;
+
+          // Display shuffled options
+          currentQuestion.shuffledOptions.forEach((option, index) => {
+            const btn = document.createElement("button");
+            const optionLabel = String.fromCharCode(65 + index); // A, B, C, D
+            btn.textContent = optionLabel + ". " + option;
+            btn.addEventListener("click", () => checkAnswer(index, btn));
+            optionsEl.appendChild(btn);
+          });
+        }
+
+        function checkAnswer(selectedIndex, selectedButton) {
+          const currentQuestion = shuffledQuestions[currentQuestionIndex];
+          // Use shuffled answer index if available, otherwise fall back to original
+          const correctIndex =
+            currentQuestion.shuffledAnswer !== undefined
+              ? currentQuestion.shuffledAnswer
+              : currentQuestion.answer;
+
+          // Highlight correct and wrong answers
+          if (selectedIndex === correctIndex) {
+            selectedButton.classList.add("correct");
+            feedbackEl.textContent = "Correct!";
+            score++;
+          } else {
+            selectedButton.classList.add("wrong");
+            optionsEl.children[correctIndex].classList.add("correct");
+            feedbackEl.textContent = "Incorrect.";
           }
-          summaryItem.appendChild(answerLine);
-        });
 
-        summaryContentEl.appendChild(summaryItem);
-      });
-    }
+          // Disable all buttons
+          Array.from(optionsEl.children).forEach(
+            (btn) => (btn.disabled = true),
+          );
 
-    function restartQuiz() {
-      // Restart the current lesson
-      if (currentLessonId) {
-        startLesson(currentLessonId);
-      }
-    }
-  </script>
-  </div>
-</body>
+          // Save user choice and actual correct answer (use shuffled options if available)
+          const optionsToSave =
+            currentQuestion.shuffledOptions || currentQuestion.options;
+          userAnswers.push({
+            question: currentQuestion.question,
+            options: optionsToSave,
+            userAnswerIndex: selectedIndex,
+            correctAnswerIndex: correctIndex,
+          });
+
+          // Wait 2 seconds, then move on
+          setTimeout(() => {
+            currentQuestionIndex++;
+            if (currentQuestionIndex < shuffledQuestions.length) {
+              loadQuestion();
+            } else {
+              finishQuiz();
+            }
+          }, 1500);
+        }
+
+        function finishQuiz() {
+          quizContainer.style.display = "none";
+          feedbackEl.textContent =
+            "Your score: " + score + " / " + shuffledQuestions.length;
+          restartBtn.style.display = "inline-block";
+          restartBtn.onclick = restartQuiz;
+          if (currentLessonId) {
+            saveScoreForLesson(
+              currentLessonId,
+              score,
+              shuffledQuestions.length,
+            );
+            renderLessonsList();
+          }
+          lessonsPage.style.display = "block";
+          showSummary();
+        }
+
+        function showSummary() {
+          summaryEl.style.display = "block";
+          summaryContentEl.innerHTML = "";
+
+          userAnswers.forEach((item, i) => {
+            const summaryItem = document.createElement("div");
+            summaryItem.classList.add("summary-item");
+
+            // Question text
+            const questionText = document.createElement("p");
+            questionText.textContent = i + 1 + ". " + item.question;
+            summaryItem.appendChild(questionText);
+
+            // Show answers
+            item.options.forEach((opt, idx) => {
+              const answerLine = document.createElement("p");
+              const optionLabel = String.fromCharCode(65 + idx); // A, B, C, D
+
+              // Correct answer
+              if (idx === item.correctAnswerIndex) {
+                answerLine.innerHTML =
+                  "• " +
+                  optionLabel +
+                  ". " +
+                  opt +
+                  " " +
+                  `<span class="summary-correct">(Correct)</span>`;
+              }
+              // User choice but not correct
+              else if (idx === item.userAnswerIndex) {
+                answerLine.innerHTML =
+                  "• " +
+                  optionLabel +
+                  ". " +
+                  opt +
+                  " " +
+                  `<span class="summary-wrong">(Your pick)</span>`;
+              }
+              // Neither correct nor user's
+              else {
+                answerLine.textContent = "• " + optionLabel + ". " + opt;
+              }
+              summaryItem.appendChild(answerLine);
+            });
+
+            summaryContentEl.appendChild(summaryItem);
+          });
+        }
+
+        function restartQuiz() {
+          // Restart the current lesson
+          if (currentLessonId) {
+            startLesson(currentLessonId);
+          }
+        }
+      </script>
+    </div>
+  </body>
 </html>

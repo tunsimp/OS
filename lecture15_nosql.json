@@ -1,0 +1,335 @@
+{
+  "title": "NoSQL Databases",
+  "questions": [
+    {
+      "id": 1,
+      "question": "What does NoSQL stand for?",
+      "options": [
+        "A. No Structured Query Language",
+        "B. Not Only SQL",
+        "C. Non-Standard Query Language",
+        "D. New Optimized SQL"
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 2,
+      "question": "Who first introduced the term 'NoSQL' in 1998?",
+      "options": [
+        "A. Eric Evans",
+        "B. Jeff Bezos",
+        "C. Carl Strozzi",
+        "D. Larry Page"
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 3,
+      "question": "Which of the following is NOT a category of NoSQL databases?",
+      "options": [
+        "A. Key-value",
+        "B. Document-based",
+        "C. Column-based",
+        "D. Table-based"
+      ],
+      "answer": "D"
+    },
+    {
+      "id": 4,
+      "question": "Which NoSQL database type is best suited for social networks due to its relationship modeling?",
+      "options": [
+        "A. Key-value",
+        "B. Document-based",
+        "C. Column-based",
+        "D. Graph-based"
+      ],
+      "answer": "D"
+    },
+    {
+      "id": 5,
+      "question": "What does the CAP theorem state?",
+      "options": [
+        "A. A distributed system can guarantee Consistency, Availability, and Partition-tolerance simultaneously",
+        "B. A distributed system can guarantee at most two of Consistency, Availability, and Partition-tolerance",
+        "C. Consistency is always preferred over Availability in distributed systems",
+        "D. Only Partition-tolerance and Consistency can coexist"
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 6,
+      "question": "In the CAP theorem, what does 'Availability' mean?",
+      "options": [
+        "A. All copies have the same value",
+        "B. Reads and writes always succeed",
+        "C. The system operates despite network failures",
+        "D. Data is replicated to multiple nodes"
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 7,
+      "question": "In the CAP theorem, what does 'Partition-tolerance' mean?",
+      "options": [
+        "A. All copies have the same value",
+        "B. Reads and writes always succeed",
+        "C. System properties hold even when network failures prevent some machines from communicating",
+        "D. Data is sharded across multiple nodes"
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 8,
+      "question": "What is 'eventual consistency' in NoSQL systems?",
+      "options": [
+        "A. Data is always immediately consistent across all nodes",
+        "B. When no updates occur for a long period, all nodes will eventually become consistent",
+        "C. Data is only consistent on the master node",
+        "D. Consistency is never guaranteed in NoSQL systems"
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 9,
+      "question": "What does ACID stand for in database transactions?",
+      "options": [
+        "A. Availability, Consistency, Isolation, Durability",
+        "B. Atomicity, Consistency, Isolation, Durability",
+        "C. Atomicity, Concurrency, Integrity, Durability",
+        "D. Availability, Concurrency, Isolation, Distribution"
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 10,
+      "question": "What does BASE stand for in NoSQL consistency models?",
+      "options": [
+        "A. Basic Availability, Strict-state, Eventual consistency",
+        "B. Basically Available, Soft-state, Eventual consistency",
+        "C. Basically Available, Strong-state, Exact consistency",
+        "D. Basic Availability, Stable-state, Eventual consistency"
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 11,
+      "question": "Which of the following is a key advantage of NoSQL over relational databases?",
+      "options": [
+        "A. Full ACID transaction support",
+        "B. Rich JOIN and GROUP BY operations",
+        "C. Horizontal scalability and no schema requirement",
+        "D. Better declarative query language"
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 12,
+      "question": "Which scaling approach does NoSQL favor?",
+      "options": [
+        "A. Vertical scaling (making a single machine more powerful)",
+        "B. Horizontal scaling (adding more smaller/cheaper servers)",
+        "C. Temporal scaling (faster processing over time)",
+        "D. Deep scaling (increasing storage depth)"
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 13,
+      "question": "Which three major papers are considered the seeds of the NoSQL movement?",
+      "options": [
+        "A. BigTable, DynamoDB, CAP Theorem",
+        "B. MongoDB, Cassandra, Redis",
+        "C. MySQL, PostgreSQL, Oracle",
+        "D. HBase, CouchDB, Neo4j"
+      ],
+      "answer": "A"
+    },
+    {
+      "id": 14,
+      "question": "Which company published the BigTable paper?",
+      "options": [
+        "A. Amazon",
+        "B. Facebook",
+        "C. Google",
+        "D. LinkedIn"
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 15,
+      "question": "Which company published the DynamoDB paper?",
+      "options": [
+        "A. Google",
+        "B. Amazon",
+        "C. Yahoo",
+        "D. Twitter"
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 16,
+      "question": "Which NoSQL database is an example of a document-based store?",
+      "options": [
+        "A. Redis",
+        "B. Cassandra",
+        "C. MongoDB",
+        "D. Neo4j"
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 17,
+      "question": "Which NoSQL database is an example of a graph-based store?",
+      "options": [
+        "A. DynamoDB",
+        "B. HBase",
+        "C. CouchDB",
+        "D. Neo4j"
+      ],
+      "answer": "D"
+    },
+    {
+      "id": 18,
+      "question": "Which NoSQL database is an example of a column-based store?",
+      "options": [
+        "A. MongoDB",
+        "B. Redis",
+        "C. Cassandra",
+        "D. DynamoDB"
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 19,
+      "question": "In document-based NoSQL, what format are documents commonly stored in?",
+      "options": [
+        "A. CSV",
+        "B. JSON or XML",
+        "C. Binary",
+        "D. Markdown"
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 20,
+      "question": "What is the basic API access method in key-value stores to retrieve data?",
+      "options": [
+        "A. SELECT key FROM store",
+        "B. find(key)",
+        "C. get(key)",
+        "D. fetch(key)"
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 21,
+      "question": "Which is a disadvantage of NoSQL databases?",
+      "options": [
+        "A. Poor write performance",
+        "B. Limited horizontal scalability",
+        "C. No declarative query language like SQL, requiring more programming",
+        "D. High licensing cost"
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 22,
+      "question": "Which of the following is NOT a typical use case for NoSQL?",
+      "options": [
+        "A. Social media data with massive user activity",
+        "B. Real-time big data analytics",
+        "C. Complex financial transactions requiring strict ACID compliance",
+        "D. Product catalog with varying attributes"
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 23,
+      "question": "In Master/Slave replication for RDBMS scaling, critical reads may be incorrect because:",
+      "options": [
+        "A. The master is overloaded with reads",
+        "B. Writes may not have yet been propagated to slave databases",
+        "C. Slaves do not support SQL queries",
+        "D. The master only stores indexes, not data"
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 24,
+      "question": "What is a limitation of sharding in RDBMS?",
+      "options": [
+        "A. It does not support write operations",
+        "B. Relationships and joins across partitions are no longer possible",
+        "C. It only works on a single server",
+        "D. It requires all data to fit in memory"
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 25,
+      "question": "Column-based NoSQL databases are based on which paper?",
+      "options": [
+        "A. Amazon's DynamoDB paper",
+        "B. Google's BigTable paper",
+        "C. Facebook's Cassandra paper",
+        "D. LinkedIn's Voldemort paper"
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 26,
+      "question": "In column-based NoSQL, data locality means:",
+      "options": [
+        "A. Data is stored only in one geographical region",
+        "B. All columns in a column family are stored together on disk, allowing multiple rows to be retrieved in one read",
+        "C. Data is cached in local memory",
+        "D. Data is replicated to the nearest server"
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 27,
+      "question": "What is 'NewSQL'?",
+      "options": [
+        "A. A new type of NoSQL database",
+        "B. Next-generation RDBMS designed to scale horizontally while still providing ACID guarantees",
+        "C. An upgrade to the SQL query language",
+        "D. A hybrid of MongoDB and MySQL"
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 28,
+      "question": "Which of the following companies uses Cassandra?",
+      "options": [
+        "A. Google and Baidu",
+        "B. Amazon and Yahoo",
+        "C. Facebook and Twitter",
+        "D. LinkedIn and Reddit"
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 29,
+      "question": "What is a benefit of document-based NoSQL databases over key-value stores?",
+      "options": [
+        "A. Faster key lookups",
+        "B. Ability to model more complex objects with nested structures",
+        "C. Better support for ACID transactions",
+        "D. Lower storage requirements"
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 30,
+      "question": "In the CAP theorem, traditional RDBMS systems typically prefer which combination?",
+      "options": [
+        "A. Availability and Partition-tolerance (AP)",
+        "B. Consistency and Partition-tolerance (CP)",
+        "C. Consistency and Availability (CA)",
+        "D. All three equally"
+      ],
+      "answer": "C"
+    }
+  ]
+}

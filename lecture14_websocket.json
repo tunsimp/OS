@@ -1,0 +1,335 @@
+{
+  "title": "Lecture 14 - WebSocket",
+  "questions": [
+    {
+      "id": 1,
+      "question": "What does WebSocket provide over a single TCP connection?",
+      "options": [
+        "A. One-way communication from server to client",
+        "B. Bidirectional full duplex communication",
+        "C. Encrypted file transfer",
+        "D. One-way communication from client to server"
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 2,
+      "question": "In what year was the WebSocket protocol standardized by IETF?",
+      "options": [
+        "A. 2009",
+        "B. 2010",
+        "C. 2011",
+        "D. 2015"
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 3,
+      "question": "What is the RFC number for the WebSocket protocol?",
+      "options": [
+        "A. RFC 2616",
+        "B. RFC 7230",
+        "C. RFC 6455",
+        "D. RFC 4918"
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 4,
+      "question": "WebSocket was introduced as a new feature in which HTML version?",
+      "options": [
+        "A. HTML3",
+        "B. HTML4",
+        "C. XHTML",
+        "D. HTML5"
+      ],
+      "answer": "D"
+    },
+    {
+      "id": 5,
+      "question": "Why is HTTP not ideal for real-time applications?",
+      "options": [
+        "A. HTTP does not support JSON",
+        "B. HTTP has too much traffic overhead and header, and is dependent on request/response",
+        "C. HTTP cannot handle large files",
+        "D. HTTP does not support encryption"
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 6,
+      "question": "Which of the following is NOT a two-way HTTP communication method?",
+      "options": [
+        "A. Polling",
+        "B. Long polling",
+        "C. Streaming",
+        "D. Caching"
+      ],
+      "answer": "D"
+    },
+    {
+      "id": 7,
+      "question": "What is the WebSocket 'handshake' process?",
+      "options": [
+        "A. Encrypting the WebSocket data before transmission",
+        "B. The client and server exchanging authentication tokens",
+        "C. The client sends an HTTP upgrade request; the server confirms and upgrades the connection",
+        "D. The server pushes the initial data frame to the client"
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 8,
+      "question": "What protocol scheme is used after a successful WebSocket upgrade?",
+      "options": [
+        "A. http:// and https://",
+        "B. ftp:// and sftp://",
+        "C. ws:// and wss://",
+        "D. tcp:// and udp://"
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 9,
+      "question": "During WebSocket data transfer, data is exchanged in the form of:",
+      "options": [
+        "A. Packets",
+        "B. Frames",
+        "C. Segments",
+        "D. Datagrams"
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 10,
+      "question": "How many frames can a single WebSocket message use?",
+      "options": [
+        "A. Always exactly one frame",
+        "B. Always two frames",
+        "C. One or multiple frames",
+        "D. Up to four frames only"
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 11,
+      "question": "Which of the following is a real-time use case that WebSocket is best suited for?",
+      "options": [
+        "A. Loading a static web page",
+        "B. Fetching old data once for processing",
+        "C. A chat application requiring instant messaging",
+        "D. Submitting a registration form"
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 12,
+      "question": "When should you NOT use WebSocket?",
+      "options": [
+        "A. Real-time stock ticker",
+        "B. Multiplayer online game",
+        "C. Loading data only once for processing",
+        "D. Live chat support"
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 13,
+      "question": "Which browser first supported WebSocket starting from version 16?",
+      "options": [
+        "A. Firefox",
+        "B. Safari",
+        "C. Chrome",
+        "D. Opera"
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 14,
+      "question": "Which of the following is a CON of WebSocket?",
+      "options": [
+        "A. High latency",
+        "B. Requires multiple connections like HTTP polling",
+        "C. Does not have built-in reconnection handling",
+        "D. Only works on mobile browsers"
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 15,
+      "question": "Which of the following is a PRO of WebSocket?",
+      "options": [
+        "A. Works on all browsers without exception",
+        "B. Bi-directional and cross-origin communication with low latency",
+        "C. Simple proxy configuration",
+        "D. Built-in reconnection handling"
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 16,
+      "question": "In the Go WebSocket example, which third-party library is used?",
+      "options": [
+        "A. gorilla/mux",
+        "B. gorilla/websocket",
+        "C. gorilla/http",
+        "D. gorilla/socket"
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 17,
+      "question": "In the Go WebSocket server, what does the 'upgrader' do?",
+      "options": [
+        "A. Compresses the WebSocket messages",
+        "B. Upgrades an HTTP connection to a WebSocket connection",
+        "C. Authenticates the client",
+        "D. Stores messages in a buffer"
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 18,
+      "question": "What HTTP status code does the server return when accepting a WebSocket handshake?",
+      "options": [
+        "A. 200 OK",
+        "B. 301 Moved Permanently",
+        "C. 101 Switching Protocols",
+        "D. 204 No Content"
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 19,
+      "question": "Which HTTP header field does the client use to request an upgrade to the WebSocket protocol?",
+      "options": [
+        "A. Content-Type: websocket",
+        "B. Connection: Upgrade and Upgrade: WebSocket",
+        "C. Accept: WebSocket",
+        "D. Transfer-Encoding: WebSocket"
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 20,
+      "question": "What happens to a WebSocket connection once established?",
+      "options": [
+        "A. It automatically closes after 30 seconds",
+        "B. It stays open until the client or server initiates closing",
+        "C. It closes after every message exchange",
+        "D. It requires re-authentication every minute"
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 21,
+      "question": "Which of the following is a WebSocket use case in gaming?",
+      "options": [
+        "A. Loading the game assets once",
+        "B. Storing player high scores in a database",
+        "C. Continuously receiving game data without refreshing the UI",
+        "D. Encrypting player save files"
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 22,
+      "question": "How does a WebSocket chat application optimize connection usage?",
+      "options": [
+        "A. It opens a new connection for every message",
+        "B. It reuses the same WebSocket connection for sending and receiving messages",
+        "C. It uses long polling to check for new messages",
+        "D. It uses server-sent events for message delivery"
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 23,
+      "question": "What is the WebSocket equivalent of the secure HTTPS protocol?",
+      "options": [
+        "A. ws://",
+        "B. wss://",
+        "C. https://",
+        "D. sftp://"
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 24,
+      "question": "In a WebSocket frame, what does the 'opcode' field indicate?",
+      "options": [
+        "A. The sender's IP address",
+        "B. The type of data contained in the frame",
+        "C. The total number of frames in the message",
+        "D. The encryption key used"
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 25,
+      "question": "Which of the following is NOT listed as a supported browser for WebSocket?",
+      "options": [
+        "A. Chrome 16+",
+        "B. Firefox 11+",
+        "C. Opera 12.1+",
+        "D. Netscape 9+"
+      ],
+      "answer": "D"
+    },
+    {
+      "id": 26,
+      "question": "What organization standardized the WebSocket API in Web IDL?",
+      "options": [
+        "A. IETF",
+        "B. W3C",
+        "C. IEEE",
+        "D. ISO"
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 27,
+      "question": "Compared to HTTP polling, WebSocket:",
+      "options": [
+        "A. Requires more connections to be established",
+        "B. Does not require multiple connection establishments",
+        "C. Sends larger headers with each message",
+        "D. Only works on the same origin"
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 28,
+      "question": "What is a disadvantage of WebSocket in terms of infrastructure?",
+      "options": [
+        "A. It has very high latency",
+        "B. It only supports text data",
+        "C. Complicated proxy configuration",
+        "D. It cannot run on mobile platforms"
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 29,
+      "question": "In Go WebSocket code, what does 'conn.ReadMessage()' return?",
+      "options": [
+        "A. Only the message content",
+        "B. The messageType, message content, and an error value",
+        "C. Only an error value",
+        "D. The client's IP address and message"
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 30,
+      "question": "Which method is used in Go to write a message back to a WebSocket client?",
+      "options": [
+        "A. conn.SendMessage()",
+        "B. conn.WriteMessage()",
+        "C. conn.PushMessage()",
+        "D. conn.EmitMessage()"
+      ],
+      "answer": "B"
+    }
+  ]
+}
