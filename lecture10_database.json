@@ -1,0 +1,302 @@
+[
+  {
+    "question": "What does NoSQL stand for?",
+    "answers": [
+      "Not Only SQL",
+      "No Structured Query Language",
+      "Non-Standard Query Layer",
+      "Non-relational Open Source Language"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is a key characteristic of in-memory databases like Go memdb?",
+    "answers": [
+      "Data is stored primarily in memory, providing fast response speed by eliminating disk access",
+      "Data is stored on disk for durability across server restarts",
+      "They are designed for large-scale distributed storage",
+      "They use SQL queries to manage data"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is a major vulnerability of in-memory databases?",
+    "answers": [
+      "Data is lost if the server crashes or is restarted",
+      "They are slower than disk-based databases",
+      "They cannot handle multiple concurrent users",
+      "They require a separate hardware device"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Which of the following is a suitable use case for an in-memory database?",
+    "answers": [
+      "Session stores and real-time analytics with high traffic spikes",
+      "Long-term archival of business records",
+      "Storing large binary files like videos",
+      "Running complex multi-table JOIN queries"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Which NoSQL database type is best suited for social networks?",
+    "answers": [
+      "Graph database",
+      "Document database",
+      "Key-value store",
+      "Column-family database"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Which of the following is a graph database?",
+    "answers": [
+      "Neo4j",
+      "MongoDB",
+      "Redis",
+      "Cassandra"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is NOT a type of NoSQL database?",
+    "answers": [
+      "Relational table database",
+      "Document database",
+      "Key-value store",
+      "Graph database"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "In a document-based NoSQL database, in what format are documents typically stored?",
+    "answers": [
+      "JSON or BSON",
+      "CSV",
+      "XML only",
+      "Plain text"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is a key advantage of NoSQL over relational databases?",
+    "answers": [
+      "Horizontal scalability and flexible schema that allows rapid data structure changes",
+      "Stronger ACID transaction guarantees",
+      "Better support for complex multi-table JOIN operations",
+      "Standardized query language across all implementations"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is a benefit of document-based NoSQL databases?",
+    "answers": [
+      "All related information is contained in one document, avoiding costly multi-table joins",
+      "They enforce strict schemas that prevent data inconsistency",
+      "They are the fastest option for write-intensive workloads",
+      "They support SQL queries natively"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Which of the following is NOT a typical use case of NoSQL databases?",
+    "answers": [
+      "Complex multi-table relational transactions requiring full ACID compliance",
+      "Real-time web applications",
+      "Storing unstructured or semi-structured data",
+      "Horizontal scaling across many servers"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What type of database is Redis?",
+    "answers": [
+      "In-memory key-value store",
+      "Relational database",
+      "Document database",
+      "Graph database"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What does Redis stand for?",
+    "answers": [
+      "Remote Dictionary Server",
+      "Relational Data Index System",
+      "Rapid Elastic Data In-memory Store",
+      "Replicated Distributed Storage"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What does the memdb function txn.Insert() do?",
+    "answers": [
+      "Adds or updates an object into the given table",
+      "Retrieves the first matching object from a table",
+      "Deletes an object from the given table",
+      "Creates a new table in the database"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What does the memdb function txn.First() return?",
+    "answers": [
+      "The first matching object for the given constraints on the index",
+      "All objects in a table sorted by index",
+      "The total count of objects matching the constraint",
+      "A list of all indexes defined on the table"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What does txn.DeleteAll() do in memdb?",
+    "answers": [
+      "Deletes all objects in a given table matching the constraints on the specified index",
+      "Drops the entire table from the database",
+      "Removes all indexes from a table",
+      "Deletes a single object matching the primary key"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is MongoDB?",
+    "answers": [
+      "A document database that stores data in flexible, JSON-like documents",
+      "A relational database that uses tables and SQL queries",
+      "An in-memory key-value cache system",
+      "A graph database for social network analysis"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is a performance advantage of MongoDB over SQL databases?",
+    "answers": [
+      "All related information is contained inside one document, avoiding joins across multiple tables",
+      "MongoDB supports faster SQL JOIN operations",
+      "MongoDB enforces strict schemas that speed up queries",
+      "MongoDB uses hardware-accelerated query execution"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is a disadvantage of MongoDB compared to relational databases?",
+    "answers": [
+      "NoSQL is not designed to remove duplication, which can lead to data quality issues",
+      "MongoDB cannot scale horizontally",
+      "MongoDB enforces strict data types that slow inserts",
+      "MongoDB requires a license for production use"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What Go package is used to connect to a MySQL database?",
+    "answers": [
+      "github.com/go-sql-driver/mysql",
+      "github.com/hashicorp/go-memdb",
+      "database/nosql",
+      "net/mysql"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "In Go's database/sql, what does db.Ping() verify?",
+    "answers": [
+      "That the database connection is alive and reachable",
+      "That a query was executed successfully",
+      "That a new record was inserted",
+      "That the database schema matches the expected structure"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is Go sqlmock primarily used for?",
+    "answers": [
+      "Simulating an SQL driver for testing without needing a real database connection",
+      "Connecting Go applications to MongoDB",
+      "Generating SQL schema from Go structs",
+      "Monitoring SQL query performance in production"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "In Go memdb, what must be defined before creating a new database?",
+    "answers": [
+      "A DBSchema that defines the tables and their indexes",
+      "A TCP connection to a remote database server",
+      "A SQL CREATE TABLE statement",
+      "A Docker container running the database engine"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is txn.LowerBound() used for in memdb?",
+    "answers": [
+      "Constructing a ResultIterator over rows with an index value greater than or equal to the provided argument, enabling range scans",
+      "Finding the object with the smallest index value in the table",
+      "Deleting all records below a given threshold value",
+      "Setting a minimum constraint on the number of rows returned"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "In the MySQL CRUD example, what SQL statement is used to insert a new student?",
+    "answers": [
+      "INSERT INTO student (name, email, age) VALUES (?, ?, ?)",
+      "ADD TO student SET name=?, email=?, age=?",
+      "PUT student (name, email, age) VALUES (?, ?, ?)",
+      "CREATE RECORD student WHERE name=? AND email=? AND age=?"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What does db.Exec() return that is useful after an INSERT statement?",
+    "answers": [
+      "A Result object that provides the last inserted ID",
+      "A Rows object for iterating query results",
+      "A boolean indicating success or failure",
+      "A string containing the executed SQL statement"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Why must rows.Close() be deferred in Go database queries?",
+    "answers": [
+      "To release the database connection back to the connection pool after iteration",
+      "To commit the transaction after reading",
+      "To encrypt the data before it is returned to the caller",
+      "To delete the rows from the database after reading"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is a memdb write transaction created with?",
+    "answers": [
+      "db.Txn(true)",
+      "db.Txn(false)",
+      "db.WriteTransaction()",
+      "db.Begin()"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What flexibility does MongoDB offer regarding data structure?",
+    "answers": [
+      "Fields can vary from document to document and the data structure can be changed over time",
+      "All documents must follow a fixed schema defined at collection creation",
+      "MongoDB only supports numeric and string field types",
+      "Data structure changes require dropping and recreating the entire collection"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Which of the following correctly describes a read-only transaction in memdb?",
+    "answers": [
+      "db.Txn(false) creates a read-only transaction that should be deferred with Abort()",
+      "db.Txn(true) creates a read-only transaction that should be deferred with Commit()",
+      "db.ReadTxn() creates a read-only transaction",
+      "db.Txn(0) creates a read-only transaction"
+    ],
+    "correct_answer": 0
+  }
+]

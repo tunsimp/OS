@@ -1,0 +1,302 @@
+[
+  {
+    "question": "What mechanism does TCP use to establish a connection?",
+    "answers": [
+      "Two-way handshake",
+      "Three-way handshake",
+      "Four-way handshake",
+      "One-way synchronization"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "question": "What is the correct sequence of the TCP three-way handshake?",
+    "answers": [
+      "SYN → ACK → SYN/ACK",
+      "ACK → SYN → SYN/ACK",
+      "SYN → SYN/ACK → ACK",
+      "SYN/ACK → SYN → ACK"
+    ],
+    "correct_answer": 2
+  },
+  {
+    "question": "What does ACK stand for in TCP communication?",
+    "answers": [
+      "Active Connection Key",
+      "Acknowledgement",
+      "Async Connection Keep-alive",
+      "Authorized Control Key"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "question": "What does the TCP window size control?",
+    "answers": [
+      "The maximum number of connections",
+      "How much data can be sent before an ACK is required",
+      "The port number range",
+      "The timeout duration"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "question": "What is the first step on the server side in the TCP client-server interaction?",
+    "answers": [
+      "bind()",
+      "listen()",
+      "socket()",
+      "accept()"
+    ],
+    "correct_answer": 2
+  },
+  {
+    "question": "Which function on the server side blocks until a client connects in TCP?",
+    "answers": [
+      "listen()",
+      "bind()",
+      "recv()",
+      "accept()"
+    ],
+    "correct_answer": 3
+  },
+  {
+    "question": "What is the state of the server after the TCP three-way handshake completes?",
+    "answers": [
+      "LISTENING",
+      "CONNECTED",
+      "ESTABLISHED",
+      "ACCEPTED"
+    ],
+    "correct_answer": 2
+  },
+  {
+    "question": "Which packet does the client send first to terminate a TCP connection?",
+    "answers": [
+      "ACK",
+      "RST",
+      "SYN",
+      "FIN"
+    ],
+    "correct_answer": 3
+  },
+  {
+    "question": "What state does the client enter after sending FIN and receiving ACK during TCP termination?",
+    "answers": [
+      "TIME_WAIT",
+      "FIN_WAIT_2",
+      "CLOSE_WAIT",
+      "LAST_ACK"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "question": "What state does the server enter after receiving the client's FIN?",
+    "answers": [
+      "FIN_WAIT_1",
+      "TIME_WAIT",
+      "LAST_ACK",
+      "CLOSE_WAIT"
+    ],
+    "correct_answer": 3
+  },
+  {
+    "question": "In Go, which function is used to start a TCP server listening on a port?",
+    "answers": [
+      "net.Connect(\"tcp\", \":8080\")",
+      "net.Listen(\"tcp\", \":8080\")",
+      "net.Bind(\"tcp\", \":8080\")",
+      "net.Serve(\"tcp\", \":8080\")"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "question": "In Go, which function does a TCP client use to connect to a server?",
+    "answers": [
+      "net.Listen(\"tcp\", \"localhost:8080\")",
+      "net.Accept(\"tcp\", \"localhost:8080\")",
+      "net.Dial(\"tcp\", \"localhost:8080\")",
+      "net.Connect(\"tcp\", \"localhost:8080\")"
+    ],
+    "correct_answer": 2
+  },
+  {
+    "question": "What does the go keyword do in the TCP server's connection handler?",
+    "answers": [
+      "Closes the connection after handling",
+      "Runs handleConnection in a separate goroutine concurrently",
+      "Queues the connection for later processing",
+      "Sends a response to the client"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "question": "What does defer ln.Close() ensure in the TCP server code?",
+    "answers": [
+      "The listener is closed immediately after starting",
+      "The listener is closed when the main function returns",
+      "The listener is restarted after each connection",
+      "The listener is closed after each client disconnects"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "question": "Which package is used in Go for TCP network programming?",
+    "answers": [
+      "os/net",
+      "http",
+      "net",
+      "socket"
+    ],
+    "correct_answer": 2
+  },
+  {
+    "question": "What does bufio.NewReader(conn).ReadString('\\n') do in the TCP server?",
+    "answers": [
+      "Reads all available data at once",
+      "Reads data from the connection up to a newline character",
+      "Writes data to the connection",
+      "Reads a fixed number of bytes"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "question": "In the example TCP server, what transformation is applied to the client's message before echoing it back?",
+    "answers": [
+      "Converted to lowercase",
+      "Reversed",
+      "Converted to uppercase",
+      "Encoded in base64"
+    ],
+    "correct_answer": 2
+  },
+  {
+    "question": "What does conn.RemoteAddr().String() return in the TCP server?",
+    "answers": [
+      "The server's IP address",
+      "The client's remote address as a string",
+      "The port number of the server",
+      "The hostname of the server"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "question": "What happens when bufio.NewReader(conn).ReadString('\\n') returns an error?",
+    "answers": [
+      "The server sends an error message to the client",
+      "The connection is closed and the handler exits",
+      "The server restarts",
+      "The error is ignored and reading continues"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "question": "Which of the following correctly describes TCP reliability?",
+    "answers": [
+      "TCP uses best-effort delivery with no guarantees",
+      "TCP guarantees ordered, error-checked delivery of data",
+      "TCP does not use acknowledgements",
+      "TCP is faster than UDP because it has no overhead"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "question": "In TCP, what does the sequence number in SYN (Seq = X) represent?",
+    "answers": [
+      "The port number of the sender",
+      "The initial sequence number chosen by the client",
+      "The checksum of the packet",
+      "The window size of the client"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "question": "When the server replies with SYN/ACK, what is the ACK sequence number?",
+    "answers": [
+      "X",
+      "Y",
+      "X + 1",
+      "Y + 1"
+    ],
+    "correct_answer": 2
+  },
+  {
+    "question": "What does the client send as the final step of the three-way handshake?",
+    "answers": [
+      "SYN",
+      "FIN",
+      "SYN/ACK",
+      "ACK"
+    ],
+    "correct_answer": 3
+  },
+  {
+    "question": "In the TCP server interaction diagram, which function on the server side follows listen()?",
+    "answers": [
+      "bind()",
+      "recv()",
+      "accept()",
+      "socket()"
+    ],
+    "correct_answer": 2
+  },
+  {
+    "question": "What does the client state TIME_WAIT indicate during TCP termination?",
+    "answers": [
+      "The client is waiting for the server to start",
+      "The client has sent the final ACK and is waiting before closing",
+      "The client is retransmitting a FIN",
+      "The client has fully closed the connection"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "question": "In the TCP buffer and window size mechanism, what does the client communicate via the window size field?",
+    "answers": [
+      "The number of packets it has sent",
+      "The amount of data it can currently receive",
+      "The timeout duration for acknowledgement",
+      "The maximum segment size"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "question": "Which import is used in the Go TCP server to read data line by line?",
+    "answers": [
+      "io",
+      "strings",
+      "bufio",
+      "bytes"
+    ],
+    "correct_answer": 2
+  },
+  {
+    "question": "In the Go TCP client, which function sends data to the server?",
+    "answers": [
+      "conn.Write()",
+      "fmt.Fprintf(conn, text)",
+      "conn.Send()",
+      "net.Send(conn, text)"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "question": "What happens if net.Listen() returns an error in the Go TCP server?",
+    "answers": [
+      "The server retries automatically",
+      "The error is logged and the server continues",
+      "The error is printed and the function returns",
+      "The server waits 5 seconds and tries again"
+    ],
+    "correct_answer": 2
+  },
+  {
+    "question": "What does the server state LAST_ACK indicate during TCP connection termination?",
+    "answers": [
+      "The server is waiting to receive the final ACK from the client",
+      "The server has sent the last data packet",
+      "The server has closed the connection fully",
+      "The server is waiting for another FIN from the client"
+    ],
+    "correct_answer": 0
+  }
+]

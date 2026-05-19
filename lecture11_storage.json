@@ -1,0 +1,302 @@
+[
+  {
+    "question": "What is file storage also known as?",
+    "answers": [
+      "File-level or file-based storage",
+      "Block-level or block-based storage",
+      "Object-level or flat storage",
+      "Hierarchical network storage"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "How is file storage organized?",
+    "answers": [
+      "Hierarchically: files are placed into folders and subfolders",
+      "Flat with no directory structure",
+      "By UID, with random order across blocks",
+      "In buckets, each with unique metadata"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Which of the following is a familiar protocol used in file storage?",
+    "answers": [
+      "NFS (Network File System)",
+      "S3 API",
+      "gRPC",
+      "WebSocket"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is a disadvantage of file storage?",
+    "answers": [
+      "Not efficient when dealing with large amounts of data across many storage devices",
+      "Cannot be shared over a local area network",
+      "Does not support backup and recovery",
+      "No cloud-based option is available"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is block storage?",
+    "answers": [
+      "Storage that breaks up information into fixed-size blocks of data, each with a UID, stored in random order",
+      "Storage that organizes files in a hierarchical folder structure",
+      "Storage that keeps each object with extensive metadata in a flat namespace",
+      "Storage that uses a SQL database to index file locations"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the typical block size range in block storage?",
+    "answers": [
+      "256KB to 4MB",
+      "1KB to 64KB",
+      "10MB to 1GB",
+      "4 bytes to 256 bytes"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is a key advantage of block storage over file storage?",
+    "answers": [
+      "Faster access because the OS reads individual blocks rather than traversing a hierarchical structure",
+      "Easier for users to browse and manage files manually",
+      "No cost for SAN infrastructure",
+      "Rich metadata makes it easy to search for files"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is a disadvantage of block storage?",
+    "answers": [
+      "SAN (Storage-Attached Network) can be expensive to buy and manage, and lack of metadata makes searching difficult",
+      "Cannot be used for database storage",
+      "Very slow incremental change ability",
+      "Limited to small file sizes under 1MB"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is object storage?",
+    "answers": [
+      "Storage where data is stored as distinct objects, each with a UID and metadata, in a flat namespace",
+      "Storage organized hierarchically into folders and subfolders",
+      "Storage that breaks data into fixed-size blocks identified by UID",
+      "Storage that uses SQL tables to organize unstructured data"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is a key advantage of object storage over other storage types?",
+    "answers": [
+      "Extremely scalable and API-friendly, well-suited for massive volumes of unstructured data",
+      "Fastest read/write performance of all storage types",
+      "Best suited for write-intensive applications",
+      "Cheapest option for mission-critical database storage"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is a disadvantage of object storage?",
+    "answers": [
+      "Slower than file and block storage, and not good for write-intensive applications",
+      "Does not support metadata for stored objects",
+      "Cannot be accessed via APIs",
+      "Limited to storing files smaller than 5MB"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What does Amazon S3 stand for?",
+    "answers": [
+      "Simple Storage Service",
+      "Scalable Server Storage",
+      "Standard Secure Storage",
+      "Shared Storage Solution"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What type of storage model does Amazon S3 use?",
+    "answers": [
+      "Object storage",
+      "Block storage",
+      "File storage",
+      "Relational storage"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the size range of objects supported by Amazon S3?",
+    "answers": [
+      "1 byte to 5TB per object",
+      "1KB to 1GB per object",
+      "256KB to 4MB per object",
+      "10MB to 10TB per object"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is an Amazon S3 bucket?",
+    "answers": [
+      "A container for objects stored in S3 that organizes the S3 namespace and identifies the responsible account",
+      "A virtual machine running in AWS used to process S3 data",
+      "A block of reserved disk space on an AWS physical server",
+      "An encrypted folder that contains database tables"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Which of the following is true about Amazon S3 bucket names?",
+    "answers": [
+      "Bucket names are globally unique regardless of AWS region",
+      "Bucket names only need to be unique within the same AWS account",
+      "Buckets can be nested inside other buckets",
+      "Bucket names can be reused after the original bucket is deleted immediately"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the soft limit on the number of S3 buckets per AWS account?",
+    "answers": [
+      "100 buckets",
+      "50 buckets",
+      "1000 buckets",
+      "Unlimited buckets"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is NOT a feature of Amazon S3?",
+    "answers": [
+      "Provides a relational query engine for structured data joins",
+      "Lifecycle management with archival support via Glacier",
+      "Concurrent read and write support",
+      "Highly scalable with low latency at low cost"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the purpose of Amazon S3 Glacier?",
+    "answers": [
+      "Archival data storage for infrequently accessed data at very low cost",
+      "Real-time streaming of large video files",
+      "High-performance block storage for databases",
+      "In-memory caching of S3 objects for faster access"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is MinIO?",
+    "answers": [
+      "An open-source object storage server compatible with the Amazon S3 API",
+      "A proprietary block storage solution for enterprise data centers",
+      "A relational database management system written in Go",
+      "A file storage protocol for Linux-based NAS devices"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What programming language was MinIO written in?",
+    "answers": [
+      "Go",
+      "Python",
+      "Java",
+      "Rust"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the minimum number of disks required for MinIO's erasure coding?",
+    "answers": [
+      "4",
+      "2",
+      "6",
+      "8"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Which storage model offers the highest performance for mission-critical applications like ERP systems?",
+    "answers": [
+      "Block storage",
+      "Object storage",
+      "File storage",
+      "In-memory storage"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Which storage type is most suitable for archival data storage and managing data at the edge?",
+    "answers": [
+      "Object storage",
+      "Block storage",
+      "File storage",
+      "SAN storage"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What does object storage metadata enable?",
+    "answers": [
+      "Rich tagging and analysis of stored objects, enabling data analytics and data integrity checks",
+      "Faster block-level access to raw disk sectors",
+      "Hierarchical folder navigation similar to file storage",
+      "SQL queries against stored object content"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "How does Amazon S3 access control work by default?",
+    "answers": [
+      "Buckets and objects are private by default; only the owner can access them",
+      "All buckets are publicly readable by default",
+      "Access is controlled exclusively by IP whitelisting",
+      "All objects are publicly writable unless explicitly locked"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Which access control method in S3 applies to individual objects?",
+    "answers": [
+      "ACLs (Access Control Lists)",
+      "IAM policies",
+      "Bucket policies",
+      "VPC endpoints"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Which of the following is a common use case for Amazon S3?",
+    "answers": [
+      "Media hosting and software delivery",
+      "Running containerized microservices",
+      "Executing SQL queries on relational data",
+      "Hosting virtual machine images for EC2"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What SMB stands for in the context of file storage protocols?",
+    "answers": [
+      "Server Message Block",
+      "Shared Memory Bus",
+      "Storage Management Bridge",
+      "Synchronous Message Broker"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is a key benefit of object storage regarding cost?",
+    "answers": [
+      "Cost-effective data on demand; cheaper than block and file storage at scale",
+      "One-time licensing fee with no usage charges",
+      "Free tier available for all enterprise customers",
+      "No additional cost for data transfer between regions"
+    ],
+    "correct_answer": 0
+  }
+]

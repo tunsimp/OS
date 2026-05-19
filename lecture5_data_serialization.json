@@ -1,0 +1,302 @@
+[
+  {
+    "question": "What is serialization (marshalling)?",
+    "answers": [
+      "The process of compressing data for storage",
+      "The process of converting a data object into a series of bytes for transmission or storage",
+      "The process of encrypting data before sending over a network",
+      "The process of converting bytes back into a data object"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "question": "What is the reverse process of serialization called?",
+    "answers": [
+      "Encoding",
+      "Decoding",
+      "Deserialization (Unmarshalling)",
+      "Decompression"
+    ],
+    "correct_answer": 2
+  },
+  {
+    "question": "Why can structured data objects NOT be directly sent over a network?",
+    "answers": [
+      "They are too large for network packets",
+      "Networks only understand sequences of bytes",
+      "They require encryption before transmission",
+      "They are not supported by TCP/IP"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "question": "Which of the following is NOT an example of structured data?",
+    "answers": [
+      "Linked list",
+      "Binary tree",
+      "Plain integer",
+      "Variant records"
+    ],
+    "correct_answer": 2
+  },
+  {
+    "question": "What does ASN.1 stand for?",
+    "answers": [
+      "Advanced Serialization Notation 1",
+      "Abstract Syntax Notation One",
+      "Asynchronous Standard Network 1",
+      "Abstract Standard Notation One"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "question": "When was ASN.1 originally designed?",
+    "answers": [
+      "1974",
+      "1990",
+      "1984",
+      "2001"
+    ],
+    "correct_answer": 2
+  },
+  {
+    "question": "For what industry was ASN.1 originally designed?",
+    "answers": [
+      "Finance",
+      "Healthcare",
+      "Telecommunications",
+      "Military"
+    ],
+    "correct_answer": 2
+  },
+  {
+    "question": "Which Go package supports ASN.1?",
+    "answers": [
+      "encoding/xml",
+      "encoding/asn1",
+      "encoding/gob",
+      "encoding/asn"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "question": "What is ASN.1 commonly used for in networking?",
+    "answers": [
+      "Compressing HTTP responses",
+      "Encoding X.509 certificates (public keys)",
+      "Encoding JSON data",
+      "Serializing Go structs only"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "question": "What is the correct function signature for ASN.1 marshalling in Go?",
+    "answers": [
+      "func Marshal(val interface{}) (string, error)",
+      "func Marshal(val interface{}) ([]byte, error)",
+      "func Encode(val interface{}) ([]byte, error)",
+      "func Serialize(val interface{}) ([]byte, error)"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "question": "When using ASN.1 with structs in Go, what must you pass to Marshal?",
+    "answers": [
+      "A pointer to the struct",
+      "The struct value itself, not a pointer (must dereference explicitly)",
+      "A JSON representation of the struct",
+      "The struct's type name as a string"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "question": "What does ASN.1 use to match fields between two different struct types during unmarshalling?",
+    "answers": [
+      "Field names",
+      "Field tags",
+      "Field order and data types",
+      "Field visibility"
+    ],
+    "correct_answer": 2
+  },
+  {
+    "question": "What happens if two structs have different field names but the same types and count in ASN.1?",
+    "answers": [
+      "Marshalling fails with an error",
+      "Only matching field names are serialized",
+      "They can be marshalled/unmarshalled interchangeably since ASN.1 ignores field names",
+      "An exception is thrown"
+    ],
+    "correct_answer": 2
+  },
+  {
+    "question": "What does JSON stand for?",
+    "answers": [
+      "Java Serialization Object Notation",
+      "JavaScript Object Notation",
+      "Java Standard Object Notation",
+      "JavaScript Standard Output Notation"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "question": "What format is JSON?",
+    "answers": [
+      "Binary format",
+      "Hexadecimal format",
+      "Text-based format",
+      "XML-based format"
+    ],
+    "correct_answer": 2
+  },
+  {
+    "question": "Which of the following is a limitation of JSON?",
+    "answers": [
+      "It cannot serialize arrays",
+      "It has no special support for complex types like dates and no distinction between number types",
+      "It does not support string values",
+      "It cannot represent objects"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "question": "How is a Go struct or map represented in JSON?",
+    "answers": [
+      "JSON array",
+      "JSON string",
+      "JSON boolean",
+      "JSON object"
+    ],
+    "correct_answer": 3
+  },
+  {
+    "question": "How is a Go array or slice represented in JSON?",
+    "answers": [
+      "JSON object",
+      "JSON string",
+      "JSON array",
+      "JSON boolean"
+    ],
+    "correct_answer": 2
+  },
+  {
+    "question": "Which Go package is used for JSON encoding and decoding?",
+    "answers": [
+      "encoding/gob",
+      "encoding/asn1",
+      "encoding/json",
+      "encoding/xml"
+    ],
+    "correct_answer": 2
+  },
+  {
+    "question": "Which function is used to encode a Go value to JSON in Go?",
+    "answers": [
+      "json.Marshal() or json.NewEncoder().Encode()",
+      "json.Serialize()",
+      "json.Pack()",
+      "json.Convert()"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the Gob package in Go?",
+    "answers": [
+      "A JSON serialization library for Go",
+      "A binary encoding serialization technique specific to Go",
+      "A cross-language serialization format like Protocol Buffers",
+      "A compression library for Go"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "question": "Which of the following is a key advantage of Gob over ASN.1?",
+    "answers": [
+      "Gob is faster than all other formats",
+      "Gob encodes type information including struct field names",
+      "Gob supports all programming languages",
+      "Gob produces human-readable output"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "question": "What does Gob do when a struct field is missing during deserialization?",
+    "answers": [
+      "It throws an error",
+      "It assigns a zero value to all fields",
+      "It ignores the missing field's value",
+      "It requests the field from the sender"
+    ],
+    "correct_answer": 2
+  },
+  {
+    "question": "What does Gob do with extra fields that exist in the receiving struct but not in the serialized data?",
+    "answers": [
+      "It fails with a type mismatch error",
+      "It leaves those extra fields unchanged",
+      "It sets them to null",
+      "It removes them from the struct"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "question": "Which Go package is used for Gob encoding?",
+    "answers": [
+      "encoding/json",
+      "encoding/asn1",
+      "encoding/gob",
+      "encoding/binary"
+    ],
+    "correct_answer": 2
+  },
+  {
+    "question": "What is Base64 encoding primarily used for?",
+    "answers": [
+      "Compressing binary data for faster transmission",
+      "Encrypting data before sending over HTTP",
+      "Translating binary data into 7-bit ASCII form for text-based protocols",
+      "Converting strings to integers"
+    ],
+    "correct_answer": 2
+  },
+  {
+    "question": "Which Go package is used for Base64 encoding?",
+    "answers": [
+      "encoding/binary",
+      "encoding/base64",
+      "encoding/ascii",
+      "encoding/gob"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "question": "What file extension does a Protocol Buffers definition file use?",
+    "answers": [
+      ".pb",
+      ".proto",
+      ".buf",
+      ".protobuf"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "question": "What is a key advantage of Protocol Buffers over Gob?",
+    "answers": [
+      "Protocol Buffers are text-based and easier to read",
+      "Protocol Buffers are language-neutral and widely supported across languages",
+      "Protocol Buffers require no definition files",
+      "Protocol Buffers are faster only in Go"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "question": "What must be agreed upon by both sender and receiver for successful deserialization?",
+    "answers": [
+      "The programming language used on each side",
+      "The operating system of each machine",
+      "How the data was serialized, including integer types, character encoding, and row formats",
+      "The network protocol used for transmission"
+    ],
+    "correct_answer": 2
+  }
+]

@@ -1,0 +1,302 @@
+[
+  {
+    "question": "Which control structures does Go support?",
+    "answers": [
+      "if, while, do-while, switch",
+      "if, for, switch",
+      "if, foreach, switch, repeat",
+      "if, loop, switch, until"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "question": "What is required in Go's if statement compared to C?",
+    "answers": [
+      "Parentheses () are required, curly braces {} are optional",
+      "Both () and {} are required",
+      "Curly braces {} are required, parentheses () are optional",
+      "Neither () nor {} are required"
+    ],
+    "correct_answer": 2
+  },
+  {
+    "question": "How do you write an infinite loop in Go?",
+    "answers": [
+      "while(true) {}",
+      "loop {}",
+      "for {}",
+      "do {} while(true)"
+    ],
+    "correct_answer": 2
+  },
+  {
+    "question": "How does Go replace a while loop?",
+    "answers": [
+      "Using the while keyword",
+      "Using for with only a condition",
+      "Using loop keyword",
+      "Using repeat keyword"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "question": "Which keyword is used for range-based loops in Go?",
+    "answers": [
+      "foreach",
+      "each",
+      "range",
+      "iterate"
+    ],
+    "correct_answer": 2
+  },
+  {
+    "question": "What data structures can the range loop iterate over in Go?",
+    "answers": [
+      "Only arrays and slices",
+      "Only maps and channels",
+      "Arrays, slices, strings, maps, and channels",
+      "Only arrays, slices, and strings"
+    ],
+    "correct_answer": 2
+  },
+  {
+    "question": "What does the fallthrough keyword do in a Go switch?",
+    "answers": [
+      "Exits the switch block",
+      "Continues execution into the next case",
+      "Skips the current case",
+      "Restarts the switch from the first case"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "question": "In Go's switch, is a break statement required to prevent fall-through?",
+    "answers": [
+      "Yes, always required like in C",
+      "No, break is optional and implicit",
+      "Only required in the default case",
+      "Only required when using integers"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "question": "What can a Go switch statement use as case values compared to C?",
+    "answers": [
+      "Only integers and constants",
+      "Only strings",
+      "Any comparable type, not just constants or integers",
+      "Only boolean values"
+    ],
+    "correct_answer": 2
+  },
+  {
+    "question": "How can a switch be used to check the dynamic type of an interface in Go?",
+    "answers": [
+      "switch i.class {}",
+      "switch i.(type) {}",
+      "typeswitch(i) {}",
+      "switch typeof(i) {}"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "question": "Which keyword declares a function in Go?",
+    "answers": [
+      "def",
+      "function",
+      "fn",
+      "func"
+    ],
+    "correct_answer": 3
+  },
+  {
+    "question": "Can a Go function return multiple values?",
+    "answers": [
+      "No, only one value is allowed",
+      "Yes, Go functions can return multiple values",
+      "Only if they are the same type",
+      "Only through a struct"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "question": "What is the default parameter passing mode in Go?",
+    "answers": [
+      "Pass by reference",
+      "Pass by pointer",
+      "Pass by value",
+      "Pass by name"
+    ],
+    "correct_answer": 2
+  },
+  {
+    "question": "How do you pass a variable by reference in Go?",
+    "answers": [
+      "By using the ref keyword",
+      "By using a pointer or passing its address with &",
+      "By declaring it as a global variable",
+      "By using the out keyword"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "question": "What does the defer keyword do in Go?",
+    "answers": [
+      "Runs the function immediately in a goroutine",
+      "Delays execution of a function until the surrounding function returns",
+      "Skips execution of a function",
+      "Runs the function on a timer"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "question": "What order do deferred functions execute in Go?",
+    "answers": [
+      "First In First Out (FIFO)",
+      "Random order",
+      "Alphabetical order",
+      "Last In First Out (LIFO)"
+    ],
+    "correct_answer": 3
+  },
+  {
+    "question": "What is a variadic function in Go?",
+    "answers": [
+      "A function that returns multiple values",
+      "A function that takes any number of arguments of a specific type",
+      "A function stored in a variable",
+      "A function that can change its return type"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "question": "What is an anonymous function in Go?",
+    "answers": [
+      "A function with no return type",
+      "A function defined inside an interface",
+      "A function with no name, usually assigned to a variable or called immediately",
+      "A function with private access"
+    ],
+    "correct_answer": 2
+  },
+  {
+    "question": "How are methods defined on a struct in Go?",
+    "answers": [
+      "Inside the struct definition",
+      "Using the method keyword before func",
+      "With a receiver type between func and the function name",
+      "By embedding the struct in an interface"
+    ],
+    "correct_answer": 2
+  },
+  {
+    "question": "What is the difference between a value receiver and a pointer receiver method in Go?",
+    "answers": [
+      "Value receivers can modify the original struct; pointer receivers cannot",
+      "Pointer receivers can modify the original struct; value receivers work on a copy",
+      "There is no difference",
+      "Pointer receivers are only used for interfaces"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "question": "How does Go determine if a type implements an interface?",
+    "answers": [
+      "The type must explicitly declare it implements the interface",
+      "The type must use the implements keyword",
+      "If the type has all the methods declared in the interface, it automatically implements it",
+      "By registering the type with the interface"
+    ],
+    "correct_answer": 2
+  },
+  {
+    "question": "What is an embedded interface in Go?",
+    "answers": [
+      "An interface defined inside a struct",
+      "An interface that includes other interfaces",
+      "An interface with no methods",
+      "An interface used only for type assertions"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "question": "What does the empty interface (interface{}) represent in Go?",
+    "answers": [
+      "An interface with no methods that any type satisfies",
+      "An interface that causes a compile error",
+      "An interface only for numeric types",
+      "An interface used for error handling"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is a goroutine in Go?",
+    "answers": [
+      "A blocking thread that waits for I/O",
+      "A function that runs concurrently with other functions, like a lightweight thread",
+      "A scheduled task that runs at fixed intervals",
+      "A special type of struct for concurrent data"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "question": "How do you start a goroutine in Go?",
+    "answers": [
+      "thread.start(funcName)",
+      "async funcName()",
+      "go funcName()",
+      "spawn funcName()"
+    ],
+    "correct_answer": 2
+  },
+  {
+    "question": "What operator is used with channels in Go?",
+    "answers": [
+      ">>",
+      "->",
+      "<-",
+      "=>"
+    ],
+    "correct_answer": 2
+  },
+  {
+    "question": "How do you send data to a channel in Go?",
+    "answers": [
+      "channel_name >> value",
+      "channel_name <- value",
+      "<- channel_name value",
+      "channel_name.send(value)"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "question": "What is the error interface in Go?",
+    "answers": [
+      "type error interface { Message() string }",
+      "type error interface { Error() string }",
+      "type error interface { Err() error }",
+      "type error interface { String() string }"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "question": "What does fmt.Errorf() do in Go?",
+    "answers": [
+      "Prints an error message and exits the program",
+      "Creates a new error value with a formatted message",
+      "Logs an error to a file",
+      "Panics with a formatted error string"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "question": "What is the Stringer interface in Go?",
+    "answers": [
+      "type Stringer interface { Print() string }",
+      "type Stringer interface { Format() string }",
+      "type Stringer interface { String() string }",
+      "type Stringer interface { Str() string }"
+    ],
+    "correct_answer": 2
+  }
+]

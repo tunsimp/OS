@@ -1,0 +1,302 @@
+[
+  {
+    "question": "What does gRPC stand for?",
+    "answers": [
+      "General-purpose Remote Procedure Calls",
+      "Google Relational Protocol Communication",
+      "Global Resource Protocol Controller",
+      "Go Runtime Procedure Calls"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "In what year was gRPC released?",
+    "answers": [
+      "2015",
+      "2011",
+      "2013",
+      "2018"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Which two technologies does gRPC rely on for transport and serialization?",
+    "answers": [
+      "HTTP/2 and Protocol Buffers (protobuf)",
+      "HTTP/1.1 and JSON",
+      "WebSocket and XML",
+      "TCP and YAML"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What file format is used to define gRPC messages and services?",
+    "answers": [
+      ".proto file",
+      ".grpc file",
+      ".json file",
+      ".yaml file"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What does gRPC automatically generate from a .proto file?",
+    "answers": [
+      "Code for data contracts, service clients, and service implementations in supported languages",
+      "A Docker container to host the service",
+      "A SQL schema for storing service data",
+      "An HTTP/1.1 REST API endpoint"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Which of the following programming languages is NOT supported by gRPC?",
+    "answers": [
+      "COBOL",
+      "Go",
+      "Python",
+      "Java"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is a key performance advantage of gRPC over REST?",
+    "answers": [
+      "Binary payload (protobuf) is lightweight and requires less CPU and bandwidth than JSON",
+      "gRPC uses HTTP/1.1 which is more widely supported",
+      "gRPC payloads are human-readable and easier to debug",
+      "gRPC eliminates the need for a network connection between services"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "How does gRPC handle backward compatibility?",
+    "answers": [
+      "Protobuf allows new parameters to be added without breaking existing definitions",
+      "gRPC requires all clients to update whenever the server schema changes",
+      "Backward compatibility is handled by maintaining separate API versions",
+      "gRPC uses HTTP redirects to route old clients to a compatible endpoint"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Which gRPC API type is most similar to a REST API?",
+    "answers": [
+      "Unary",
+      "Server streaming",
+      "Client streaming",
+      "Bi-directional streaming"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "In server streaming gRPC, what happens after the client sends one request?",
+    "answers": [
+      "The server sends back a stream of multiple responses",
+      "The client sends a stream of messages and the server replies once",
+      "Both client and server send streams simultaneously",
+      "The server sends a single response and closes the connection"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "In client streaming gRPC, what does the client do?",
+    "answers": [
+      "Sends a stream of multiple messages to the server, which replies with a single response",
+      "Sends one request and waits for a stream of responses",
+      "Opens a bidirectional channel for simultaneous messaging",
+      "Sends a single request and receives a single response"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is bi-directional streaming in gRPC?",
+    "answers": [
+      "Both client and server send streams of messages to each other simultaneously",
+      "The server streams data to the client while the client is idle",
+      "The client sends a batch of requests and receives a batch of responses",
+      "Two separate unary calls made at the same time"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "How does gRPC differ from REST in terms of communication style?",
+    "answers": [
+      "gRPC is API-oriented and supports bidirectional async streaming; REST is CRUD-oriented with request/response",
+      "gRPC uses HTTP/1.1 while REST uses HTTP/2",
+      "gRPC uses JSON by default while REST uses protobuf",
+      "REST supports streaming while gRPC only supports unary calls"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Which HTTP version does REST typically use?",
+    "answers": [
+      "HTTP/1.1",
+      "HTTP/2",
+      "HTTP/3",
+      "HTTP/0.9"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the default data format used by REST APIs?",
+    "answers": [
+      "JSON (text-based)",
+      "Protocol Buffers (binary)",
+      "XML exclusively",
+      "YAML"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the purpose of the 'option go_package' field in a .proto file?",
+    "answers": [
+      "Specifies the Go package path where the generated code will be placed",
+      "Defines the version of the protobuf syntax being used",
+      "Sets the network port the gRPC server will listen on",
+      "Declares the service name for the gRPC registry"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "In the sample .proto file, what does the field number (e.g., = 1, = 2) represent in a message?",
+    "answers": [
+      "A unique identifier for each field used in the binary encoding",
+      "The default value of the field",
+      "The order in which fields are displayed to the user",
+      "The maximum allowed value for numeric fields"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "In gRPC Go server code, which network protocol and address is the server typically configured to listen on?",
+    "answers": [
+      "TCP on 0.0.0.0 with a specified port",
+      "UDP on localhost only",
+      "HTTP on 127.0.0.1 with port 80",
+      "WebSocket on 0.0.0.0 with port 443"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What Go function is used on the gRPC client side to establish a connection to the server?",
+    "answers": [
+      "grpc.Dial()",
+      "grpc.Connect()",
+      "net.Listen()",
+      "http.NewRequest()"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What should be deferred after establishing a gRPC client connection?",
+    "answers": [
+      "cc.Close()",
+      "cc.Disconnect()",
+      "grpc.Shutdown()",
+      "client.Done()"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the role of 'context.Background()' in a gRPC client call?",
+    "answers": [
+      "It provides a non-nil, empty context used as the base context for the RPC call",
+      "It sets the timeout duration for the server response",
+      "It attaches authentication credentials to the request",
+      "It specifies the data serialization format for the request"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "In the .proto syntax, how is a unary RPC service method declared?",
+    "answers": [
+      "rpc MethodName(RequestType) returns (ResponseType) {}",
+      "func MethodName(RequestType) ResponseType",
+      "service MethodName(RequestType) -> ResponseType",
+      "rpc MethodName: RequestType => ResponseType"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is a major architectural benefit of separating API definition from implementation in gRPC?",
+    "answers": [
+      "Teams can implement services in different programming languages from a single .proto file",
+      "The server and client must always be written in the same language",
+      "Service logic and network code must be written together for consistency",
+      "Only the server-side code is generated; client code must be written manually"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What kind of architecture does gRPC naturally support due to its language-agnostic code generation?",
+    "answers": [
+      "Microservices architecture where each service can be implemented in a different language",
+      "Monolithic architecture where all services share the same codebase",
+      "Peer-to-peer architecture without any centralized server",
+      "Serverless architecture where no persistent server process is needed"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Which syntax version is specified at the top of the sample .proto file?",
+    "answers": [
+      "proto3",
+      "proto2",
+      "proto1",
+      "protobuf4"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What does the 'package' keyword in a .proto file define?",
+    "answers": [
+      "The namespace for the generated code to avoid naming conflicts",
+      "The programming language to generate code for",
+      "The HTTP endpoint path for the service",
+      "The version number of the gRPC framework"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the main difference between gRPC and REST regarding orientation?",
+    "answers": [
+      "gRPC is API-oriented while REST is CRUD-oriented",
+      "gRPC is CRUD-oriented while REST is API-oriented",
+      "Both are equally API-oriented with no significant difference",
+      "gRPC is database-oriented while REST is file-oriented"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What must a developer implement after gRPC generates the service code from a .proto file?",
+    "answers": [
+      "The service logic (business logic) for each defined RPC method",
+      "The binary serialization code for each message type",
+      "The HTTP/2 connection management and multiplexing code",
+      "The network socket listener and thread management"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Which of the following is true about gRPC being platform independent?",
+    "answers": [
+      "gRPC services can run on any platform and communicate across different operating systems and languages",
+      "gRPC only runs on Linux-based servers",
+      "gRPC requires all services to run inside Docker containers",
+      "gRPC is platform independent only when using the Go implementation"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the advantage of gRPC supporting streaming APIs compared to REST?",
+    "answers": [
+      "gRPC can send and receive continuous streams of data efficiently, while REST is limited to single request/response cycles",
+      "gRPC streaming reduces the need for any serialization of messages",
+      "gRPC streaming works over HTTP/1.1 while REST streaming requires HTTP/2",
+      "gRPC streaming is only available for server-to-client direction"
+    ],
+    "correct_answer": 0
+  }
+]

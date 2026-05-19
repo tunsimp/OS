@@ -1,0 +1,302 @@
+[
+  {
+    "question": "Which of the following is NOT a design philosophy of Go?",
+    "answers": [
+      "Do Less, Enable More",
+      "Less is exponentially more",
+      "Innovation over consolidation",
+      "Consolidation not innovation"
+    ],
+    "correct_answer": 2
+  },
+  {
+    "question": "Who started the Go project?",
+    "answers": [
+      "Linus Torvalds, Dennis Ritchie, and Ken Thompson",
+      "Robert Griesemer, Ken Thompson, and Rob Pike",
+      "Ian Lance Taylor, Russ Cox, and Rob Pike",
+      "Guido van Rossum, Ken Thompson, and Rob Pike"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "question": "When was Go officially announced?",
+    "answers": [
+      "March 2012",
+      "Late 2007",
+      "November 2009",
+      "Mid 2008"
+    ],
+    "correct_answer": 2
+  },
+  {
+    "question": "Which of the following languages inspired Go?",
+    "answers": [
+      "Java, Python, Ruby",
+      "C, Pascal, CSP",
+      "C++, Haskell, Erlang",
+      "Rust, Swift, Kotlin"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "question": "Which company uses Go for Kubernetes?",
+    "answers": [
+      "Facebook",
+      "Uber",
+      "Google",
+      "Dropbox"
+    ],
+    "correct_answer": 2
+  },
+  {
+    "question": "What is the entry point of a Go program?",
+    "answers": [
+      "func start()",
+      "func init()",
+      "func main()",
+      "func run()"
+    ],
+    "correct_answer": 2
+  },
+  {
+    "question": "Which command runs a Go file?",
+    "answers": [
+      "go build file.go",
+      "go run file.go",
+      "go exec file.go",
+      "go start file.go"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "question": "What does Go use for garbage collection?",
+    "answers": [
+      "Manual memory management",
+      "Reference counting",
+      "Fully supported garbage collection",
+      "Smart pointers"
+    ],
+    "correct_answer": 2
+  },
+  {
+    "question": "How do you declare a variable implicitly in Go?",
+    "answers": [
+      "var name string",
+      "name := \"Hello\"",
+      "let name = \"Hello\"",
+      "dim name as string"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "question": "Which symbol is used in Go's shorthand variable declaration?",
+    "answers": [
+      "=",
+      "==",
+      ":=",
+      "<-"
+    ],
+    "correct_answer": 2
+  },
+  {
+    "question": "How is a constant declared in Go?",
+    "answers": [
+      "var SIZE int = 10",
+      "let SIZE = 10",
+      "const SIZE int = 10",
+      "final SIZE int = 10"
+    ],
+    "correct_answer": 2
+  },
+  {
+    "question": "Which naming convention does Go use?",
+    "answers": [
+      "snake_case",
+      "PascalCase only",
+      "Camel case",
+      "kebab-case"
+    ],
+    "correct_answer": 2
+  },
+  {
+    "question": "In Go, a variable starting with an uppercase letter indicates what?",
+    "answers": [
+      "It is a constant",
+      "It is exported (global scope)",
+      "It is a pointer",
+      "It is immutable"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "question": "Which of the following is a valid signed integer type in Go?",
+    "answers": [
+      "integer32",
+      "int32",
+      "signed32",
+      "long"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "question": "What type is used for UTF-32 characters in Go?",
+    "answers": [
+      "char",
+      "byte",
+      "rune",
+      "unicode"
+    ],
+    "correct_answer": 2
+  },
+  {
+    "question": "Which package is used to convert an integer to a string in Go?",
+    "answers": [
+      "fmt",
+      "strings",
+      "strconv",
+      "convert"
+    ],
+    "correct_answer": 2
+  },
+  {
+    "question": "What does iota represent in Go?",
+    "answers": [
+      "A built-in math constant",
+      "An auto-incrementing integer starting at 0 used in const blocks",
+      "A loop counter",
+      "A type alias for int"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "question": "How is the length of an array obtained in Go?",
+    "answers": [
+      "arr.length()",
+      "size(arr)",
+      "len(arr)",
+      "arr.size"
+    ],
+    "correct_answer": 2
+  },
+  {
+    "question": "What happens when you assign an array to another variable in Go?",
+    "answers": [
+      "A reference is created",
+      "A shallow copy is made",
+      "The array is copied",
+      "A pointer is returned"
+    ],
+    "correct_answer": 2
+  },
+  {
+    "question": "Which keyword creates a slice with a specific length and capacity in Go?",
+    "answers": [
+      "new",
+      "alloc",
+      "make",
+      "create"
+    ],
+    "correct_answer": 2
+  },
+  {
+    "question": "What does append() do in Go?",
+    "answers": [
+      "Modifies the original slice in place",
+      "Adds elements to a slice and returns the new slice",
+      "Inserts an element at a specific index",
+      "Concatenates two arrays"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "question": "What does slc[1:] return?",
+    "answers": [
+      "Elements from index 0 to 1",
+      "Elements from index 1 to the end",
+      "The element at index 1 only",
+      "A copy of the entire slice"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "question": "Which data structure in Go maps keys to values?",
+    "answers": [
+      "struct",
+      "slice",
+      "array",
+      "map"
+    ],
+    "correct_answer": 3
+  },
+  {
+    "question": "How do you check if a key exists in a Go map?",
+    "answers": [
+      "map.contains(key)",
+      "val, isExisted := map[key]",
+      "map.has(key)",
+      "exists(map, key)"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "question": "Which of the following CANNOT be used as a map key in Go?",
+    "answers": [
+      "int",
+      "string",
+      "array",
+      "slice"
+    ],
+    "correct_answer": 3
+  },
+  {
+    "question": "How do you delete an entry from a map in Go?",
+    "answers": [
+      "map.remove(key)",
+      "remove(map, key)",
+      "delete(map, key)",
+      "map.delete(key)"
+    ],
+    "correct_answer": 2
+  },
+  {
+    "question": "How do you access a field of a struct in Go?",
+    "answers": [
+      "Using -> operator",
+      "Using the dot operator (.)",
+      "Using the :: operator",
+      "Using the @ symbol"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "question": "What happens when you assign a struct to another variable in Go?",
+    "answers": [
+      "A reference is created",
+      "A pointer is returned",
+      "The struct is copied",
+      "Only public fields are copied"
+    ],
+    "correct_answer": 2
+  },
+  {
+    "question": "Which of the following best describes Go's type system?",
+    "answers": [
+      "Dynamically typed like Python",
+      "Weakly typed like JavaScript",
+      "Statically typed similar to C/C++",
+      "Duck typed"
+    ],
+    "correct_answer": 2
+  },
+  {
+    "question": "What is the correct way to declare a multi-dimensional array in Go?",
+    "answers": [
+      "var arr [2,3]int",
+      "var arr [2][3]int",
+      "var arr [[2][3]]int",
+      "int arr[2][3]"
+    ],
+    "correct_answer": 1
+  }
+]

@@ -456,7 +456,7 @@
     <div class="top-row">
       <div>
         <h1>My Quiz Website</h1>
-        <p class="subtitle">Practice OS & networking questions across multiple lessons.</p>
+        <p class="subtitle">Practice questions from course lectures.</p>
       </div>
       <div class="pill-strip">
         <span class="pill-dot"></span>
@@ -612,16 +612,16 @@
 
     // --- Load lessons from JSON files ---
     const LESSON_FILES = [
-      "sna_access_control_questions.json",
-      "sna_booting_questions.json",
-      "sna_containers_questions.json",
-      "sna_dns_questions.json",
-      "sna_monitoring_questions.json",
-      "sna_network_services_questions.json",
-      "sna_performance_questions.json",
-      "sna_process_control_questions.json",
-      "sna_tcpip_questions.json",
-      "sna_virtualization_questions.json"
+      "lecture1_go_overview_1.json",
+      "lecture2_go_overview_2.json",
+      "lecture3_socket_tcp.json",
+      "lecture4_socket_udp.json",
+      "lecture5_data_serialization.json",
+      "lecture7_VM.json",
+      "lecture9_HTTP.json",
+      "lecture10_database.json",
+      "lecture11_storage.json",
+      "lecture13_grpc.json"
     ];
 
     // Transform question format from {answers, correct_answer} to {options, answer}
@@ -635,9 +635,15 @@
 
     // Generate lesson title from filename
     function getLessonTitle(filename) {
-      return filename
-        .replace(/^sna_/, "")
-        .replace(/_questions\.json$/, "")
+      const withoutExt = filename.replace(/\.json$/i, "");
+      const lectureMatch = withoutExt.match(/^lecture(\d+)_(.+)$/i);
+      if (lectureMatch) {
+        const topic = lectureMatch[2]
+          .replace(/_/g, " ")
+          .replace(/\b\w/g, l => l.toUpperCase());
+        return "Lecture " + lectureMatch[1] + ": " + topic;
+      }
+      return withoutExt
         .replace(/_/g, " ")
         .replace(/\b\w/g, l => l.toUpperCase());
     }

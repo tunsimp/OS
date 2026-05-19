@@ -1,0 +1,302 @@
+[
+  {
+    "question": "Which RFC defines UDP?",
+    "answers": [
+      "RFC 793",
+      "RFC 791",
+      "RFC 768",
+      "RFC 959"
+    ],
+    "correct_answer": 2
+  },
+  {
+    "question": "Which of the following is NOT a feature of UDP?",
+    "answers": [
+      "Best effort delivery",
+      "No ACK",
+      "Guaranteed ordered delivery",
+      "No congestion control"
+    ],
+    "correct_answer": 2
+  },
+  {
+    "question": "What is the main advantage of UDP over TCP?",
+    "answers": [
+      "Reliability",
+      "Ordered delivery",
+      "Speed and lower overhead",
+      "Automatic retransmission"
+    ],
+    "correct_answer": 2
+  },
+  {
+    "question": "How many bytes does the UDP header consist of in total?",
+    "answers": [
+      "4 bytes",
+      "8 bytes",
+      "12 bytes",
+      "20 bytes"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "question": "Which fields are in the UDP header?",
+    "answers": [
+      "Source port, Destination port, Sequence number, Checksum",
+      "Source port, Destination port, Packet length, Checksum",
+      "Source IP, Destination IP, Port, Checksum",
+      "Source port, Destination port, TTL, Checksum"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "question": "What is a key advantage of UDP's connectionless nature?",
+    "answers": [
+      "It guarantees packet delivery",
+      "It supports multicast and broadcast without duplicating packets",
+      "It ensures ordered packet arrival",
+      "It provides flow control"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "question": "Which Go function resolves a UDP address?",
+    "answers": [
+      "net.ParseUDPAddr()",
+      "net.ResolveUDPAddr()",
+      "net.LookupUDP()",
+      "net.DialUDPAddr()"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "question": "Which Go function is used to listen for incoming UDP packets?",
+    "answers": [
+      "net.DialUDP()",
+      "net.AcceptUDP()",
+      "net.ListenUDP()",
+      "net.ConnectUDP()"
+    ],
+    "correct_answer": 2
+  },
+  {
+    "question": "Which Go function is used by the UDP client to connect to a UDP server?",
+    "answers": [
+      "net.ListenUDP()",
+      "net.DialUDP()",
+      "net.ConnectUDP()",
+      "net.OpenUDP()"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "question": "In Go's UDP server, which function reads data and also returns the sender's address?",
+    "answers": [
+      "conn.Read()",
+      "conn.ReadFrom()",
+      "conn.ReadFromUDP()",
+      "conn.Receive()"
+    ],
+    "correct_answer": 2
+  },
+  {
+    "question": "In the UDP socket flow diagram, what does the server do first while waiting for a client?",
+    "answers": [
+      "accept()",
+      "listen()",
+      "recvfrom()",
+      "connect()"
+    ],
+    "correct_answer": 2
+  },
+  {
+    "question": "In Go's UDP server, which function sends a response back to the client?",
+    "answers": [
+      "conn.Write()",
+      "conn.Send()",
+      "conn.WriteToUDP()",
+      "conn.Reply()"
+    ],
+    "correct_answer": 2
+  },
+  {
+    "question": "Which IP address is used for UDP broadcast in Go?",
+    "answers": [
+      "127.0.0.1",
+      "0.0.0.0",
+      "255.255.255.255",
+      "224.0.0.1"
+    ],
+    "correct_answer": 2
+  },
+  {
+    "question": "Which Go function is used to create a broadcast receiver?",
+    "answers": [
+      "net.ListenUDP()",
+      "net.ListenPacket()",
+      "net.DialUDP()",
+      "net.ReceiveBroadcast()"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "question": "What IP address range is used for multicast in the UDP multicast example?",
+    "answers": [
+      "192.168.x.x",
+      "10.0.x.x",
+      "224.x.x.x",
+      "255.x.x.x"
+    ],
+    "correct_answer": 2
+  },
+  {
+    "question": "Which Go function is used to listen for multicast UDP messages?",
+    "answers": [
+      "net.ListenUDP()",
+      "net.ListenMulticastUDP()",
+      "net.DialUDP()",
+      "net.JoinMulticast()"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "question": "What does SetMulticastTTL() control in multicast UDP?",
+    "answers": [
+      "The size of the multicast group",
+      "The number of router hops the multicast packet can traverse",
+      "The timeout for receiving multicast messages",
+      "The multicast IP address"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "question": "In the UDP daytime server example, what does the server send back to the client?",
+    "answers": [
+      "The client's message echoed back",
+      "The current date and time as a string",
+      "A confirmation message",
+      "The server's IP address"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "question": "What does the UDP broadcast sender send to '255.255.255.255:8888'?",
+    "answers": [
+      "A connection request",
+      "A string read from standard input",
+      "A heartbeat signal",
+      "The server's hostname"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "question": "In the broadcast receiver, what does pc.ReadFrom(buf) return?",
+    "answers": [
+      "Only the data",
+      "Only the sender address",
+      "Number of bytes, sender address, and error",
+      "Data and checksum"
+    ],
+    "correct_answer": 2
+  },
+  {
+    "question": "What does 'best effort' mean in the context of UDP?",
+    "answers": [
+      "UDP will always deliver packets eventually",
+      "UDP tries to deliver packets but makes no guarantees",
+      "UDP retransmits lost packets automatically",
+      "UDP checks for errors and requests retransmission"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "question": "Which of the following is true about UDP compared to TCP?",
+    "answers": [
+      "UDP has more overhead than TCP",
+      "UDP requires a connection to be established before sending",
+      "UDP has no congestion control",
+      "UDP guarantees packet ordering"
+    ],
+    "correct_answer": 2
+  },
+  {
+    "question": "In the UDP client example, what does the client send to the server before reading the response?",
+    "answers": [
+      "A connection request packet",
+      "The string \"anything\"",
+      "A SYN packet",
+      "The current timestamp"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "question": "How does the UDP server know where to send a reply?",
+    "answers": [
+      "It uses a pre-configured client IP address",
+      "It gets the client's address from the ReadFromUDP call",
+      "It broadcasts to all connected clients",
+      "It uses the last known connection"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "question": "Which of the following services is most suitable for UDP?",
+    "answers": [
+      "File transfer",
+      "Email delivery",
+      "Live video streaming",
+      "Database transactions"
+    ],
+    "correct_answer": 2
+  },
+  {
+    "question": "In the UDP socket flow using Connect, what does the client call after Connect()?",
+    "answers": [
+      "bind()",
+      "recvfrom()",
+      "sendto()",
+      "listen()"
+    ],
+    "correct_answer": 2
+  },
+  {
+    "question": "What does net.Dial(\"udp\", \"255.255.255.255:8888\") do in Go?",
+    "answers": [
+      "Creates a TCP connection to the broadcast address",
+      "Creates a UDP connection targeting the broadcast address",
+      "Listens for incoming UDP broadcast packets",
+      "Joins a multicast group"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "question": "What method does the multicast receiver call after creating a connection to join the group?",
+    "answers": [
+      "conn.Subscribe()",
+      "conn.JoinGroup()",
+      "conn.AddMember()",
+      "conn.Connect()"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "question": "What is the signature of the Go function to write to a specific UDP address?",
+    "answers": [
+      "func (c *UDPConn) WriteUDP(b []byte, addr *UDPAddr)",
+      "func (c *UDPConn) WriteToUDP(b []byte, addr *UDPAddr) (n int, err error)",
+      "func (c *UDPConn) SendToUDP(b []byte, addr *UDPAddr) (n int, err error)",
+      "func (c *UDPConn) SendUDP(b []byte, addr *UDPAddr)"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "question": "UDP is described as 'simply a conduit between applications and' which layer?",
+    "answers": [
+      "Transport layer",
+      "Data link layer",
+      "IP layer",
+      "Application layer"
+    ],
+    "correct_answer": 2
+  }
+]

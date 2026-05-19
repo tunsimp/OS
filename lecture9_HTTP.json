@@ -1,0 +1,312 @@
+[
+  {
+    "question": "What does HTTP stand for?",
+    "answers": [
+      "HyperText Transfer Protocol",
+      "High Transfer Text Protocol",
+      "Hyperlink and Text Transmission Protocol",
+      "Hosted Text Transfer Protocol"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What type of protocol is HTTP?",
+    "answers": [
+      "Sessionless client-server protocol",
+      "Stateful peer-to-peer protocol",
+      "Connection-oriented persistent protocol",
+      "Encrypted tunneling protocol"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What does URL stand for?",
+    "answers": [
+      "Uniform Resource Locator",
+      "Universal Resource Link",
+      "Unified Request Locator",
+      "Uniform Request Language"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Which part of a URL indicates the protocol used for the connection?",
+    "answers": [
+      "Scheme",
+      "Authority",
+      "Path",
+      "Fragment"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What does the HTTP GET method do?",
+    "answers": [
+      "Instructs the server to send the target resource",
+      "Uploads data included in the request body to the server",
+      "Deletes the target resource from the server",
+      "Retrieves only metadata of the resource without the body"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Which HTTP method retrieves only the metadata of a resource without its body?",
+    "answers": [
+      "HEAD",
+      "GET",
+      "OPTIONS",
+      "TRACE"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the purpose of HTTP status codes?",
+    "answers": [
+      "To indicate the result of the server's attempt to satisfy the client's request",
+      "To encrypt data transmitted between client and server",
+      "To identify the content type of the request body",
+      "To specify which HTTP method the client used"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Which HTTP status code range indicates a successful response?",
+    "answers": [
+      "2xx",
+      "3xx",
+      "4xx",
+      "5xx"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Which HTTP status code range indicates client errors?",
+    "answers": [
+      "4xx",
+      "1xx",
+      "2xx",
+      "5xx"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Which HTTP status code range indicates server errors?",
+    "answers": [
+      "5xx",
+      "2xx",
+      "3xx",
+      "4xx"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What Go package is used to build HTTP services?",
+    "answers": [
+      "net/http",
+      "encoding/json",
+      "io/ioutil",
+      "fmt/http"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What does REST stand for?",
+    "answers": [
+      "Representational State Transfer",
+      "Remote Execution and State Transfer",
+      "Resource Encapsulation and Storage Transport",
+      "Responsive Server Technology"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is data serialization in the context of HTTP services?",
+    "answers": [
+      "Converting data structures into a format that can be transmitted over a network",
+      "Encrypting HTTP headers for secure transmission",
+      "Caching server responses for faster repeated access",
+      "Compressing HTML files before sending them to the client"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the role of a Multiplexer in an HTTP server?",
+    "answers": [
+      "Receives client requests, determines the destination, and passes them to the appropriate handler",
+      "Encrypts data between client and server",
+      "Caches frequently requested resources",
+      "Manages database connections for the server"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is Middleware in an HTTP server responsible for?",
+    "answers": [
+      "Performing auxiliary tasks such as logging, authentication, and access control",
+      "Sending responses directly to the client",
+      "Storing data permanently on the server",
+      "Building the HTML structure of the response"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What does gRPC stand for?",
+    "answers": [
+      "Google Remote Procedure Call",
+      "General Remote Protocol Connection",
+      "Global Resource Protocol Controller",
+      "Go Runtime Protocol Command"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Which HTTP version does gRPC use?",
+    "answers": [
+      "HTTP/2",
+      "HTTP/1.0",
+      "HTTP/1.1",
+      "HTTP/3"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the default data format used by gRPC?",
+    "answers": [
+      "Protocol Buffers (protobuf)",
+      "JSON",
+      "XML",
+      "YAML"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is a key benefit of using Protocol Buffers (protobuf)?",
+    "answers": [
+      "Compact binary format that results in smaller message sizes and faster serialization",
+      "Human-readable format that is easy to debug",
+      "Compatible with all browsers without additional configuration",
+      "Requires no schema definition before use"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What file extension is used for Protocol Buffer definition files?",
+    "answers": [
+      ".proto",
+      ".pb",
+      ".grpc",
+      ".buf"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What does WebSocket provide that standard HTTP does not?",
+    "answers": [
+      "Full-duplex, persistent communication between client and server over a single connection",
+      "Faster one-way data transfer from server to client",
+      "Encryption of all transmitted data by default",
+      "The ability to send requests without headers"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What protocol is used to initiate a WebSocket connection?",
+    "answers": [
+      "HTTP",
+      "FTP",
+      "TCP directly without HTTP",
+      "UDP"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Which JavaScript method is used to open a WebSocket connection?",
+    "answers": [
+      "new WebSocket(url)",
+      "WebSocket.connect(url)",
+      "WebSocket.open(url)",
+      "http.upgrade(url)"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Which HTTP header field is used to request an upgrade to the WebSocket protocol?",
+    "answers": [
+      "Upgrade",
+      "Connection-Type",
+      "Protocol-Switch",
+      "Accept-Protocol"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "In which year was the WebSocket protocol standardized?",
+    "answers": [
+      "2011",
+      "2008",
+      "2013",
+      "2015"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is caching in the context of HTTP services?",
+    "answers": [
+      "Storing responses temporarily to serve future identical requests faster",
+      "Compressing HTTP responses before sending them to the client",
+      "Encrypting session tokens on the server side",
+      "Logging all incoming requests for audit purposes"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What does the cache hit ratio measure?",
+    "answers": [
+      "The percentage of requests served from cache compared to total requests",
+      "The speed at which the cache stores new data",
+      "The amount of memory used by the cache",
+      "The number of cache misses per second"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is a disadvantage of caching?",
+    "answers": [
+      "Stale data may be served if the cache is not properly invalidated",
+      "Caching always increases server response time",
+      "Caching requires a dedicated physical server",
+      "Caching only works with POST requests"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Which Go package is typically used to build a RESTful API?",
+    "answers": [
+      "net/http",
+      "encoding/xml",
+      "database/sql",
+      "os/signal"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What does an HTTP request consist of?",
+    "answers": [
+      "Method, target resource, headers, and optionally a body",
+      "Only the URL and the response body",
+      "IP address, port number, and payload",
+      "Status code, headers, and a redirect URL"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What does the HTTP POST method do?",
+    "answers": [
+      "Uploads data included in the request body to the web server",
+      "Retrieves a resource from the server",
+      "Deletes a resource from the server",
+      "Fetches only the headers of a resource"
+    ],
+    "correct_answer": 0
+  }
+]
