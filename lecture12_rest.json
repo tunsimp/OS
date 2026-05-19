@@ -1,335 +1,302 @@
-{
-  "title": "Lecture 12 - REST API",
-  "questions": [
-    {
-      "id": 1,
-      "question": "What does API stand for?",
-      "options": [
-        "A. Application Programming Interface",
-        "B. Automated Program Integration",
-        "C. Application Process Interaction",
-        "D. Automated Programming Interface"
-      ],
-      "answer": "A"
-    },
-    {
-      "id": 2,
-      "question": "What does REST stand for?",
-      "options": [
-        "A. Remote Execution State Transfer",
-        "B. Representational State Transfer",
-        "C. Resource Exchange Standard Transfer",
-        "D. Representational Service Technology"
-      ],
-      "answer": "B"
-    },
-    {
-      "id": 3,
-      "question": "Which of the following is NOT an HTTP verb used in REST APIs?",
-      "options": [
-        "A. GET",
-        "B. SEND",
-        "C. PUT",
-        "D. DELETE"
-      ],
-      "answer": "B"
-    },
-    {
-      "id": 4,
-      "question": "Which HTTP verb is used to retrieve a resource from the server?",
-      "options": [
-        "A. POST",
-        "B. PUT",
-        "C. GET",
-        "D. PATCH"
-      ],
-      "answer": "C"
-    },
-    {
-      "id": 5,
-      "question": "Which HTTP verb is typically used to create a new resource?",
-      "options": [
-        "A. GET",
-        "B. DELETE",
-        "C. PUT",
-        "D. POST"
-      ],
-      "answer": "D"
-    },
-    {
-      "id": 6,
-      "question": "What is a 'Resource' in RESTful API design?",
-      "options": [
-        "A. A collection of homogeneous objects",
-        "B. A single instance of an object",
-        "C. An API URL on a server",
-        "D. A slash-separated piece of information in a URL"
-      ],
-      "answer": "B"
-    },
-    {
-      "id": 7,
-      "question": "What is a 'Collection' in RESTful API design?",
-      "options": [
-        "A. A single instance of an object",
-        "B. A set of HTTP verbs",
-        "C. A collection of homogeneous objects",
-        "D. A database table"
-      ],
-      "answer": "C"
-    },
-    {
-      "id": 8,
-      "question": "Which of the following is the best RESTful API endpoint naming convention?",
-      "options": [
-        "A. /getAllDrinks",
-        "B. /deleteDrink",
-        "C. /drinks",
-        "D. /fetchDrinks"
-      ],
-      "answer": "C"
-    },
-    {
-      "id": 9,
-      "question": "What is the recommended data format for RESTful API responses?",
-      "options": [
-        "A. XML",
-        "B. CSV",
-        "C. JSON",
-        "D. HTML"
-      ],
-      "answer": "C"
-    },
-    {
-      "id": 10,
-      "question": "Which Content-Type header value is used when responding with JSON?",
-      "options": [
-        "A. text/json",
-        "B. application/xml",
-        "C. application/json",
-        "D. text/plain"
-      ],
-      "answer": "C"
-    },
-    {
-      "id": 11,
-      "question": "Which REST design principle states that the server does not store client session state between requests?",
-      "options": [
-        "A. Caching",
-        "B. Statelessness",
-        "C. Layered System",
-        "D. Uniform Interface"
-      ],
-      "answer": "B"
-    },
-    {
-      "id": 12,
-      "question": "Which in-memory caching tool is commonly used to improve REST API performance?",
-      "options": [
-        "A. MongoDB",
-        "B. Redis",
-        "C. MySQL",
-        "D. Cassandra"
-      ],
-      "answer": "B"
-    },
-    {
-      "id": 13,
-      "question": "What is the purpose of API versioning?",
-      "options": [
-        "A. To encrypt API responses",
-        "B. To gradually phase out old endpoints without forcing immediate migration",
-        "C. To authenticate API consumers",
-        "D. To limit the number of API requests"
-      ],
-      "answer": "B"
-    },
-    {
-      "id": 14,
-      "question": "Which of the following is a correct example of API versioning?",
-      "options": [
-        "A. /drinks?version=1",
-        "B. /v1/drinks",
-        "C. /drinks/version1",
-        "D. /api-v1-drinks"
-      ],
-      "answer": "B"
-    },
-    {
-      "id": 15,
-      "question": "What does the endpoint /articles/:articleId/comments demonstrate?",
-      "options": [
-        "A. API versioning",
-        "B. Pagination",
-        "C. Nesting resources for hierarchical objects",
-        "D. Filtering with query parameters"
-      ],
-      "answer": "C"
-    },
-    {
-      "id": 16,
-      "question": "Which URL demonstrates correct filtering using query parameters?",
-      "options": [
-        "A. /employees/Smith/30",
-        "B. /employees?lastName=Smith&age=30",
-        "C. /filterEmployees/Smith",
-        "D. /employees/filter/lastName/Smith"
-      ],
-      "answer": "B"
-    },
-    {
-      "id": 17,
-      "question": "What is the main benefit of pagination in REST APIs?",
-      "options": [
-        "A. It encrypts the response data",
-        "B. It reduces server resource usage by returning fewer results at a time",
-        "C. It allows real-time data streaming",
-        "D. It speeds up authentication"
-      ],
-      "answer": "B"
-    },
-    {
-      "id": 18,
-      "question": "What is Postman primarily used for?",
-      "options": [
-        "A. Deploying web servers",
-        "B. Managing databases",
-        "C. Building, testing, and sharing APIs",
-        "D. Monitoring server health"
-      ],
-      "answer": "C"
-    },
-    {
-      "id": 19,
-      "question": "Which of the following is an open-source alternative to Postman?",
-      "options": [
-        "A. Swagger",
-        "B. Hoppscotch (Postwoman)",
-        "C. Insomnia",
-        "D. Thunder Client"
-      ],
-      "answer": "B"
-    },
-    {
-      "id": 20,
-      "question": "What is a 'URL Segment' in RESTful API design?",
-      "options": [
-        "A. A server endpoint URL",
-        "B. A slash-separated piece of information in a URL",
-        "C. The base URL of a server",
-        "D. An HTTP header field"
-      ],
-      "answer": "B"
-    },
-    {
-      "id": 21,
-      "question": "Which HTTP status code range represents client errors?",
-      "options": [
-        "A. 1xx",
-        "B. 2xx",
-        "C. 3xx",
-        "D. 4xx"
-      ],
-      "answer": "D"
-    },
-    {
-      "id": 22,
-      "question": "What is the key difference between REST API and a stateful API?",
-      "options": [
-        "A. REST API uses XML while stateful uses JSON",
-        "B. Stateful APIs store information about previous requests; REST is stateless",
-        "C. REST API requires authentication; stateful does not",
-        "D. Stateful APIs only support GET requests"
-      ],
-      "answer": "B"
-    },
-    {
-      "id": 23,
-      "question": "Which of the following represents a 'bad' API design according to REST best practices?",
-      "options": [
-        "A. GET /drinks",
-        "B. POST /drinks",
-        "C. GET /getAllDrinks",
-        "D. DELETE /drinks/:id"
-      ],
-      "answer": "C"
-    },
-    {
-      "id": 24,
-      "question": "What is the main advantage of a REST API's single point of contact?",
-      "options": [
-        "A. It allows direct database access",
-        "B. It focuses on core competencies while outsourcing non-core tasks to external services",
-        "C. It eliminates the need for security",
-        "D. It increases server response times"
-      ],
-      "answer": "B"
-    },
-    {
-      "id": 25,
-      "question": "In the Go REST server example, which function encodes the response to JSON?",
-      "options": [
-        "A. json.Marshal()",
-        "B. json.NewEncoder(w).Encode()",
-        "C. w.Write(json)",
-        "D. http.JSON()"
-      ],
-      "answer": "B"
-    },
-    {
-      "id": 26,
-      "question": "Which API type uses WSDL and XML?",
-      "options": [
-        "A. REST",
-        "B. WebSocket",
-        "C. SOAP",
-        "D. GraphQL"
-      ],
-      "answer": "C"
-    },
-    {
-      "id": 27,
-      "question": "What does a REST API 'Endpoint' represent?",
-      "options": [
-        "A. The database connection string",
-        "B. An API URL on a server representing a resource or collection",
-        "C. The client application consuming the API",
-        "D. A query parameter appended to a URL"
-      ],
-      "answer": "B"
-    },
-    {
-      "id": 28,
-      "question": "Collections in REST API endpoints should be named using:",
-      "options": [
-        "A. Singular nouns (e.g., /drink)",
-        "B. Verbs (e.g., /getDrinks)",
-        "C. Plural nouns (e.g., /drinks)",
-        "D. Uppercase letters (e.g., /DRINKS)"
-      ],
-      "answer": "C"
-    },
-    {
-      "id": 29,
-      "question": "Which HTTP verb is used to update an existing resource by its ID?",
-      "options": [
-        "A. GET",
-        "B. POST",
-        "C. PUT",
-        "D. FETCH"
-      ],
-      "answer": "C"
-    },
-    {
-      "id": 30,
-      "question": "What does 'data caching' risk in a REST API context?",
-      "options": [
-        "A. Increased server load",
-        "B. Returning outdated data",
-        "C. Breaking the stateless constraint",
-        "D. Slower response times"
-      ],
-      "answer": "B"
-    }
-  ]
-}
+[
+  {
+    "question": "What does API stand for?",
+    "answers": [
+      "Application Programming Interface",
+      "Automated Program Integration",
+      "Application Process Interaction",
+      "Automated Programming Interface"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What does REST stand for?",
+    "answers": [
+      "Remote Execution State Transfer",
+      "Representational State Transfer",
+      "Resource Exchange Standard Transfer",
+      "Representational Service Technology"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "question": "Which of the following is NOT an HTTP verb used in REST APIs?",
+    "answers": [
+      "GET",
+      "SEND",
+      "PUT",
+      "DELETE"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "question": "Which HTTP verb is used to retrieve a resource from the server?",
+    "answers": [
+      "POST",
+      "PUT",
+      "GET",
+      "PATCH"
+    ],
+    "correct_answer": 2
+  },
+  {
+    "question": "Which HTTP verb is typically used to create a new resource?",
+    "answers": [
+      "GET",
+      "DELETE",
+      "PUT",
+      "POST"
+    ],
+    "correct_answer": 3
+  },
+  {
+    "question": "What is a 'Resource' in RESTful API design?",
+    "answers": [
+      "A collection of homogeneous objects",
+      "A single instance of an object",
+      "An API URL on a server",
+      "A slash-separated piece of information in a URL"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "question": "What is a 'Collection' in RESTful API design?",
+    "answers": [
+      "A single instance of an object",
+      "A set of HTTP verbs",
+      "A collection of homogeneous objects",
+      "A database table"
+    ],
+    "correct_answer": 2
+  },
+  {
+    "question": "Which of the following is the best RESTful API endpoint naming convention?",
+    "answers": [
+      "/getAllDrinks",
+      "/deleteDrink",
+      "/drinks",
+      "/fetchDrinks"
+    ],
+    "correct_answer": 2
+  },
+  {
+    "question": "What is the recommended data format for RESTful API responses?",
+    "answers": [
+      "XML",
+      "CSV",
+      "JSON",
+      "HTML"
+    ],
+    "correct_answer": 2
+  },
+  {
+    "question": "Which Content-Type header value is used when responding with JSON?",
+    "answers": [
+      "text/json",
+      "application/xml",
+      "application/json",
+      "text/plain"
+    ],
+    "correct_answer": 2
+  },
+  {
+    "question": "Which REST design principle states that the server does not store client session state between requests?",
+    "answers": [
+      "Caching",
+      "Statelessness",
+      "Layered System",
+      "Uniform Interface"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "question": "Which in-memory caching tool is commonly used to improve REST API performance?",
+    "answers": [
+      "MongoDB",
+      "Redis",
+      "MySQL",
+      "Cassandra"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "question": "What is the purpose of API versioning?",
+    "answers": [
+      "To encrypt API responses",
+      "To gradually phase out old endpoints without forcing immediate migration",
+      "To authenticate API consumers",
+      "To limit the number of API requests"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "question": "Which of the following is a correct example of API versioning?",
+    "answers": [
+      "/drinks?version=1",
+      "/v1/drinks",
+      "/drinks/version1",
+      "/api-v1-drinks"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "question": "What does the endpoint /articles/:articleId/comments demonstrate?",
+    "answers": [
+      "API versioning",
+      "Pagination",
+      "Nesting resources for hierarchical objects",
+      "Filtering with query parameters"
+    ],
+    "correct_answer": 2
+  },
+  {
+    "question": "Which URL demonstrates correct filtering using query parameters?",
+    "answers": [
+      "/employees/Smith/30",
+      "/employees?lastName=Smith&age=30",
+      "/filterEmployees/Smith",
+      "/employees/filter/lastName/Smith"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "question": "What is the main benefit of pagination in REST APIs?",
+    "answers": [
+      "It encrypts the response data",
+      "It reduces server resource usage by returning fewer results at a time",
+      "It allows real-time data streaming",
+      "It speeds up authentication"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "question": "What is Postman primarily used for?",
+    "answers": [
+      "Deploying web servers",
+      "Managing databases",
+      "Building, testing, and sharing APIs",
+      "Monitoring server health"
+    ],
+    "correct_answer": 2
+  },
+  {
+    "question": "Which of the following is an open-source alternative to Postman?",
+    "answers": [
+      "Swagger",
+      "Hoppscotch (Postwoman)",
+      "Insomnia",
+      "Thunder Client"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "question": "What is a 'URL Segment' in RESTful API design?",
+    "answers": [
+      "A server endpoint URL",
+      "A slash-separated piece of information in a URL",
+      "The base URL of a server",
+      "An HTTP header field"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "question": "Which HTTP status code range represents client errors?",
+    "answers": [
+      "1xx",
+      "2xx",
+      "3xx",
+      "4xx"
+    ],
+    "correct_answer": 3
+  },
+  {
+    "question": "What is the key difference between REST API and a stateful API?",
+    "answers": [
+      "REST API uses XML while stateful uses JSON",
+      "Stateful APIs store information about previous requests; REST is stateless",
+      "REST API requires authentication; stateful does not",
+      "Stateful APIs only support GET requests"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "question": "Which of the following represents a 'bad' API design according to REST best practices?",
+    "answers": [
+      "GET /drinks",
+      "POST /drinks",
+      "GET /getAllDrinks",
+      "DELETE /drinks/:id"
+    ],
+    "correct_answer": 2
+  },
+  {
+    "question": "What is the main advantage of a REST API's single point of contact?",
+    "answers": [
+      "It allows direct database access",
+      "It focuses on core competencies while outsourcing non-core tasks to external services",
+      "It eliminates the need for security",
+      "It increases server response times"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "question": "In the Go REST server example, which function encodes the response to JSON?",
+    "answers": [
+      "json.Marshal()",
+      "json.NewEncoder(w).Encode()",
+      "w.Write(json)",
+      "http.JSON()"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "question": "Which API type uses WSDL and XML?",
+    "answers": [
+      "REST",
+      "WebSocket",
+      "SOAP",
+      "GraphQL"
+    ],
+    "correct_answer": 2
+  },
+  {
+    "question": "What does a REST API 'Endpoint' represent?",
+    "answers": [
+      "The database connection string",
+      "An API URL on a server representing a resource or collection",
+      "The client application consuming the API",
+      "A query parameter appended to a URL"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "question": "Collections in REST API endpoints should be named using:",
+    "answers": [
+      "Singular nouns (e.g., /drink)",
+      "Verbs (e.g., /getDrinks)",
+      "Plural nouns (e.g., /drinks)",
+      "Uppercase letters (e.g., /DRINKS)"
+    ],
+    "correct_answer": 2
+  },
+  {
+    "question": "Which HTTP verb is used to update an existing resource by its ID?",
+    "answers": [
+      "GET",
+      "POST",
+      "PUT",
+      "FETCH"
+    ],
+    "correct_answer": 2
+  },
+  {
+    "question": "What does 'data caching' risk in a REST API context?",
+    "answers": [
+      "Increased server load",
+      "Returning outdated data",
+      "Breaking the stateless constraint",
+      "Slower response times"
+    ],
+    "correct_answer": 1
+  }
+]
