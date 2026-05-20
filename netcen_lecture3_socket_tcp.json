@@ -1,11 +1,11 @@
 [
   {
-    "question": "What mechanism does TCP use to establish a connection?",
+    "question": "What is the purpose of the TCP three-way handshake?",
     "answers": [
-      "Three-way handshake",
-      "Two-way handshake",
-      "Four-way handshake",
-      "One-way synchronization"
+      "To establish a reliable connection between client and server",
+      "To encrypt data before transmission",
+      "To determine the fastest route between two hosts",
+      "To compress data before sending"
     ],
     "correct_answer": 0
   },
@@ -20,77 +20,167 @@
     "correct_answer": 0
   },
   {
-    "question": "What does ACK stand for in TCP communication?",
+    "question": "What is the purpose of ACK in TCP communication?",
     "answers": [
-      "Acknowledgement",
-      "Active Connection Key",
-      "Async Connection Keep-alive",
-      "Authorized Control Key"
+      "To acknowledge that data was successfully received",
+      "To request a new connection",
+      "To terminate the connection",
+      "To indicate the window size"
     ],
     "correct_answer": 0
   },
   {
-    "question": "What does the TCP window size control?",
+    "question": "What is the purpose of the TCP window size mechanism?",
     "answers": [
-      "How much data can be sent before an ACK is required",
-      "The maximum number of connections",
-      "The port number range",
-      "The timeout duration"
+      "To control how much data can be sent before waiting for an acknowledgement, preventing buffer overflow",
+      "To set the maximum number of simultaneous connections",
+      "To determine the MTU of the network",
+      "To set the timeout duration for retransmission"
     ],
     "correct_answer": 0
   },
   {
-    "question": "What is the first step on the server side in the TCP client-server interaction?",
+    "question": "Why does TCP use buffering?",
     "answers": [
-      "socket()",
-      "bind()",
+      "To temporarily store incoming data that the receiver has not yet processed",
+      "To encrypt data in transit",
+      "To compress data before sending",
+      "To reorder packets at the sender side"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the purpose of the FIN packet in TCP?",
+    "answers": [
+      "To signal that one side has finished sending data and wants to terminate the connection",
+      "To request a new data stream",
+      "To acknowledge received data",
+      "To reset the connection after an error"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Why does TCP connection termination require four steps instead of three?",
+    "answers": [
+      "Because both sides must independently close their half of the connection",
+      "Because TCP requires extra encryption steps to close securely",
+      "Because the server must wait for all clients to disconnect first",
+      "Because the client must confirm the server's FIN twice"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the purpose of the TIME_WAIT state on the client during TCP termination?",
+    "answers": [
+      "To ensure the final ACK was received and allow delayed packets to expire",
+      "To allow the server to send remaining data",
+      "To wait for a new connection request from the server",
+      "To retransmit the FIN if the server does not respond"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the role of the accept() call on the TCP server side?",
+    "answers": [
+      "It blocks and waits for an incoming client connection, then returns a new connection",
+      "It binds the server to a port",
+      "It sends the initial SYN packet",
+      "It closes the connection after use"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the purpose of the listen() call in the TCP server?",
+    "answers": [
+      "To mark the socket as passive and ready to accept incoming connections",
+      "To accept data from the client",
+      "To connect to a remote server",
+      "To resolve the server's hostname"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Why would a TCP server handle each accepted connection in a separate goroutine?",
+    "answers": [
+      "To allow the server to handle multiple clients concurrently without blocking",
+      "Because Go requires goroutines for all network calls",
+      "To reduce memory usage",
+      "To encrypt each connection separately"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the purpose of defer conn.Close() in a TCP connection handler?",
+    "answers": [
+      "To ensure the connection is closed when the handler function exits, preventing resource leaks",
+      "To immediately close the connection when called",
+      "To delay sending the final response to the client",
+      "To schedule a reconnect after the connection ends"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the purpose of bufio.NewReader in TCP communication?",
+    "answers": [
+      "To provide buffered reading, allowing efficient line-by-line or chunk-based reading from a connection",
+      "To encrypt the data stream",
+      "To compress data before reading",
+      "To convert binary data to string automatically"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "In the TCP client-server flow, what does the client call to initiate a connection?",
+    "answers": [
+      "connect() / Dial()",
       "listen()",
+      "bind()",
       "accept()"
     ],
     "correct_answer": 0
   },
   {
-    "question": "Which function on the server side blocks until a client connects in TCP?",
+    "question": "What does it mean for TCP to guarantee ordered delivery?",
     "answers": [
-      "accept()",
-      "listen()",
-      "bind()",
-      "recv()"
+      "Data is received by the application in the same order it was sent, regardless of network reordering",
+      "Packets always take the same route through the network",
+      "The server processes requests in the order clients connect",
+      "ACK numbers are always sequential"
     ],
     "correct_answer": 0
   },
   {
-    "question": "What is the state of the server after the TCP three-way handshake completes?",
+    "question": "If a TCP receiver's buffer is full, what happens to the window size advertised to the sender?",
     "answers": [
-      "ESTABLISHED",
-      "LISTENING",
-      "CONNECTED",
-      "ACCEPTED"
+      "It decreases to slow down the sender",
+      "It increases to request more data",
+      "It stays the same",
+      "It resets to zero immediately and disconnects"
     ],
     "correct_answer": 0
   },
   {
-    "question": "Which packet does the client send first to terminate a TCP connection?",
+    "question": "What is the purpose of sequence numbers in TCP?",
     "answers": [
-      "FIN",
-      "ACK",
-      "RST",
-      "SYN"
+      "To track and order bytes so the receiver can reassemble data correctly and detect missing packets",
+      "To identify which port the packet is destined for",
+      "To encrypt the payload of each packet",
+      "To identify the sender's IP address"
     ],
     "correct_answer": 0
   },
   {
-    "question": "What state does the client enter after sending FIN and receiving ACK during TCP termination?",
+    "question": "When the server sends SYN/ACK, what does the ACK number (X+1) tell the client?",
     "answers": [
-      "FIN_WAIT_2",
-      "TIME_WAIT",
-      "CLOSE_WAIT",
-      "LAST_ACK"
+      "The server has received bytes up to X and expects the next byte to be X+1",
+      "The server's own sequence number",
+      "The connection ID assigned by the server",
+      "The port number the server will use"
     ],
     "correct_answer": 0
   },
   {
-    "question": "What state does the server enter after receiving the client's FIN?",
+    "question": "What state does the server enter immediately after receiving the client's FIN?",
     "answers": [
       "CLOSE_WAIT",
       "FIN_WAIT_1",
@@ -100,202 +190,112 @@
     "correct_answer": 0
   },
   {
-    "question": "How does Go's net.Listen() abstract the traditional TCP socket API?",
+    "question": "What does the ESTABLISHED state mean in a TCP connection?",
     "answers": [
-      "It combines the socket() and bind() steps to prepare the server for connections",
-      "It replaces the accept() system call entirely",
-      "It explicitly sets the window size for the connection",
-      "It automatically handles the three-way handshake and returns a connected socket"
+      "The three-way handshake is complete and data can now be exchanged",
+      "The socket has been created but not yet bound",
+      "The connection is being terminated",
+      "The server is waiting for the first client connection"
     ],
     "correct_answer": 0
   },
   {
-    "question": "In the context of the TCP three-way handshake, what occurs at the network layer when a Go client executes net.Dial(\"tcp\", ...)?",
+    "question": "In the TCP server-side flow, what is the correct order of system calls?",
     "answers": [
-      "The OS allocates an ephemeral port and initiates the SYN sequence",
-      "The client immediately sends its first payload data",
-      "The client binds to a local port statically",
-      "The client enters the ESTABLISHED state instantly without blocking"
+      "socket() → bind() → listen() → accept()",
+      "socket() → bind() → accept() → listen()",
+      "socket() → listen() → bind() → accept()",
+      "bind() → socket() → listen() → accept()"
     ],
     "correct_answer": 0
   },
   {
-    "question": "Why is it critical to wrap the handleConnection(conn) call in a 'go' routine for a TCP server?",
+    "question": "Why is TCP considered reliable compared to UDP?",
     "answers": [
-      "It allows the server to handle multiple clients concurrently without blocking the main loop",
-      "It guarantees that the connection is closed automatically",
-      "It increases the TCP window size for faster transfer",
-      "It synchronizes the data sequence numbers"
+      "TCP uses ACKs, retransmission, ordering, and flow control to guarantee data delivery",
+      "TCP is faster and uses less bandwidth",
+      "TCP encrypts all data automatically",
+      "TCP uses more ports to avoid collisions"
     ],
     "correct_answer": 0
   },
   {
-    "question": "What is the architectural purpose of placing defer ln.Close() immediately after a successful net.Listen()?",
+    "question": "What happens when a TCP sender does not receive an ACK within the timeout period?",
     "answers": [
-      "It guarantees the socket descriptor is released back to the OS when the function exits, preventing resource leaks",
-      "It delays closing connections until all data is transmitted",
-      "It restarts the listener automatically on crash",
-      "It forces a FIN packet to all connected clients"
+      "The sender retransmits the unacknowledged data",
+      "The connection is immediately terminated",
+      "The sender increases the window size",
+      "The sender sends a FIN to close the connection"
     ],
     "correct_answer": 0
   },
   {
-    "question": "Which package is used in Go for TCP network programming?",
+    "question": "What is the purpose of the bind() call in a TCP server?",
     "answers": [
-      "net",
-      "os/net",
-      "http",
-      "socket"
+      "To associate the socket with a specific local address and port number",
+      "To connect to a remote host",
+      "To begin listening for incoming connections",
+      "To accept a new client connection"
     ],
     "correct_answer": 0
   },
   {
-    "question": "Why must a TCP server reading strings use a delimiter-based approach like ReadString('\\n') instead of reading raw bytes?",
+    "question": "In Go, what does net.Listen() return that the server uses to wait for clients?",
     "answers": [
-      "TCP is a stream-oriented protocol without inherent message boundaries, requiring application-level delimiters",
-      "TCP packets are always exactly one line long",
-      "The OS network stack requires a newline to flush the buffer",
-      "Using delimiters encrypts the payload automatically"
+      "A net.Listener that can accept incoming connections",
+      "A net.Conn representing a connected client",
+      "A net.UDPConn for datagram communication",
+      "A bytes.Buffer containing the client's request"
     ],
     "correct_answer": 0
   },
   {
-    "question": "In the example TCP server, what transformation is applied to the client's message before echoing it back?",
+    "question": "What would happen if a TCP server did NOT spawn a goroutine for each connection and instead handled them sequentially?",
     "answers": [
-      "Converted to uppercase",
-      "Converted to lowercase",
-      "Reversed",
-      "Encoded in base64"
+      "Only one client could be served at a time; other clients would have to wait",
+      "The server would crash after the first connection",
+      "The server would automatically queue all requests",
+      "The server would send data faster"
     ],
     "correct_answer": 0
   },
   {
-    "question": "What does conn.RemoteAddr().String() return in the TCP server?",
+    "question": "What is the significance of the LAST_ACK state on the server side during TCP termination?",
     "answers": [
-      "The client's remote address as a string",
-      "The server's IP address",
-      "The port number of the server",
-      "The hostname of the server"
+      "The server has sent its FIN and is waiting for the client's final ACK before fully closing",
+      "The server is waiting to send the last data packet",
+      "The server has already closed the connection",
+      "The server is resending the FIN due to timeout"
     ],
     "correct_answer": 0
   },
   {
-    "question": "What does receiving an error from ReadString('\\n') typically signify about the TCP socket state?",
+    "question": "What does the net package's Dial() function do in Go TCP programming?",
     "answers": [
-      "The client has disconnected or sent a FIN packet, and the server should close its connection",
-      "The client is pausing transmission and the server should wait",
-      "The network is congested and TCP is reducing the window size",
-      "The client sent data faster than the server can process"
+      "Initiates a connection from the client to the server",
+      "Creates a listening socket on the server",
+      "Resolves a hostname to an IP address",
+      "Reads data from an existing connection"
     ],
     "correct_answer": 0
   },
   {
-    "question": "Which of the following correctly describes TCP reliability?",
+    "question": "What is the purpose of flow control in TCP?",
     "answers": [
-      "TCP guarantees ordered, error-checked delivery of data",
-      "TCP uses best-effort delivery with no guarantees",
-      "TCP does not use acknowledgements",
-      "TCP is faster than UDP because it has no overhead"
+      "To prevent the sender from overwhelming the receiver by sending too much data too fast",
+      "To route packets through the fastest network path",
+      "To encrypt data at the transport layer",
+      "To compress data before transmission"
     ],
     "correct_answer": 0
   },
   {
-    "question": "In TCP, what does the sequence number in SYN (Seq = X) represent?",
+    "question": "What is the FIN_WAIT_2 state on the client side during TCP termination?",
     "answers": [
-      "The initial sequence number chosen by the client",
-      "The port number of the sender",
-      "The checksum of the packet",
-      "The window size of the client"
-    ],
-    "correct_answer": 0
-  },
-  {
-    "question": "When the server replies with SYN/ACK, what is the ACK sequence number?",
-    "answers": [
-      "X + 1",
-      "X",
-      "Y",
-      "Y + 1"
-    ],
-    "correct_answer": 0
-  },
-  {
-    "question": "What does the client send as the final step of the three-way handshake?",
-    "answers": [
-      "ACK",
-      "SYN",
-      "FIN",
-      "SYN/ACK"
-    ],
-    "correct_answer": 0
-  },
-  {
-    "question": "In the TCP server interaction diagram, which function on the server side follows listen()?",
-    "answers": [
-      "accept()",
-      "bind()",
-      "recv()",
-      "socket()"
-    ],
-    "correct_answer": 0
-  },
-  {
-    "question": "What does the client state TIME_WAIT indicate during TCP termination?",
-    "answers": [
-      "The client has sent the final ACK and is waiting before closing",
-      "The client is waiting for the server to start",
-      "The client is retransmitting a FIN",
-      "The client has fully closed the connection"
-    ],
-    "correct_answer": 0
-  },
-  {
-    "question": "In the TCP buffer and window size mechanism, what does the client communicate via the window size field?",
-    "answers": [
-      "The amount of data it can currently receive",
-      "The number of packets it has sent",
-      "The timeout duration for acknowledgement",
-      "The maximum segment size"
-    ],
-    "correct_answer": 0
-  },
-  {
-    "question": "Which import is used in the Go TCP server to read data line by line?",
-    "answers": [
-      "bufio",
-      "io",
-      "strings",
-      "bytes"
-    ],
-    "correct_answer": 0
-  },
-  {
-    "question": "In the Go TCP client, why is a newline appended when sending data via fmt.Fprintf(conn, text+\"\\n\")?",
-    "answers": [
-      "The server's logic expects a newline delimiter to frame the incoming stream into a distinct message",
-      "It automatically handles TCP sequence numbering",
-      "It encrypts the text before sending it over the network",
-      "It triggers the TCP ACK response from the client side"
-    ],
-    "correct_answer": 0
-  },
-  {
-    "question": "What happens if net.Listen() returns an error in the Go TCP server?",
-    "answers": [
-      "The error is printed and the function returns",
-      "The server retries automatically",
-      "The error is logged and the server continues",
-      "The server waits 5 seconds and tries again"
-    ],
-    "correct_answer": 0
-  },
-  {
-    "question": "What does the server state LAST_ACK indicate during TCP connection termination?",
-    "answers": [
-      "The server is waiting to receive the final ACK from the client",
-      "The server has sent the last data packet",
-      "The server has closed the connection fully",
-      "The server is waiting for another FIN from the client"
+      "The client has sent its FIN and received the server's ACK, and is now waiting for the server's FIN",
+      "The client is waiting to send its FIN",
+      "The client has fully closed the connection",
+      "The client is retransmitting its FIN"
     ],
     "correct_answer": 0
   }
