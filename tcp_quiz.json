@@ -1,0 +1,292 @@
+[
+  {
+    "question": "What is the result of calling listener.Addr().String() after net.Listen(\"tcp\", \":8080\")?",
+    "answers": [
+      "Prints the local address of the server listener",
+      "Prints the remote address of the connected client",
+      "Returns nil because no client has connected yet",
+      "Causes a runtime panic"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Which statement about TCP socket programming in Go is true?",
+    "answers": [
+      "Go uses goroutines to handle concurrent connections",
+      "Go only supports blocking I/O for TCP socket programming",
+      "Go does not provide functions for reading and writing binary data over TCP",
+      "Go requires a third-party library to create TCP listeners"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the result of calling listener.Accept() and printing it directly in the main function with no client connected?",
+    "answers": [
+      "Fails to compile due to an error",
+      "Blocks forever waiting for a connection",
+      "Prints nil immediately",
+      "Returns an empty connection object"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Which function is used to close a socket connection in Go?",
+    "answers": [
+      "conn.Close()",
+      "conn.Disconnect()",
+      "net.CloseConn()",
+      "socket.Close()"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Which package in Go provides functionality for socket programming?",
+    "answers": [
+      "net",
+      "socket",
+      "io",
+      "http"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the purpose of the net.Dial() function in Go?",
+    "answers": [
+      "To establish a connection to a remote address",
+      "To create a TCP listener on a local port",
+      "To resolve a domain name to an IP address",
+      "To split a host and port from an address string"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "How do you create a TCP listener in Go?",
+    "answers": [
+      "net.Listen(\"tcp\", \":port\")",
+      "net.Dial(\"tcp\", \":port\")",
+      "net.Accept(\"tcp\", \":port\")",
+      "net.Bind(\"tcp\", \":port\")"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Which of the following is NOT a valid socket address format in Go?",
+    "answers": [
+      "192.168.1.1",
+      "192.168.1.1:8080",
+      "localhost:8080",
+      "[:1]:8080"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Which statement about TCP socket programming in Go is true?",
+    "answers": [
+      "Go provides a high-level abstraction for TCP socket programming",
+      "Go requires manual memory management for socket buffers",
+      "Go does not support IPv6 socket addresses",
+      "Go can only handle one TCP connection at a time"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Which of the following is an example of a valid IPv6 socket address in Go?",
+    "answers": [
+      "[::1]:8080",
+      "::1:8080",
+      "ipv6::1:8080",
+      "localhost6:8080"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Which function is used to read data from a socket connection in Go?",
+    "answers": [
+      "conn.Read()",
+      "conn.Receive()",
+      "conn.Get()",
+      "net.ReadFrom()"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What does conn.RemoteAddr().String() return after a successful net.Dial()?",
+    "answers": [
+      "Prints the remote address of the client connection",
+      "Prints the local address of the listening server",
+      "Returns an empty string",
+      "Causes a nil pointer dereference"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "How can you set the read and write buffer sizes for a TCP connection in Go?",
+    "answers": [
+      "By calling conn.SetReadBuffer() and conn.SetWriteBuffer()",
+      "By passing buffer size options to net.Listen()",
+      "By modifying the global net package configuration",
+      "By using the bufio package after accepting a connection"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the result of writing data to a server and reading the response when no server is actually listening?",
+    "answers": [
+      "Prints an empty string",
+      "Prints the data that was sent",
+      "Causes a compile error",
+      "Automatically retries the connection"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the purpose of conn.SetDeadline() in TCP socket programming in Go?",
+    "answers": [
+      "To set an absolute time after which read and write operations will time out",
+      "To set the maximum number of bytes that can be read",
+      "To close the connection after a specified number of requests",
+      "To limit the number of concurrent goroutines"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the purpose of the bind() function in TCP socket programming?",
+    "answers": [
+      "To associate a socket with a specific IP address and port",
+      "To establish a connection to a remote server",
+      "To accept an incoming client connection",
+      "To close an existing socket"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Which protocols are commonly used with sockets in Go for network communication?",
+    "answers": [
+      "TCP and UDP",
+      "TCP and HTTP only",
+      "UDP and WebSocket only",
+      "HTTP and FTP only"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the purpose of the net.SplitHostPort() function in Go?",
+    "answers": [
+      "To split a TCP address string into its host and port components",
+      "To resolve a domain name to an IP address",
+      "To create a new TCP listener on the specified host and port",
+      "To validate whether a socket address is correctly formatted"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the purpose of the net.ResolveTCPAddr() function in Go?",
+    "answers": [
+      "To resolve a TCP address from a string representation into a TCPAddr struct",
+      "To establish a new TCP connection to a remote host",
+      "To split a host and port from an address string",
+      "To accept incoming TCP connections on a listener"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the purpose of conn.SetReadDeadline(time.Now().Add(1 * time.Second))?",
+    "answers": [
+      "Data must be received within one second or the read operation times out",
+      "The connection is automatically closed after one second",
+      "The server will retry sending data for one second if the first attempt fails",
+      "The maximum size of data that can be read is limited to one second worth of data"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "If a server writes \"Hello, client!\" and the client echoes back the same data, what does the server print after reading?",
+    "answers": [
+      "Hello, client!",
+      "An empty string",
+      "A runtime error",
+      "The client's IP address"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Which function is used to resolve a domain name to an IP address in Go?",
+    "answers": [
+      "net.ResolveIPAddr()",
+      "net.LookupHost()",
+      "net.ResolveTCPAddr()",
+      "net.ParseIP()"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the purpose of the net.Conn interface in Go TCP socket programming?",
+    "answers": [
+      "To represent a generic network connection with read, write, and close operations",
+      "To define the configuration for a TCP listener",
+      "To store the IP routing table for a network interface",
+      "To manage multiple concurrent connections in a connection pool"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What does a server print after calling conn.Read(buffer) when a client sends data?",
+    "answers": [
+      "The data received from the client",
+      "The client's remote IP address",
+      "An empty string",
+      "The number of bytes received"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "How do you send data to a socket connection in Go?",
+    "answers": [
+      "conn.Write(data)",
+      "conn.Send(data)",
+      "conn.Push(data)",
+      "net.Write(conn, data)"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Which function is used to accept incoming TCP connections in Go?",
+    "answers": [
+      "listener.Accept()",
+      "net.Accept()",
+      "conn.Accept()",
+      "net.Listen().Accept()"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "How can you set a timeout for TCP socket operations in Go?",
+    "answers": [
+      "By passing a context with a timeout to socket functions, or using SetDeadline",
+      "By setting a global timeout in the net package configuration",
+      "By using the time.Sleep() function before each socket call",
+      "Go does not support timeouts for TCP socket operations"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "How can you handle multiple concurrent connections in Go TCP socket programming?",
+    "answers": [
+      "By creating a new goroutine for each accepted connection",
+      "By using a single blocking loop that processes connections one at a time",
+      "By using the net.MultiConn interface",
+      "By spawning a new OS thread for each connection using the os package"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Which statement about TCP as a protocol is true?",
+    "answers": [
+      "TCP provides reliable, ordered, and error-checked delivery of data",
+      "TCP is a connectionless protocol that does not guarantee delivery",
+      "TCP is faster than UDP for all types of network communication",
+      "TCP does not support full-duplex communication"
+    ],
+    "correct_answer": 0
+  }
+]

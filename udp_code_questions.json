@@ -1,0 +1,152 @@
+[
+  {
+    "question": "What is the result of the following code?\npackage main\nimport (\n  \"fmt\"\n  \"net\"\n)\nfunc main() {\n  addr, err := net.ResolveUDPAddr(\"udp\", \":9000\")\n  if err != nil {\n    fmt.Println(err)\n    return\n  }\n  fmt.Println(addr)\n}",
+    "answers": [
+      "Prints the resolved UDP address, e.g., 0.0.0.0:9000 or [::]:9000",
+      "Fails to compile because net.ResolveUDPAddr does not exist",
+      "Prints nil because no socket has been opened yet",
+      "Panics because resolving an address requires a live network connection"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the result of the following code?\npackage main\nimport (\n  \"fmt\"\n  \"net\"\n)\nfunc main() {\n  addr, _ := net.ResolveUDPAddr(\"udp\", \":9000\")\n  conn, err := net.ListenUDP(\"udp\", addr)\n  if err != nil {\n    fmt.Println(err)\n    return\n  }\n  defer conn.Close()\n  fmt.Println(conn.LocalAddr())\n}",
+    "answers": [
+      "Prints the local UDP address the server is listening on, e.g., [::]:9000",
+      "Prints the remote client address",
+      "Fails to compile because net.ListenUDP returns only one value",
+      "Panics because UDP does not support the LocalAddr() method"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the result of the following UDP server code when a client sends \"Hello\"?\npackage main\nimport (\n  \"fmt\"\n  \"net\"\n)\nfunc main() {\n  addr, _ := net.ResolveUDPAddr(\"udp\", \":9000\")\n  conn, _ := net.ListenUDP(\"udp\", addr)\n  defer conn.Close()\n  buffer := make([]byte, 1024)\n  n, clientAddr, _ := conn.ReadFromUDP(buffer)\n  fmt.Println(string(buffer[:n]))\n  fmt.Println(clientAddr)\n}",
+    "answers": [
+      "Prints \"Hello\" and the client's UDP address",
+      "Prints an empty string because UDP does not preserve message content",
+      "Fails to compile because ReadFromUDP returns only two values",
+      "Panics because UDP cannot read data without a prior connection"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the result of the following UDP client code?\npackage main\nimport (\n  \"fmt\"\n  \"net\"\n)\nfunc main() {\n  serverAddr, _ := net.ResolveUDPAddr(\"udp\", \"localhost:9000\")\n  conn, _ := net.DialUDP(\"udp\", nil, serverAddr)\n  defer conn.Close()\n  conn.Write([]byte(\"ping\"))\n  buffer := make([]byte, 1024)\n  n, _ := conn.Read(buffer)\n  fmt.Println(string(buffer[:n]))\n}",
+    "answers": [
+      "Prints the server's response if the server echoes back; prints nothing or blocks if no server replies",
+      "Fails to compile because net.DialUDP does not support nil as the local address",
+      "Always prints \"ping\" because UDP echoes all sent packets",
+      "Panics because UDP clients cannot use conn.Read()"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the result of the following code?\npackage main\nimport (\n  \"fmt\"\n  \"net\"\n)\nfunc main() {\n  conn, err := net.Dial(\"udp\", \"localhost:9000\")\n  if err != nil {\n    fmt.Println(err)\n    return\n  }\n  defer conn.Close()\n  fmt.Println(\"Connected\")\n}",
+    "answers": [
+      "Prints \"Connected\" — net.Dial for UDP does not verify the server is reachable and succeeds immediately",
+      "Fails with a connection refused error because no server is listening",
+      "Blocks forever waiting for a UDP handshake to complete",
+      "Fails to compile because net.Dial cannot be used with UDP"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the result of the following code?\npackage main\nimport (\n  \"fmt\"\n  \"net\"\n)\nfunc main() {\n  addr, _ := net.ResolveUDPAddr(\"udp\", \":9000\")\n  conn, _ := net.ListenUDP(\"udp\", addr)\n  defer conn.Close()\n  conn.WriteToUDP([]byte(\"hello client\"), addr)\n  fmt.Println(\"sent\")\n}",
+    "answers": [
+      "Prints \"sent\" but sends the message to the server's own address (likely unintended)",
+      "Fails to compile because WriteToUDP requires a client address returned from ReadFromUDP",
+      "Panics because you cannot write to a UDP connection before reading",
+      "Prints \"sent\" and correctly delivers the message to all connected clients"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the key difference in how errors are handled between this TCP code and this UDP code?\n// TCP\nconn, err := net.Dial(\"tcp\", \"localhost:9000\")\n// UDP\nconn, err := net.Dial(\"udp\", \"localhost:9000\")",
+    "answers": [
+      "TCP returns a connection refused error if no server is listening; UDP Dial succeeds regardless because UDP is connectionless",
+      "UDP returns a connection refused error faster than TCP",
+      "Both behave identically and return the same errors",
+      "TCP never returns errors on Dial; only UDP does"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the result of the following code?\npackage main\nimport (\n  \"fmt\"\n  \"net\"\n)\nfunc main() {\n  addr, _ := net.ResolveUDPAddr(\"udp\", \":9000\")\n  conn, _ := net.ListenUDP(\"udp\", addr)\n  defer conn.Close()\n  conn.SetReadDeadline(time.Now().Add(2 * time.Second))\n  buffer := make([]byte, 1024)\n  n, _, err := conn.ReadFromUDP(buffer)\n  if err != nil {\n    fmt.Println(\"timeout:\", err)\n    return\n  }\n  fmt.Println(string(buffer[:n]))\n}",
+    "answers": [
+      "Prints \"timeout: ...\" after 2 seconds if no UDP packet is received within the deadline",
+      "Blocks forever regardless of the deadline because UDP ignores timeouts",
+      "Fails to compile because SetReadDeadline is not available on UDPConn",
+      "Immediately returns with an empty buffer without waiting"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the result of sending a UDP packet larger than the buffer size?\npackage main\nimport \"net\"\nfunc main() {\n  addr, _ := net.ResolveUDPAddr(\"udp\", \":9000\")\n  conn, _ := net.ListenUDP(\"udp\", addr)\n  defer conn.Close()\n  buffer := make([]byte, 4) // very small buffer\n  n, _, _ := conn.ReadFromUDP(buffer)\n  _ = n\n}",
+    "answers": [
+      "The data beyond the buffer size is silently truncated; the excess bytes in the UDP packet are lost",
+      "ReadFromUDP automatically resizes the buffer to fit the entire packet",
+      "A runtime panic occurs because the buffer overflows",
+      "ReadFromUDP returns an error indicating the buffer is too small"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the result of the following multicast UDP setup?\npackage main\nimport (\n  \"fmt\"\n  \"net\"\n)\nfunc main() {\n  addr, _ := net.ResolveUDPAddr(\"udp\", \"224.0.0.1:9999\")\n  conn, err := net.ListenMulticastUDP(\"udp\", nil, addr)\n  if err != nil {\n    fmt.Println(err)\n    return\n  }\n  defer conn.Close()\n  fmt.Println(\"Listening on multicast:\", addr)\n}",
+    "answers": [
+      "Prints \"Listening on multicast: 224.0.0.1:9999\" and waits for multicast UDP packets on that group address",
+      "Fails because multicast addresses are not supported in Go",
+      "Connects to a single remote server at 224.0.0.1",
+      "Fails to compile because net.ListenMulticastUDP does not exist in Go"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the result of the following code?\npackage main\nimport (\n  \"fmt\"\n  \"net\"\n)\nfunc main() {\n  serverAddr, _ := net.ResolveUDPAddr(\"udp\", \"localhost:9000\")\n  conn, _ := net.DialUDP(\"udp\", nil, serverAddr)\n  defer conn.Close()\n  fmt.Println(conn.RemoteAddr())\n}",
+    "answers": [
+      "Prints the server's UDP address, e.g., 127.0.0.1:9000",
+      "Prints nil because UDP is connectionless and has no remote address",
+      "Fails to compile because DialUDP does not return a connection with RemoteAddr()",
+      "Panics because RemoteAddr() is only valid for TCP connections"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the result of the following UDP echo server when a client sends \"test\"?\nconn.ReadFromUDP(buffer[:n])\nconn.WriteToUDP(buffer[:n], clientAddr)",
+    "answers": [
+      "Reads \"test\" from the client and sends \"test\" back to the client's address",
+      "Reads \"test\" and broadcasts it to all connected UDP clients",
+      "Fails because WriteToUDP cannot reuse the same buffer as ReadFromUDP",
+      "Sends an empty packet back because buffer[:n] is consumed by ReadFromUDP"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the result of the following code?\npackage main\nimport (\n  \"fmt\"\n  \"net\"\n)\nfunc main() {\n  conn, _ := net.Dial(\"udp\", \"8.8.8.8:53\")\n  defer conn.Close()\n  fmt.Println(conn.LocalAddr())\n}",
+    "answers": [
+      "Prints the local UDP address assigned by the OS for the outgoing connection (e.g., 192.168.x.x:random_port)",
+      "Prints 8.8.8.8:53 because LocalAddr returns the destination",
+      "Prints nil because no data has been sent yet",
+      "Fails to compile because conn.LocalAddr() is not available for UDP"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the result of calling conn.Write() on a UDP connection created with net.DialUDP() when no server is listening?",
+    "answers": [
+      "Write succeeds without error — UDP does not confirm delivery, so the packet is sent and silently dropped",
+      "Write returns a connection refused error immediately",
+      "Write blocks until the server starts listening",
+      "Write panics because the remote address is unreachable"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the correct way to handle concurrent UDP clients in Go, and what is the output pattern?\nfor {\n  n, addr, _ := conn.ReadFromUDP(buffer)\n  go handleClient(conn, buffer[:n], addr)\n}",
+    "answers": [
+      "Each incoming UDP packet is handled concurrently in a new goroutine, so the server can process multiple clients without blocking",
+      "The loop blocks on each goroutine before processing the next UDP packet",
+      "Fails at runtime because goroutines cannot access a shared UDPConn safely",
+      "Fails to compile because ReadFromUDP cannot be used inside a for loop"
+    ],
+    "correct_answer": 0
+  }
+]

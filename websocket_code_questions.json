@@ -1,0 +1,152 @@
+[
+  {
+    "question": "What is the result of the following code?\npackage main\nimport (\n  \"log\"\n  \"net/http\"\n  \"github.com/gorilla/websocket\"\n)\nvar upgrader = websocket.Upgrader{}\nfunc handler(w http.ResponseWriter, r *http.Request) {\n  ws, err := upgrader.Upgrade(w, r, nil)\n  if err != nil {\n    log.Println(err)\n    return\n  }\n  defer ws.Close()\n  log.Println(\"Client connected\")\n}\nfunc main() {\n  http.HandleFunc(\"/ws\", handler)\n  http.ListenAndServe(\":8080\", nil)\n}",
+    "answers": [
+      "Starts an HTTP server that upgrades connections on /ws to WebSocket and prints \"Client connected\" for each new WebSocket client",
+      "Starts a plain HTTP server that returns JSON responses on /ws",
+      "Fails to compile because websocket.Upgrader{} requires configuration arguments",
+      "Panics at runtime because ListenAndServe blocks the goroutine"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the result of the following WebSocket echo server when a client sends \"hello\"?\nfor {\n  messageType, message, err := ws.ReadMessage()\n  if err != nil {\n    break\n  }\n  ws.WriteMessage(messageType, message)\n}",
+    "answers": [
+      "Reads \"hello\" from the client and writes \"hello\" back — the server echoes every message",
+      "Reads \"hello\" and broadcasts it to all connected WebSocket clients",
+      "Fails at runtime because ReadMessage and WriteMessage cannot be used in the same loop",
+      "Prints \"hello\" to the server console but does not send anything back to the client"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the result of the following code when a client sends a text message?\nmessageType, message, err := ws.ReadMessage()\nif err != nil {\n  log.Println(err)\n  return\n}\nfmt.Println(messageType, string(message))",
+    "answers": [
+      "Prints the message type integer (e.g., 1 for text) and the message content (e.g., \"hello\")",
+      "Prints only the raw bytes of the message",
+      "Fails to compile because ReadMessage returns only two values",
+      "Prints 0 and an empty string because WebSocket hides the message type"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the result of the following upgrader configuration?\nvar upgrader = websocket.Upgrader{\n  CheckOrigin: func(r *http.Request) bool {\n    return true\n  },\n}",
+    "answers": [
+      "Allows WebSocket connections from any origin by always returning true in CheckOrigin",
+      "Rejects all WebSocket connections because CheckOrigin returns true instead of an error",
+      "Fails to compile because CheckOrigin must return an error, not a bool",
+      "Limits connections to the same origin as the server"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the result of the following code?\nws, err := upgrader.Upgrade(w, r, nil)\nif err != nil {\n  log.Println(\"upgrade failed:\", err)\n  return\n}\ndefer ws.Close()\nerr = ws.WriteMessage(websocket.TextMessage, []byte(\"Welcome!\"))\nif err != nil {\n  log.Println(err)\n}",
+    "answers": [
+      "Upgrades the HTTP connection to WebSocket and immediately sends the text message \"Welcome!\" to the client",
+      "Sends \"Welcome!\" over HTTP without upgrading to WebSocket",
+      "Fails because WriteMessage cannot be called immediately after Upgrade",
+      "Sends a binary message with content \"Welcome!\" regardless of the TextMessage constant"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the result of the following code when the WebSocket client disconnects abruptly?\nfor {\n  _, _, err := ws.ReadMessage()\n  if err != nil {\n    log.Println(\"Client disconnected:\", err)\n    break\n  }\n}",
+    "answers": [
+      "ReadMessage returns an error when the client disconnects, the error is logged, and the loop breaks",
+      "ReadMessage blocks forever regardless of the client disconnecting",
+      "The loop continues without error because WebSocket handles disconnections transparently",
+      "ReadMessage panics when the connection is closed unexpectedly"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the result of the following code?\npackage main\nimport (\n  \"log\"\n  \"net/http\"\n  \"github.com/gorilla/websocket\"\n)\nvar upgrader = websocket.Upgrader{}\nfunc main() {\n  http.HandleFunc(\"/ws\", func(w http.ResponseWriter, r *http.Request) {\n    ws, _ := upgrader.Upgrade(w, r, nil)\n    defer ws.Close()\n    ws.WriteMessage(websocket.TextMessage, []byte(\"hi\"))\n  })\n  log.Fatal(http.ListenAndServe(\":8080\", nil))\n}",
+    "answers": [
+      "Each WebSocket client that connects receives the text message \"hi\" and then the connection closes",
+      "The server sends \"hi\" to all clients simultaneously on startup",
+      "Fails to compile because log.Fatal cannot wrap http.ListenAndServe",
+      "The server crashes because ws.Close() is called before WriteMessage completes"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the result of the following JavaScript client connecting to the Go WebSocket server?\nconst ws = new WebSocket(\"ws://localhost:8080/ws\");\nws.onmessage = (event) => console.log(event.data);",
+    "answers": [
+      "The client connects and logs any messages sent by the server (e.g., \"hi\" or \"Welcome!\") to the console",
+      "Fails because JavaScript WebSocket clients cannot connect to Go servers",
+      "The connection is rejected because the browser is a different origin",
+      "Logs the raw binary bytes of the message instead of the text content"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the result of the following code?\nws.SetReadDeadline(time.Now().Add(5 * time.Second))\n_, _, err := ws.ReadMessage()\nif err != nil {\n  fmt.Println(\"read timeout:\", err)\n}",
+    "answers": [
+      "If no message is received within 5 seconds, ReadMessage returns an error and \"read timeout: ...\" is printed",
+      "The WebSocket connection is closed after 5 seconds regardless of activity",
+      "SetReadDeadline is ignored because WebSocket manages its own timeouts",
+      "Fails to compile because SetReadDeadline is not available on WebSocket connections"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the result of using ws.WriteMessage(websocket.BinaryMessage, data) instead of websocket.TextMessage?",
+    "answers": [
+      "Sends the data as a binary WebSocket frame instead of a text frame; the client receives it as binary data",
+      "Converts the binary data to a UTF-8 string before sending",
+      "Fails at runtime because Go WebSocket only supports text messages",
+      "Sends the data as a base64-encoded text frame"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the result of the following concurrent WebSocket broadcast pattern?\nvar clients = make(map[*websocket.Conn]bool)\nfunc broadcast(message []byte) {\n  for client := range clients {\n    client.WriteMessage(websocket.TextMessage, message)\n  }\n}",
+    "answers": [
+      "Sends the message to all registered WebSocket clients; may cause race conditions if not protected by a mutex",
+      "Sends the message only to the most recently connected client",
+      "Fails to compile because maps cannot store websocket.Conn pointers",
+      "Automatically uses goroutines to send to each client in parallel"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the result of the following code?\npackage main\nimport (\n  \"fmt\"\n  \"net/http\"\n  \"github.com/gorilla/websocket\"\n)\nvar upgrader = websocket.Upgrader{}\nfunc handler(w http.ResponseWriter, r *http.Request) {\n  ws, _ := upgrader.Upgrade(w, r, nil)\n  defer ws.Close()\n  for {\n    t, msg, err := ws.ReadMessage()\n    if err != nil {\n      return\n    }\n    ws.WriteMessage(t, []byte(\"Echo: \" + string(msg)))\n  }\n}\nfunc main() {\n  http.HandleFunc(\"/ws\", handler)\n  fmt.Println(\"Server started\")\n  http.ListenAndServe(\":8080\", nil)\n}",
+    "answers": [
+      "Prints \"Server started\", listens on :8080, and echoes back every received message prefixed with \"Echo: \"",
+      "Prints \"Server started\" and immediately exits without listening",
+      "Fails to compile because string() cannot convert a []byte in a WebSocket handler",
+      "Panics because ReadMessage and WriteMessage cannot be called in the same goroutine"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the result of calling upgrader.Upgrade() on a plain HTTP GET request that does NOT include the 'Upgrade: websocket' header?",
+    "answers": [
+      "Upgrade() returns an error because the request is not a valid WebSocket upgrade request",
+      "Upgrade() succeeds and creates a WebSocket connection anyway",
+      "Upgrade() silently falls back to an HTTP response",
+      "Upgrade() panics because the header is missing"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the result of the following code?\nfor {\n  _, message, err := ws.ReadMessage()\n  if err != nil {\n    break\n  }\n  go func(msg []byte) {\n    ws.WriteMessage(websocket.TextMessage, msg)\n  }(message)\n}",
+    "answers": [
+      "Reads messages and writes responses in separate goroutines, but may cause concurrent write errors because gorilla/websocket connections do not support concurrent writes",
+      "Correctly handles each message concurrently with no issues",
+      "Fails to compile because goroutines cannot capture WebSocket connections",
+      "Sends each message twice because WriteMessage is called inside a goroutine"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the result of the following WebSocket ping/pong handler?\nws.SetPingHandler(func(data string) error {\n  fmt.Println(\"Ping received:\", data)\n  return ws.WriteMessage(websocket.PongMessage, []byte(data))\n})",
+    "answers": [
+      "When the client sends a ping, the server prints the ping data and replies with a pong containing the same data",
+      "The server sends a ping to the client every time this handler is registered",
+      "Fails to compile because SetPingHandler does not accept a string parameter",
+      "The default ping handler is overridden and pongs are no longer sent automatically"
+    ],
+    "correct_answer": 0
+  }
+]

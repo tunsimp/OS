@@ -1,0 +1,322 @@
+[
+  {
+    "question": "What is the purpose of using monitoring in a REST API?",
+    "answers": [
+      "To track the performance and health of the API",
+      "To automatically fix failing endpoints",
+      "To generate API documentation from live traffic",
+      "To enforce rate limiting on incoming requests"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Which HTTP status code indicates a successful request with no response content?",
+    "answers": [
+      "204",
+      "200",
+      "201",
+      "202"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the purpose of using pagination in a REST API?",
+    "answers": [
+      "To improve performance by returning data in manageable chunks",
+      "To authenticate users before returning data",
+      "To encrypt the response body",
+      "To version the API response format"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Which of the following is NOT a RESTful API constraint?",
+    "answers": [
+      "Service orchestration",
+      "Statelessness",
+      "Uniform interface",
+      "Layered system"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Which best describes HATEOAS in the context of REST APIs?",
+    "answers": [
+      "An architectural style that enables easy navigation between resources through hyperlinks",
+      "A security model for authenticating REST API clients",
+      "A caching strategy for reducing server load",
+      "A method of versioning REST API endpoints"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Which is a common command-line tool for calling or exploring an API?",
+    "answers": [
+      "curl",
+      "grep",
+      "awk",
+      "sed"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Which best describes the completeness best practice for resource representation in REST?",
+    "answers": [
+      "The format should be able to represent a resource completely, including nested resources and both simple and complex structures",
+      "A resource must only expose its primary key field in the response",
+      "Resources must always be represented as flat JSON with no nested objects",
+      "The format must be XML to support all resource types"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Which architectural style is REST based on?",
+    "answers": [
+      "Client-Server",
+      "Peer-to-Peer",
+      "Event-Driven",
+      "Publish-Subscribe"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Which monitoring tools are commonly used for REST APIs?",
+    "answers": [
+      "New Relic, Datadog, and Prometheus",
+      "Postman, Swagger, and curl",
+      "Jest, Mocha, and JUnit",
+      "Docker, Kubernetes, and Helm"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the purpose of rate limiting in a REST API?",
+    "answers": [
+      "To improve security and manage server load",
+      "To increase the response speed for all clients",
+      "To automatically scale the server based on traffic",
+      "To format the response in a consistent structure"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Which is a benefit of using an API gateway?",
+    "answers": [
+      "Rate limiting and throttling",
+      "Automatic database schema migration",
+      "Generating client SDKs from the API schema",
+      "Replacing authentication with IP whitelisting"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Which HTTP method is used to create a new resource in a REST API?",
+    "answers": [
+      "POST",
+      "GET",
+      "PUT",
+      "PATCH"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the purpose of CORS (Cross-Origin Resource Sharing) in a REST API?",
+    "answers": [
+      "To enable cross-domain requests from browsers",
+      "To encrypt data transmitted between client and server",
+      "To validate the format of incoming JSON payloads",
+      "To cache responses for repeated cross-origin requests"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Which testing tools are commonly used for REST APIs?",
+    "answers": [
+      "Jest, Mocha, and Postman",
+      "Docker, Kubernetes, and Helm",
+      "Prometheus, Grafana, and Datadog",
+      "Swagger, apiDoc, and New Relic"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the purpose of using caching in a REST API?",
+    "answers": [
+      "To improve performance by serving repeated requests from stored responses",
+      "To persist user session data across requests",
+      "To encrypt sensitive fields in the response body",
+      "To balance load across multiple API server instances"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Which package in the Go standard library is commonly used for building REST APIs?",
+    "answers": [
+      "net/http",
+      "encoding/json",
+      "io/ioutil",
+      "os/signal"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the purpose of HTTP status codes in a REST API?",
+    "answers": [
+      "To indicate the success or failure of a request",
+      "To specify the format of the request body",
+      "To authenticate the client making the request",
+      "To define the version of the REST API being used"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the purpose of query parameters in a REST API?",
+    "answers": [
+      "To filter, sort, or paginate data in the response",
+      "To pass authentication credentials to the server",
+      "To specify the HTTP method for the request",
+      "To define the content type of the request body"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "How should API testing be treated?",
+    "answers": [
+      "As black box testing",
+      "As white box testing",
+      "As integration testing only",
+      "As unit testing only"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Which of the following best describes REST?",
+    "answers": [
+      "REST is an architectural style for distributed hypermedia systems",
+      "REST is a programming language for building web services",
+      "REST is a binary communication protocol",
+      "REST is a database query language"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Which HTTP method is used to update an existing resource in a REST API?",
+    "answers": [
+      "PUT",
+      "POST",
+      "GET",
+      "DELETE"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the correct URI format to get a sub-resource by resource ID and sub-resource ID?",
+    "answers": [
+      "/{resource}/{resource-id}/{sub-resource}/{sub-resource-id}",
+      "/{resource}/{sub-resource}?id={resource-id}&subid={sub-resource-id}",
+      "/{resource}+{resource-id}/{sub-resource}+{sub-resource-id}",
+      "/{resource}/{sub-resource}/{resource-id}/{sub-resource-id}"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "How do you define a route in a Go REST API using the net/http package?",
+    "answers": [
+      "Using http.HandleFunc() or http.NewServeMux()",
+      "Using http.Route() or http.RegisterPath()",
+      "Using net.Handle() or net.ServeMux()",
+      "Using http.Listen() or http.Bind()"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What must be enabled for a RESTful web service to receive invocations from different domains, subdomains, or ports?",
+    "answers": [
+      "CORS (Cross-Origin Resource Sharing)",
+      "OAuth 2.0",
+      "JWT authentication",
+      "SSL/TLS encryption"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the purpose of using OAuth 2.0 in a REST API?",
+    "answers": [
+      "To handle authentication and authorization",
+      "To compress the API response payload",
+      "To version the API endpoints",
+      "To cache responses on the client side"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the purpose of using JWT (JSON Web Tokens) in a REST API?",
+    "answers": [
+      "To handle authentication and authorization by encoding claims in a signed token",
+      "To serialize complex objects in the response body",
+      "To enforce rate limiting on API endpoints",
+      "To monitor the health and performance of the API"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Which RESTful URL pattern supports searching for a book by its ID?",
+    "answers": [
+      "GET /books/{id}",
+      "POST /books/search?id={id}",
+      "GET /search/books/{id}",
+      "PUT /books/find/{id}"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "The insistence that RESTful APIs have URLs that identify resources in a consistent and predictable manner is known as?",
+    "answers": [
+      "The uniform interface constraint",
+      "The stateless constraint",
+      "The layered system constraint",
+      "The code-on-demand constraint"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Which tools are commonly used to document REST APIs?",
+    "answers": [
+      "Postman, Swagger, and apiDoc",
+      "Jest, Mocha, and Chai",
+      "Prometheus, Grafana, and Datadog",
+      "Docker, Kubernetes, and Helm"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What does REST stand for?",
+    "answers": [
+      "Representational State Transfer",
+      "Remote Execution and State Transport",
+      "Resource Encapsulation and Secure Transfer",
+      "Reliable Event Streaming Technology"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the purpose of testing in a REST API?",
+    "answers": [
+      "To ensure the API is functioning as expected",
+      "To automatically deploy the API to production",
+      "To generate documentation from the API endpoints",
+      "To monitor the API's performance in real time"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the purpose of versioning in a REST API?",
+    "answers": [
+      "To handle breaking changes without disrupting existing clients",
+      "To improve the performance of repeated requests",
+      "To enforce authentication across all API versions",
+      "To paginate large datasets in the response"
+    ],
+    "correct_answer": 0
+  }
+]

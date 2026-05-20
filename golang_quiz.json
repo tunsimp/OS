@@ -1,0 +1,302 @@
+[
+  {
+    "question": "Which keyword is used to declare a new variable in Go?",
+    "answers": [
+      "var",
+      "let",
+      "dim",
+      "def"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "How do you define fields in a struct in Go?",
+    "answers": [
+      "type S struct { field1 Type1; field2 Type2 }",
+      "struct S { field1, field2 }",
+      "class S { var field1; var field2 }",
+      "define S { field1: Type1, field2: Type2 }"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Which command is used to format Go source code according to the official style guide?",
+    "answers": [
+      "go fmt",
+      "go format",
+      "go lint",
+      "go style"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the default value of a numeric type in Go?",
+    "answers": [
+      "0",
+      "nil",
+      "-1",
+      "undefined"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the entry point for a Go program?",
+    "answers": [
+      "main()",
+      "start()",
+      "run()",
+      "init()"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "How do you declare a multidimensional slice in Go?",
+    "answers": [
+      "var arr [][]int",
+      "var arr [,]int",
+      "var arr int[][]",
+      "var arr multi[int]"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "In Go, how do you declare a variable without specifying its type explicitly?",
+    "answers": [
+      "x := value",
+      "var x",
+      "auto x = value",
+      "dynamic x = value"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the difference between an array and a slice in Go?",
+    "answers": [
+      "Arrays have a fixed length, while slices can grow and shrink dynamically",
+      "Slices have a fixed length, while arrays can grow and shrink dynamically",
+      "Arrays and slices are identical in Go",
+      "Arrays can hold multiple types, while slices can only hold one type"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "How do you find the length of an array or slice in Go?",
+    "answers": [
+      "len(array)",
+      "array.length()",
+      "array.size()",
+      "sizeof(array)"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "In Go, can the keys of a map be of different types?",
+    "answers": [
+      "No, all keys in a map must be the same type",
+      "Yes, keys can be any type including mixed types",
+      "Yes, but only if the value types are also mixed",
+      "No, maps in Go only support string keys"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "In Go, can the length of an array be changed after it is declared?",
+    "answers": [
+      "No, arrays in Go have a fixed length",
+      "Yes, using the append() function",
+      "Yes, by reassigning the array variable",
+      "Only if the array was declared with the var keyword"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Which of the following is NOT a key design goal of Go?",
+    "answers": [
+      "Compatibility with legacy systems",
+      "Simplicity and readability",
+      "High performance compilation",
+      "Built-in concurrency support"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the shorthand syntax for declaring and initializing multiple variables in Go?",
+    "answers": [
+      "x, y, z := 1, 2, 3",
+      "var x, y, z = 1, 2, 3",
+      "let x=1, y=2, z=3",
+      "x=1; y=2; z=3"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Which of the following is NOT a basic data type in Go?",
+    "answers": [
+      "long",
+      "int",
+      "bool",
+      "string"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "In Go, can an array hold elements of different types?",
+    "answers": [
+      "No, all elements in a Go array must be of the same type",
+      "Yes, using the interface{} type implicitly",
+      "Yes, if the array is declared with the any keyword",
+      "Only if the array type is declared as mixed"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Who developed the Go programming language?",
+    "answers": [
+      "Google",
+      "Microsoft",
+      "Meta",
+      "Apple"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Which package is used for input/output operations in Go?",
+    "answers": [
+      "fmt",
+      "io",
+      "os",
+      "log"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Which keyword is used to import packages in Go?",
+    "answers": [
+      "import",
+      "include",
+      "require",
+      "use"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "How do you check if a key exists in a map in Go?",
+    "answers": [
+      "value, ok := m[key]",
+      "ok := m.exists(key)",
+      "if m[key] != nil {}",
+      "ok := m.contains(key)"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the default value for a boolean variable in Go?",
+    "answers": [
+      "false",
+      "true",
+      "nil",
+      "0"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "How do you declare a fixed-size array in Go?",
+    "answers": [
+      "arr := [size]type{values}",
+      "arr := []type{values}",
+      "arr := array[size]type",
+      "var arr = new Array(size)"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Can you compare two arrays for equality using the == operator in Go?",
+    "answers": [
+      "Yes, if they are the same type and length",
+      "No, arrays must be compared element by element",
+      "Yes, but only for arrays of primitive types",
+      "No, Go does not support the == operator for any composite types"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Which of the following is NOT a built-in type in Go?",
+    "answers": [
+      "list",
+      "int",
+      "string",
+      "bool"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "How do you declare a map in Go?",
+    "answers": [
+      "var m map[KeyType]ValueType",
+      "var m Map<KeyType, ValueType>",
+      "m := new map[KeyType]ValueType",
+      "var m = HashMap(KeyType, ValueType)"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What happens if you declare a constant in Go without explicitly assigning a value?",
+    "answers": [
+      "A compiler error occurs",
+      "The constant defaults to zero",
+      "The constant defaults to nil",
+      "The constant is assigned the next iota value automatically"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Which syntax is used in Go to declare and initialize a variable at the same time using the short form?",
+    "answers": [
+      "x := 5",
+      "x = 5",
+      "var x = 5",
+      "let x = 5"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Which programming language is commonly known as Go?",
+    "answers": [
+      "Golang",
+      "GoScript",
+      "GoLang++",
+      "GoBasic"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is Go's approach to managing dependencies?",
+    "answers": [
+      "Go uses a module system managed with the 'go mod' command",
+      "Go uses a global package registry with no versioning",
+      "Go copies all dependency source code into the project directory manually",
+      "Go uses a package manager called gopkg that must be installed separately"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Which of the following is a valid variable name in Go?",
+    "answers": [
+      "myVar",
+      "my-var",
+      "1myVar",
+      "my var"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What happens if you try to access an index outside the bounds of an array in Go?",
+    "answers": [
+      "A runtime panic occurs",
+      "Go returns the zero value for that type",
+      "Go returns nil",
+      "A compile-time error is reported"
+    ],
+    "correct_answer": 0
+  }
+]

@@ -1,0 +1,302 @@
+[
+  {
+    "question": "What is the primary purpose of the .proto file in gRPC?",
+    "answers": [
+      "To define message structures, service definitions, and RPC methods",
+      "To configure the gRPC server's network settings",
+      "To store serialized binary data for transmission",
+      "To generate Docker containers for gRPC services"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Which of the following is a valid gRPC service method invocation pattern?",
+    "answers": [
+      "Client sends a single request and receives a stream of responses",
+      "Client sends a broadcast and all servers respond simultaneously",
+      "Server initiates the connection and sends the first request",
+      "Both client and server must send requests before any response is sent"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "How does gRPC support streaming of data between clients and servers?",
+    "answers": [
+      "By using server-streaming, client-streaming, or bidirectional-streaming method calls",
+      "By using WebSocket connections over HTTP/1.1",
+      "By chunking JSON responses into multiple HTTP requests",
+      "By polling the server at a fixed interval for new data"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Which of the following is NOT a typical RPC protocol?",
+    "answers": [
+      "HTTP",
+      "gRPC",
+      "Thrift",
+      "CORBA"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the purpose of the grpc.WithInsecure() dial option in Go?",
+    "answers": [
+      "To disable SSL/TLS security for the gRPC connection",
+      "To enable mutual TLS authentication",
+      "To compress the gRPC payload before transmission",
+      "To set a connection timeout for the gRPC dial"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the purpose of the grpc.Dial() function in Go?",
+    "answers": [
+      "To create a new gRPC client connection to a server",
+      "To start a new gRPC server and begin listening",
+      "To register a service implementation with the gRPC server",
+      "To serialize a protobuf message for transmission"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "How does gRPC handle errors and exceptions?",
+    "answers": [
+      "By using a custom error handling mechanism with status codes",
+      "By returning nil for all errors and logging them server-side",
+      "By throwing exceptions that the client must catch",
+      "By returning HTTP status codes identical to REST"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the main difference between a local procedure call and an RPC?",
+    "answers": [
+      "The location of the procedure being called — RPC executes code on a remote machine",
+      "RPC is always faster than a local procedure call",
+      "Local procedure calls support streaming while RPC does not",
+      "RPC requires the client and server to be written in the same language"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Which Go package is used to implement a gRPC server?",
+    "answers": [
+      "google.golang.org/grpc",
+      "net/http",
+      "github.com/grpc/grpc-go",
+      "golang.org/x/net/grpc"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Which of the following is a common use case for gRPC?",
+    "answers": [
+      "Microservices communication, real-time chat applications, and IoT device communication",
+      "Serving static HTML pages to web browsers",
+      "Managing relational database transactions",
+      "Rendering server-side HTML templates"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What does this Go code do: grpc.Dial(\"localhost:50051\", grpc.WithInsecure()) followed by c.SayHello()?",
+    "answers": [
+      "The client connects to the server, sends a Hello request, and prints the response",
+      "The server starts listening on port 50051 and waits for clients",
+      "The code registers a new gRPC service with the local registry",
+      "The code generates protobuf code from a .proto file"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Which of the following is a gRPC service method type?",
+    "answers": [
+      "Unary, Server Streaming, and Client Streaming",
+      "GET, POST, and DELETE",
+      "Synchronous, Asynchronous, and Parallel",
+      "Push, Pull, and Broadcast"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the main advantage of using Protocol Buffers (Protobuf) with gRPC?",
+    "answers": [
+      "Faster data serialization and deserialization compared to JSON",
+      "Human-readable format that is easier to debug",
+      "No schema definition required before use",
+      "Compatible with all browsers without any additional tools"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the main advantage of using an RPC over a direct network socket connection?",
+    "answers": [
+      "Easier development and maintenance through higher-level abstractions",
+      "Lower network latency due to raw socket access",
+      "No need for serialization of data structures",
+      "Automatic load balancing without additional configuration"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Which is a key benefit of using gRPC for microservices communication?",
+    "answers": [
+      "Reduced network latency due to binary encoding and HTTP/2",
+      "Automatic service discovery without a registry",
+      "Built-in support for relational database transactions",
+      "Compatible with HTTP/1.1 for legacy service support"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "How does gRPC compare to REST in terms of performance?",
+    "answers": [
+      "gRPC is generally faster than REST due to binary encoding and HTTP/2 multiplexing",
+      "REST is faster than gRPC for all types of requests",
+      "gRPC and REST have identical performance characteristics",
+      "REST is faster for streaming scenarios while gRPC is faster for unary calls"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the main disadvantage of using an RPC compared to a direct network socket connection?",
+    "answers": [
+      "Increased latency due to the additional abstraction layer",
+      "Lack of support for streaming data",
+      "Requires both client and server to use the same OS",
+      "Cannot be used over the internet"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Which of the following is NOT a typical RPC model?",
+    "answers": [
+      "Publish-Subscribe RPC",
+      "Unary RPC",
+      "Server Streaming RPC",
+      "Bidirectional Streaming RPC"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the role of a gRPC load balancer?",
+    "answers": [
+      "To distribute incoming requests across multiple gRPC server instances",
+      "To serialize protobuf messages before sending them to the server",
+      "To generate client stubs from the .proto file",
+      "To monitor the health of gRPC connections and restart failed ones"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Which protocol does gRPC use for communication?",
+    "answers": [
+      "HTTP/2",
+      "HTTP/1.1",
+      "WebSocket",
+      "UDP"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What does gRPC stand for?",
+    "answers": [
+      "General-purpose Remote Procedure Call",
+      "Google Relational Protocol Communication",
+      "Global Resource Protocol Controller",
+      "Go Runtime Procedure Calls"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the primary purpose of an RPC?",
+    "answers": [
+      "To execute a procedure on a remote machine as if it were a local call, enabling client-server communication",
+      "To store data in a distributed database across multiple servers",
+      "To render HTML pages on the server and send them to the browser",
+      "To encrypt network traffic between two endpoints"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the purpose of the 'service' keyword in a .proto file?",
+    "answers": [
+      "To define a new gRPC service containing one or more RPC methods",
+      "To import an external .proto file into the current schema",
+      "To specify the serialization format for the message fields",
+      "To declare a package namespace for the generated code"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the purpose of the gRPC health checking service?",
+    "answers": [
+      "To monitor the health of gRPC server instances and report their status",
+      "To authenticate clients before they can call service methods",
+      "To compress gRPC payloads to reduce bandwidth usage",
+      "To automatically restart failed gRPC servers"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "How does gRPC handle authentication and authorization?",
+    "answers": [
+      "It relies on the underlying transport layer (e.g., SSL/TLS) for security",
+      "It has a built-in username and password authentication system",
+      "It uses JWT tokens embedded in the .proto file definition",
+      "It delegates authentication entirely to the application code with no framework support"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the primary advantage of Protocol Buffers (Protobuf) over JSON for gRPC serialization?",
+    "answers": [
+      "Smaller message size, faster serialization, and stronger type-safety",
+      "Human-readable format that is easier to inspect and debug",
+      "No schema required, allowing fully dynamic message structures",
+      "Native support in all web browsers without additional libraries"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Which languages have native gRPC support?",
+    "answers": [
+      "Java, C++, Python, C#, and Go",
+      "Only Go and Java",
+      "Only Python and JavaScript",
+      "Only C++ and Rust"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "Which is a key benefit of using gRPC over traditional REST-based APIs?",
+    "answers": [
+      "Reduced bandwidth usage due to binary encoding",
+      "Human-readable payloads that are easy to debug in the browser",
+      "Built-in support for HTML rendering",
+      "No need to define a schema before building the service"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the purpose of the 'message' keyword in a .proto file?",
+    "answers": [
+      "To define a new message type that represents the structure of request or response data",
+      "To send a log message to the gRPC server",
+      "To declare an RPC method within a service",
+      "To import another .proto file's definitions"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the primary purpose of gRPC?",
+    "answers": [
+      "To provide a scalable and efficient method for inter-process communication",
+      "To serve static web content to end users",
+      "To replace relational databases in microservice architectures",
+      "To generate REST APIs automatically from database schemas"
+    ],
+    "correct_answer": 0
+  }
+]

@@ -1,0 +1,152 @@
+[
+  {
+    "question": "What is the result of the following code?\npackage main\nimport (\n  \"log\"\n  \"google.golang.org/grpc\"\n)\nfunc main() {\n  conn, err := grpc.Dial(\"localhost:50051\", grpc.WithInsecure())\n  if err != nil {\n    log.Fatalf(\"did not connect: %v\", err)\n  }\n  defer conn.Close()\n  log.Println(conn.GetState())\n}",
+    "answers": [
+      "Prints the current connection state (e.g., IDLE or CONNECTING)",
+      "Prints the server's IP address",
+      "Fails to compile because GetState() does not exist",
+      "Panics because no server is listening on port 50051"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the result of the following code?\npackage main\nimport (\n  \"log\"\n  \"google.golang.org/grpc\"\n)\nfunc main() {\n  conn, err := grpc.Dial(\"localhost:50051\", grpc.WithInsecure())\n  if err != nil {\n    log.Fatalf(\"connection error: %v\", err)\n  }\n  defer conn.Close()\n  log.Println(\"Connected\")\n}",
+    "answers": [
+      "Prints \"Connected\" — grpc.Dial is non-blocking and does not fail even if no server is running",
+      "Fails with a connection refused error immediately",
+      "Blocks forever waiting for the server to start",
+      "Fails to compile because grpc.WithInsecure() is deprecated"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What does the following .proto definition produce when compiled?\nsyntax = \"proto3\";\npackage hello;\nmessage HelloRequest {\n  string name = 1;\n}\nmessage HelloResponse {\n  string message = 1;\n}\nservice Greeter {\n  rpc SayHello (HelloRequest) returns (HelloResponse);\n}",
+    "answers": [
+      "Generated Go code with a GreeterClient interface, GreeterServer interface, HelloRequest struct, and HelloResponse struct",
+      "A running gRPC server on the default port",
+      "A JSON schema file describing the HelloRequest and HelloResponse",
+      "A SQL table schema for storing HelloRequest records"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the result of the following server-side gRPC handler?\nfunc (s *server) SayHello(ctx context.Context, req *pb.HelloRequest) (*pb.HelloResponse, error) {\n  return &pb.HelloResponse{Message: \"Hello \" + req.GetName()}, nil\n}\n// Client calls: c.SayHello(ctx, &pb.HelloRequest{Name: \"Alice\"})",
+    "answers": [
+      "The client receives a HelloResponse with Message = \"Hello Alice\"",
+      "The client receives an empty HelloResponse",
+      "The server panics because string concatenation is not allowed in handlers",
+      "The client receives a nil response and an error"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the result of the following code?\nfunc main() {\n  conn, _ := grpc.Dial(\"localhost:50051\", grpc.WithInsecure())\n  defer conn.Close()\n  client := pb.NewGreeterClient(conn)\n  ctx, cancel := context.WithTimeout(context.Background(), time.Second)\n  defer cancel()\n  r, err := client.SayHello(ctx, &pb.HelloRequest{Name: \"World\"})\n  if err != nil {\n    log.Println(\"Error:\", err)\n    return\n  }\n  log.Println(r.GetMessage())\n}",
+    "answers": [
+      "Prints an error because no server is listening, due to the timeout expiring",
+      "Prints \"Hello World\" immediately",
+      "Blocks forever ignoring the timeout",
+      "Fails to compile because context.WithTimeout requires three arguments"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the result of the following gRPC server code?\nfunc main() {\n  lis, err := net.Listen(\"tcp\", \":50051\")\n  if err != nil {\n    log.Fatalf(\"failed to listen: %v\", err)\n  }\n  s := grpc.NewServer()\n  log.Println(\"Server listening on\", lis.Addr())\n  if err := s.Serve(lis); err != nil {\n    log.Fatalf(\"failed to serve: %v\", err)\n  }\n}",
+    "answers": [
+      "Prints \"Server listening on [::]:50051\" and blocks waiting for incoming gRPC connections",
+      "Prints \"Server listening on [::]:50051\" and immediately exits",
+      "Fails to compile because grpc.NewServer() requires arguments",
+      "Panics because no service is registered before calling Serve()"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the result of calling req.GetName() when the client sends &pb.HelloRequest{Name: \"Bob\"}?",
+    "answers": [
+      "Returns the string \"Bob\"",
+      "Returns nil because GetName() returns a pointer",
+      "Panics because the field must be accessed directly as req.Name",
+      "Returns an empty string because protobuf fields are always zero-valued"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the result of the following server-side streaming handler?\nfunc (s *server) ListNumbers(req *pb.NumberRequest, stream pb.Numbers_ListNumbersServer) error {\n  for i := 0; i < 3; i++ {\n    stream.Send(&pb.NumberResponse{Value: int32(i)})\n  }\n  return nil\n}\n// Client reads all streamed responses and prints each Value",
+    "answers": [
+      "The client receives and prints 0, 1, 2 in sequence",
+      "The client receives only the last value, 2",
+      "The server panics because streaming handlers cannot use loops",
+      "The client receives an error because server streaming requires bidirectional channels"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the result of the following code?\nconn, err := grpc.Dial(\"localhost:50051\")\nif err != nil {\n  log.Fatalf(\"error: %v\", err)\n}\nlog.Println(\"done\")",
+    "answers": [
+      "Fails to compile because grpc.Dial requires at least one dial option (e.g., grpc.WithInsecure() or grpc.WithTransportCredentials())",
+      "Prints \"done\" and exits normally",
+      "Connects successfully using default TLS settings",
+      "Panics at runtime because no dial option is provided"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the result of the following code?\nfunc main() {\n  conn, _ := grpc.Dial(\"localhost:50051\", grpc.WithInsecure())\n  defer conn.Close()\n  fmt.Println(conn.Target())\n}",
+    "answers": [
+      "Prints \"localhost:50051\" — the target address used when dialing",
+      "Prints the server's resolved IP address",
+      "Prints an empty string because no connection was established",
+      "Fails to compile because Target() is not a method on ClientConn"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the result of the following client-side streaming code?\nstream, _ := client.UploadNumbers(context.Background())\nfor _, n := range []int32{1, 2, 3} {\n  stream.Send(&pb.NumberRequest{Value: n})\n}\nreply, _ := stream.CloseAndRecv()\nlog.Println(reply.GetTotal())",
+    "answers": [
+      "Sends 1, 2, 3 to the server and prints the total computed by the server (e.g., 6 if the server sums them)",
+      "Sends only the last value (3) because previous sends are overwritten",
+      "Fails because client streaming requires the server to send first",
+      "Prints 0 because CloseAndRecv() discards the server response"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What happens when you register a service but do not call s.Serve(lis) in a gRPC server?\nfunc main() {\n  lis, _ := net.Listen(\"tcp\", \":50051\")\n  s := grpc.NewServer()\n  pb.RegisterGreeterServer(s, &server{})\n  log.Println(\"Registered\")\n}",
+    "answers": [
+      "Prints \"Registered\" and exits immediately — the server never starts accepting connections",
+      "Starts accepting connections automatically after RegisterGreeterServer()",
+      "Panics because Serve() must be called before RegisterGreeterServer()",
+      "Fails to compile because Serve() is required in main()"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the result of the following bidirectional streaming exchange?\n// Server echoes every received message back to the client\n// Client sends \"ping\" and reads the response\nstream.Send(&pb.Message{Text: \"ping\"})\nres, _ := stream.Recv()\nfmt.Println(res.GetText())",
+    "answers": [
+      "Prints \"ping\" — the server echoes the message back",
+      "Prints an empty string because bidirectional streaming does not support echoing",
+      "Panics because Send() and Recv() cannot be called on the same stream",
+      "Prints \"pong\" by default because gRPC auto-generates echo responses"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the result of the following code when the context deadline is exceeded before the server responds?\nctx, cancel := context.WithTimeout(context.Background(), 1*time.Millisecond)\ndefer cancel()\nr, err := client.SayHello(ctx, &pb.HelloRequest{Name: \"Test\"})\nif err != nil {\n  fmt.Println(\"timeout error\")\n  return\n}\nfmt.Println(r.GetMessage())",
+    "answers": [
+      "Prints \"timeout error\" because the deadline expires before the server responds",
+      "Prints the server's response because gRPC ignores context deadlines",
+      "Panics because context.WithTimeout is not compatible with gRPC",
+      "Blocks forever because gRPC does not support context cancellation"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "question": "What is the purpose of defer conn.Close() in the following gRPC client code?\nfunc main() {\n  conn, _ := grpc.Dial(\"localhost:50051\", grpc.WithInsecure())\n  defer conn.Close()\n  client := pb.NewGreeterClient(conn)\n  // ... make calls\n}",
+    "answers": [
+      "Ensures the gRPC connection is closed and resources are released when main() returns",
+      "Immediately closes the connection before any calls are made",
+      "Prevents the client from making more than one RPC call",
+      "Automatically reconnects if the server drops the connection"
+    ],
+    "correct_answer": 0
+  }
+]
