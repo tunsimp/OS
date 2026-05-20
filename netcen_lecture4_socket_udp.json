@@ -60,12 +60,12 @@
     "correct_answer": 0
   },
   {
-    "question": "Why does a UDP program often call net.ResolveUDPAddr before listening or dialing?",
+    "question": "Which Go function resolves a UDP address?",
     "answers": [
-      "To translate a string address into a structured *UDPAddr object required by socket functions",
-      "To perform a three-way handshake with the destination",
-      "To check if the destination port is blocked by a firewall",
-      "To allocate a buffer for incoming UDP datagrams"
+      "net.ResolveUDPAddr()",
+      "net.ParseUDPAddr()",
+      "net.LookupUDP()",
+      "net.DialUDPAddr()"
     ],
     "correct_answer": 0
   },
@@ -90,12 +90,12 @@
     "correct_answer": 0
   },
   {
-    "question": "Why must a UDP server use conn.ReadFromUDP() instead of a standard Read() function?",
+    "question": "In Go's UDP server, which function reads data and also returns the sender's address?",
     "answers": [
-      "Because UDP is connectionless, the server must extract the sender's address from every datagram to know where to reply",
-      "ReadFromUDP automatically reassembles fragmented packets",
-      "Standard Read() is only compatible with TCP sockets",
-      "ReadFromUDP performs congestion control checks on the payload"
+      "conn.ReadFromUDP()",
+      "conn.Read()",
+      "conn.ReadFrom()",
+      "conn.Receive()"
     ],
     "correct_answer": 0
   },
@@ -110,12 +110,12 @@
     "correct_answer": 0
   },
   {
-    "question": "How does conn.WriteToUDP() handle data transmission differently than a TCP connection's write method?",
+    "question": "In Go's UDP server, which function sends a response back to the client?",
     "answers": [
-      "It requires an explicit destination address for every call since there is no persistent connection state",
-      "It guarantees the data reaches the client by requesting an ACK",
-      "It automatically breaks large files into smaller sequence-numbered chunks",
-      "It establishes a temporary connection before sending the data"
+      "conn.WriteToUDP()",
+      "conn.Write()",
+      "conn.Send()",
+      "conn.Reply()"
     ],
     "correct_answer": 0
   },
@@ -130,12 +130,12 @@
     "correct_answer": 0
   },
   {
-    "question": "Why is net.ListenPacket() used for a broadcast receiver instead of net.Listen()?",
+    "question": "Which Go function is used to create a broadcast receiver?",
     "answers": [
-      "ListenPacket() is designed for connectionless, packet-oriented protocols like UDP, whereas Listen() is for stream-oriented TCP",
-      "ListenPacket() automatically filters out unicast traffic",
-      "ListenPacket() increases the receiving window size",
-      "ListenPacket() requires root privileges to execute"
+      "net.ListenPacket()",
+      "net.ListenUDP()",
+      "net.DialUDP()",
+      "net.ReceiveBroadcast()"
     ],
     "correct_answer": 0
   },
@@ -160,12 +160,12 @@
     "correct_answer": 0
   },
   {
-    "question": "What is the operational purpose of calling SetMulticastTTL(2) on a multicast connection?",
+    "question": "What does SetMulticastTTL() control in multicast UDP?",
     "answers": [
-      "It limits the lifespan of the multicast packets to two router hops to prevent flooding the wider network",
-      "It ensures the packet is retransmitted up to two times if lost",
-      "It allows a maximum of two clients to join the multicast group",
-      "It limits the multicast payload size to 2 kilobytes"
+      "The number of router hops the multicast packet can traverse",
+      "The size of the multicast group",
+      "The timeout for receiving multicast messages",
+      "The multicast IP address"
     ],
     "correct_answer": 0
   },
@@ -220,12 +220,12 @@
     "correct_answer": 0
   },
   {
-    "question": "Why does the UDP Daytime Client need to send a dummy payload to the server first?",
+    "question": "In the UDP client example, what does the client send to the server before reading the response?",
     "answers": [
-      "Since UDP is connectionless, the server's recvfrom() blocks until a datagram arrives to provide the client's return address",
-      "To authenticate the client with the server",
-      "To synchronize sequence numbers before data transfer",
-      "To allocate buffer space on the server side"
+      "The string \"anything\"",
+      "A connection request packet",
+      "A SYN packet",
+      "The current timestamp"
     ],
     "correct_answer": 0
   },
@@ -270,12 +270,12 @@
     "correct_answer": 0
   },
   {
-    "question": "In the Go multicast receiver code, what is the role of conn.JoinGroup()?",
+    "question": "What method does the multicast receiver call after creating a connection to join the group?",
     "answers": [
-      "It signals the underlying network interface and OS to start accepting packets destined for that specific multicast IP",
-      "It establishes a secure TCP tunnel to the multicast server",
-      "It broadcasts a notification to other clients that a new receiver has joined",
-      "It allocates a dedicated UDP port specifically for multicast traffic"
+      "conn.JoinGroup()",
+      "conn.Subscribe()",
+      "conn.AddMember()",
+      "conn.Connect()"
     ],
     "correct_answer": 0
   },
