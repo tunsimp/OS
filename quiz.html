@@ -675,36 +675,56 @@
           return result;
         }
 
-        // --- Load lessons from JSON files ---
+        // --- Load lessons from JSON files (lectures + extra quizzes, no SNA) ---
         const LESSON_FILES = [
-          "lecture1_go_overview_1.json",
-          "lecture2_go_overview_2.json",
-          "lecture3_socket_tcp.json",
-          "lecture4_socket_udp.json",
-          "lecture5_data_serialization.json",
-          "lecture7_VM.json",
-          "lecture9_HTTP.json",
-          "lecture10_database.json",
-          "lecture11_storage.json",
-          "lecture13_grpc.json",
-          "lecture14_websocket.json",
-          "lecture12_rest.json",
-          "lecture15_nosql.json",
+          "netcen_lecture1_go_overview_1.json",
+          "netcen_lecture2_go_overview_2.json",
+          "netcen_lecture3_socket_tcp.json",
+          "netcen_lecture4_socket_udp.json",
+          "netcen_lecture5_data_serialization.json",
+          "netcen_lecture7_VM.json",
+          "netcen_lecture9_HTTP.json",
+          "netcen_lecture10_database.json",
+          "netcen_lecture11_storage.json",
+          "netcen_lecture12_rest.json",
+          "netcen_lecture13_grpc.json",
+          "netcen_lecture14_websocket.json",
+          "netcen_lecture15_nosql.json",
+          "netcen_golang_quiz.json",
+          "netcen_tcp_quiz.json",
+          "netcen_udp_code_questions.json",
+          "netcen_restapi_quiz.json",
+          "netcen_grpc_quiz.json",
+          "netcen_grpc_code_questions.json",
+          "netcen_websocket_code_questions.json",
         ];
 
-        // Transform question format from {answers, correct_answer} to {options, answer}
+        function extractQuestions(data) {
+          if (Array.isArray(data)) return data;
+          if (data && Array.isArray(data.questions)) return data.questions;
+          return null;
+        }
+
+        // Normalize to { question, options, answer } (answer = 0-based index)
         function transformQuestion(q) {
-          return {
-            question: q.question,
-            options: q.answers || q.options || [],
-            answer:
-              q.correct_answer !== undefined ? q.correct_answer : q.answer,
-          };
+          const options = (q.answers || q.options || []).map((opt) =>
+            typeof opt === "string" ? opt.replace(/^[A-D]\.\s*/i, "") : opt,
+          );
+          let answer =
+            q.correct_answer !== undefined && q.correct_answer !== null
+              ? q.correct_answer
+              : q.answer;
+          if (typeof answer === "string" && /^[A-D]$/i.test(answer.trim())) {
+            answer = answer.trim().toUpperCase().charCodeAt(0) - 65;
+          }
+          return { question: q.question, options, answer };
         }
 
         // Generate lesson title from filename
         function getLessonTitle(filename) {
-          const withoutExt = filename.replace(/\.json$/i, "");
+          const withoutExt = filename
+            .replace(/\.json$/i, "")
+            .replace(/^netcen_/i, "");
           const lectureMatch = withoutExt.match(/^lecture(\d+)_(.+)$/i);
           if (lectureMatch) {
             const topic = lectureMatch[2]
@@ -713,6 +733,8 @@
             return "Lecture " + lectureMatch[1] + ": " + topic;
           }
           return withoutExt
+            .replace(/_questions$/i, "")
+            .replace(/_quiz$/i, " Quiz")
             .replace(/_/g, " ")
             .replace(/\b\w/g, (l) => l.toUpperCase());
         }
@@ -732,29 +754,28 @@
                 );
               }
               const data = await res.json();
+              const rawQuestions = extractQuestions(data);
 
-              // Handle array of questions
-              if (Array.isArray(data)) {
-                if (data.length === 0) {
-                  throw new Error("File is empty");
-                }
-                const transformedQuestions = data.map(transformQuestion);
-                lessons.push({
-                  id: filename,
-                  title: getLessonTitle(filename),
-                  questions: transformedQuestions,
-                });
-                loadedCount++;
-                console.log(
-                  "✓ Loaded:",
-                  filename,
-                  "(" + transformedQuestions.length + " questions)",
-                );
-              } else {
+              if (!rawQuestions || rawQuestions.length === 0) {
                 throw new Error(
-                  "Unexpected format - expected array of questions",
+                  rawQuestions
+                    ? "File is empty"
+                    : "Unexpected format - expected array of questions",
                 );
               }
+
+              const transformedQuestions = rawQuestions.map(transformQuestion);
+              lessons.push({
+                id: filename,
+                title: getLessonTitle(filename),
+                questions: transformedQuestions,
+              });
+              loadedCount++;
+              console.log(
+                "✓ Loaded:",
+                filename,
+                "(" + transformedQuestions.length + " questions)",
+              );
             } catch (err) {
               console.error("✗ Failed to load", filename, ":", err.message);
               errorCount++;
